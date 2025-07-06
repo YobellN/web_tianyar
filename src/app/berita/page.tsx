@@ -64,42 +64,53 @@ export default function BeritaPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-20">
-        <div className="absolute inset-0 bg-black opacity-30"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Berita & Kegiatan</h1>
-          <p className="text-xl opacity-90">Informasi Terkini dari Desa Tianyar</p>
+      <section className="relative bg-gradient-to-br from-[#204357] to-blue-800 text-white pt-20">
+        <div 
+          className="relative py-24 bg-cover bg-center"
+          style={{
+            backgroundImage: "url('https://images.pexels.com/photos/1666021/pexels-photo-1666021.jpeg?auto=compress&cs=tinysrgb&w=1920&h=600&fit=crop')"
+          }}
+        >
+          <div className="absolute inset-0 bg-[#204357]/70"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fade-in">
+              Berita & Kegiatan
+            </h1>
+            <p className="text-xl opacity-90 animate-slide-up">
+              Informasi Terkini dari Desa Tianyar
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Berita Utama */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-8">
-            <span className="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium">
+          <div className="mb-8 animate-fade-in">
+            <span className="bg-red-100 text-red-800 px-4 py-2 rounded-full text-sm font-medium">
               BERITA UTAMA
             </span>
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative">
+            <div className="relative animate-slide-up">
               <img 
                 src={beritaUtama.gambar} 
                 alt={beritaUtama.judul}
-                className="rounded-lg shadow-lg w-full h-80 object-cover"
+                className="rounded-xl shadow-lg w-full h-80 object-cover"
               />
               <div className="absolute top-4 left-4">
-                <span className="bg-indigo-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                <span className="bg-[#204357] text-white px-3 py-1 rounded-full text-sm font-medium">
                   {beritaUtama.kategori}
                 </span>
               </div>
             </div>
             
-            <div>
-              <div className="text-sm text-indigo-600 font-medium mb-2">{beritaUtama.tanggal}</div>
+            <div className="animate-slide-up">
+              <div className="text-sm text-[#204357] font-medium mb-2">{beritaUtama.tanggal}</div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{beritaUtama.judul}</h2>
               <p className="text-lg text-gray-600 mb-6">{beritaUtama.excerpt}</p>
-              <button className="bg-indigo-600 text-white px-8 py-3 rounded-lg hover:bg-indigo-700 transition-colors font-medium">
+              <button className="bg-[#204357] text-white px-8 py-3 rounded-lg hover:bg-[#1a3a4a] transition-colors font-medium">
                 Baca Selengkapnya
               </button>
             </div>
@@ -116,7 +127,7 @@ export default function BeritaPage() {
                 key={index}
                 className={`px-6 py-2 rounded-full transition-colors ${
                   index === 0 
-                    ? 'bg-indigo-600 text-white' 
+                    ? 'bg-[#204357] text-white' 
                     : 'bg-white text-gray-700 hover:bg-gray-100 border'
                 }`}
               >
@@ -130,14 +141,14 @@ export default function BeritaPage() {
       {/* Berita Terbaru */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12 animate-fade-in">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Berita Terbaru</h2>
             <p className="text-lg text-gray-600">Ikuti perkembangan dan kegiatan terbaru di Desa Tianyar</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {beritaTerbaru.map((berita, index) => (
-              <article key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+              <article key={index} className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden animate-slide-up">
                 <div className="relative h-48 overflow-hidden">
                   <img 
                     src={berita.gambar} 
@@ -145,18 +156,18 @@ export default function BeritaPage() {
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute top-4 left-4">
-                    <span className="bg-indigo-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    <span className="bg-[#204357] text-white px-3 py-1 rounded-full text-sm font-medium">
                       {berita.kategori}
                     </span>
                   </div>
                 </div>
                 <div className="p-6">
-                  <div className="text-sm text-indigo-600 font-medium mb-2">{berita.tanggal}</div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3 hover:text-indigo-700 transition-colors cursor-pointer">
+                  <div className="text-sm text-[#204357] font-medium mb-2">{berita.tanggal}</div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3 hover:text-[#204357] transition-colors cursor-pointer">
                     {berita.judul}
                   </h3>
-                  <p className="text-gray-600 mb-4">{berita.excerpt}</p>
-                  <button className="text-indigo-600 font-medium hover:text-indigo-800 flex items-center">
+                  <p className="text-gray-600 mb-4 text-sm">{berita.excerpt}</p>
+                  <button className="text-[#204357] font-medium hover:text-[#1a3a4a] flex items-center text-sm">
                     Baca Selengkapnya
                     <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -168,7 +179,7 @@ export default function BeritaPage() {
           </div>
           
           <div className="text-center mt-12">
-            <button className="bg-indigo-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-indigo-700 transition-colors">
+            <button className="bg-[#204357] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#1a3a4a] transition-colors">
               Muat Berita Lainnya
             </button>
           </div>
@@ -176,34 +187,34 @@ export default function BeritaPage() {
       </section>
 
       {/* Pengumuman */}
-      <section className="py-16 bg-indigo-50">
+      <section className="py-16 bg-amber-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12 animate-fade-in">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Pengumuman Penting</h2>
             <p className="text-lg text-gray-600">Informasi penting untuk masyarakat desa</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-yellow-500">
+            <div className="bg-white rounded-xl shadow-sm p-6 border-l-4 border-amber-500 animate-slide-up">
               <div className="flex items-start">
                 <div className="text-2xl mr-4">📢</div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">Jadwal Pelayanan Administrasi</h3>
-                  <p className="text-gray-600 mb-3">
+                  <p className="text-gray-600 mb-3 text-sm">
                     Kantor desa buka setiap hari Senin-Jumat pukul 08:00-15:00 WITA. 
                     Untuk pelayanan khusus dapat menghubungi nomor yang tersedia.
                   </p>
-                  <span className="text-sm text-yellow-700 font-medium">Berlaku mulai 1 Februari 2025</span>
+                  <span className="text-sm text-amber-700 font-medium">Berlaku mulai 1 Februari 2025</span>
                 </div>
               </div>
             </div>
             
-            <div className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-green-500">
+            <div className="bg-white rounded-xl shadow-sm p-6 border-l-4 border-green-500 animate-slide-up">
               <div className="flex items-start">
                 <div className="text-2xl mr-4">🌱</div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">Program Penghijauan Desa</h3>
-                  <p className="text-gray-600 mb-3">
+                  <p className="text-gray-600 mb-3 text-sm">
                     Ajakan kepada seluruh masyarakat untuk berpartisipasi dalam program penanaman 1000 pohon 
                     di area desa dan sekitar sumber mata air.
                   </p>
@@ -216,8 +227,8 @@ export default function BeritaPage() {
       </section>
 
       {/* Newsletter Subscription */}
-      <section className="py-16 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-16 bg-[#204357] text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Berlangganan Newsletter</h2>
           <p className="text-xl mb-8 opacity-90">Dapatkan berita dan informasi terbaru langsung di email Anda</p>
           
@@ -228,7 +239,7 @@ export default function BeritaPage() {
                 placeholder="Masukkan email Anda"
                 className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white"
               />
-              <button className="bg-white text-indigo-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+              <button className="bg-white text-[#204357] px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                 Berlangganan
               </button>
             </div>

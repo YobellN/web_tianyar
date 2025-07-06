@@ -4,8 +4,8 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-xl font-bold mb-4">Desa Tianyar</h3>
-            <p className="text-gray-300 mb-4">
+            <h3 className="text-xl font-bold mb-4 text-[#204357]">Desa Tianyar</h3>
+            <p className="text-gray-300 mb-4 text-sm leading-relaxed">
               Desa Tianyar adalah sebuah desa yang terletak di Kabupaten Karangasem, Bali. 
               Desa ini memiliki kekayaan budaya, tradisi, dan potensi wisata yang luar biasa.
             </p>
@@ -31,17 +31,16 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Navigasi</h4>
             <ul className="space-y-2">
-              <li><a href="/" className="text-gray-300 hover:text-white transition-colors">Beranda</a></li>
-              <li><a href="/profil" className="text-gray-300 hover:text-white transition-colors">Profil Desa</a></li>
-              <li><a href="/budaya" className="text-gray-300 hover:text-white transition-colors">Budaya & Tradisi</a></li>
-              <li><a href="/wisata" className="text-gray-300 hover:text-white transition-colors">Wisata</a></li>
-              <li><a href="/umkm" className="text-gray-300 hover:text-white transition-colors">UMKM</a></li>
+              <li><a href="/" className="text-gray-300 hover:text-white transition-colors text-sm">Beranda</a></li>
+              <li><a href="/wisata" className="text-gray-300 hover:text-white transition-colors text-sm">Wisata</a></li>
+              <li><a href="/umkm" className="text-gray-300 hover:text-white transition-colors text-sm">UMKM</a></li>
+              <li><a href="/berita" className="text-gray-300 hover:text-white transition-colors text-sm">Berita</a></li>
             </ul>
           </div>
           
           <div>
             <h4 className="text-lg font-semibold mb-4">Kontak</h4>
-            <div className="space-y-2 text-gray-300">
+            <div className="space-y-2 text-gray-300 text-sm">
               <p>📍 Desa Tianyar, Karangasem, Bali</p>
               <p>📞 +62 xxx-xxxx-xxxx</p>
               <p>✉️ info@desatianyar.id</p>
@@ -50,7 +49,7 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
-          <p>&copy; 2025 Desa Tianyar. Semua hak cipta dilindungi.</p>
+          <p className="text-sm">&copy; 2025 Desa Tianyar. Semua hak cipta dilindungi.</p>
         </div>
       </div>
     </footer>
