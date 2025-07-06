@@ -43,12 +43,12 @@ export default function NewsSection() {
                 />
               </div>
               <div className="p-6">
-                <div className="text-sm text-blue-600 font-medium mb-2">{item.date}</div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-3 hover:text-blue-600 transition-colors cursor-pointer">
+                <div className="text-sm text-[#204357] font-medium mb-2">{item.date}</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-3 hover:text-[#204357] transition-colors cursor-pointer">
                   {item.title}
                 </h3>
                 <p className="text-gray-600 mb-4 text-sm">{item.excerpt}</p>
-                <button className="text-blue-600 font-medium hover:text-blue-800 flex items-center text-sm">
+                <button className="text-[#204357] font-medium hover:text-[#1a3a4a] flex items-center text-sm">
                   Baca Selengkapnya
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -60,7 +60,7 @@ export default function NewsSection() {
         </div>
         
         <div className="text-center mt-8">
-          <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200">
+          <button className="bg-[#204357] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#1a3a4a] transition-colors duration-200">
             Lihat Semua Berita
           </button>
         </div>

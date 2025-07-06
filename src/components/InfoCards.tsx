@@ -1,12 +1,6 @@
 export default function InfoCards() {
   const cards = [
     {
-      title: "Profil Desa",
-      description: "Informasi lengkap tentang sejarah, geografis, dan demografis Desa Tianyar",
-      icon: "🏛️",
-      link: "/profil"
-    },
-    {
       title: "Destinasi Wisata",
       description: "Tempat-tempat indah dan menarik yang wajib dikunjungi",
       icon: "🏞️",
@@ -23,6 +17,12 @@ export default function InfoCards() {
       description: "Informasi terkini dan kegiatan yang sedang berlangsung di desa",
       icon: "📰",
       link: "/berita"
+    },
+    {
+      title: "Budaya & Tradisi",
+      description: "Kekayaan budaya dan tradisi yang masih terjaga hingga saat ini",
+      icon: "🎭",
+      link: "#budaya"
     }
   ];
 
@@ -47,13 +47,13 @@ export default function InfoCards() {
               <div className="text-3xl mb-4 group-hover:scale-110 transition-transform duration-200">
                 {card.icon}
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-[#204357] transition-colors">
                 {card.title}
               </h3>
               <p className="text-gray-600 mb-4 text-sm leading-relaxed">
                 {card.description}
               </p>
-              <div className="flex items-center text-blue-600 font-medium text-sm">
+              <div className="flex items-center text-[#204357] font-medium text-sm">
                 Pelajari Lebih Lanjut
                 <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

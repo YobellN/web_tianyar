@@ -22,7 +22,7 @@ export default function Statistics() {
           {stats.map((stat, index) => (
             <div key={index} className="text-center animate-slide-up">
               <div className="text-4xl mb-3">{stat.icon}</div>
-              <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
+              <div className="text-3xl md:text-4xl font-bold text-[#204357] mb-2">{stat.number}</div>
               <div className="text-gray-600">{stat.label}</div>
             </div>
           ))}

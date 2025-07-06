@@ -36,7 +36,7 @@ export default function CultureSection() {
   ];
 
   return (
-    <section className="py-16 bg-amber-50">
+    <section id="budaya" className="py-16 bg-amber-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12 animate-fade-in">
@@ -76,7 +76,7 @@ export default function CultureSection() {
         </div>
 
         {/* Filosofi Tri Hita Karana */}
-        <div className="bg-blue-600 rounded-2xl p-8 text-white animate-fade-in">
+        <div className="bg-[#204357] rounded-2xl p-8 text-white animate-fade-in">
           <div className="text-center mb-8">
             <h3 className="text-2xl md:text-3xl font-bold mb-3">Filosofi Tri Hita Karana</h3>
             <p className="text-blue-100">

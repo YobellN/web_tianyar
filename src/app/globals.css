@@ -3,8 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --primary-blue: #2563eb;
-  --secondary-blue: #3b82f6;
+  --primary-blue: #204357;
+  --secondary-blue: #2563eb;
   --light-blue: #eff6ff;
   --cream: #fefbf3;
   --warm-cream: #fef3e2;
@@ -48,12 +48,27 @@ body {
   }
 }
 
+@keyframes header-appear {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .animate-fade-in {
   animation: fade-in 0.8s ease-out;
 }
 
 .animate-slide-up {
   animation: slide-up 0.8s ease-out;
+}
+
+.animate-header-appear {
+  animation: header-appear 0.3s ease-out;
 }
 
 /* Smooth scrolling */
@@ -83,8 +98,25 @@ html {
 button:focus,
 a:focus,
 input:focus {
-  outline: 2px solid #3b82f6;
+  outline: 2px solid #204357;
   outline-offset: 2px;
+}
+
+/* Video container responsive */
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
 }
 
 /* Responsive typography */
