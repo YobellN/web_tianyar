@@ -3,11 +3,11 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --primary-blue: #1e40af;
+  --primary-blue: #2563eb;
   --secondary-blue: #3b82f6;
-  --light-blue: #dbeafe;
-  --cream: #fef7ed;
-  --warm-cream: #fed7aa;
+  --light-blue: #eff6ff;
+  --cream: #fefbf3;
+  --warm-cream: #fef3e2;
   --accent-gold: #f59e0b;
 }
 
@@ -18,13 +18,6 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
@@ -32,11 +25,11 @@ body {
   line-height: 1.6;
 }
 
-/* Custom animations */
+/* Smooth animations */
 @keyframes fade-in {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -44,7 +37,7 @@ body {
   }
 }
 
-@keyframes fade-in-delay {
+@keyframes slide-up {
   from {
     opacity: 0;
     transform: translateY(30px);
@@ -52,73 +45,15 @@ body {
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-@keyframes fade-in-delay-2 {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-@keyframes slide-in-left {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slide-in-right {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
   }
 }
 
 .animate-fade-in {
-  animation: fade-in 1s ease-out;
+  animation: fade-in 0.8s ease-out;
 }
 
-.animate-fade-in-delay {
-  animation: fade-in-delay 1s ease-out 0.3s both;
-}
-
-.animate-fade-in-delay-2 {
-  animation: fade-in-delay-2 1s ease-out 0.6s both;
-}
-
-.animate-float {
-  animation: float 3s ease-in-out infinite;
-}
-
-.animate-slide-in-left {
-  animation: slide-in-left 1s ease-out;
-}
-
-.animate-slide-in-right {
-  animation: slide-in-right 1s ease-out;
+.animate-slide-up {
+  animation: slide-up 0.8s ease-out;
 }
 
 /* Smooth scrolling */
@@ -128,52 +63,28 @@ html {
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: #f8fafc;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #3b82f6;
-  border-radius: 4px;
+  background: #cbd5e1;
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #1e40af;
+  background: #94a3b8;
 }
 
-/* Focus styles for accessibility */
+/* Focus styles */
 button:focus,
 a:focus,
 input:focus {
   outline: 2px solid #3b82f6;
   outline-offset: 2px;
-}
-
-/* Glass morphism effect */
-.glass {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-/* Gradient text */
-.gradient-text {
-  background: linear-gradient(135deg, #1e40af, #3b82f6, #f59e0b);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Custom shadows */
-.shadow-blue {
-  box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.1), 0 10px 10px -5px rgba(59, 130, 246, 0.04);
-}
-
-.shadow-cream {
-  box-shadow: 0 10px 25px -5px rgba(245, 158, 11, 0.1), 0 10px 10px -5px rgba(245, 158, 11, 0.04);
 }
 
 /* Responsive typography */
@@ -187,27 +98,4 @@ input:focus {
     font-size: 1.75rem;
     line-height: 1.3;
   }
-}
-
-/* Custom button styles */
-.btn-primary {
-  background: linear-gradient(135deg, #1e40af, #3b82f6);
-  transition: all 0.3s ease;
-}
-
-.btn-primary:hover {
-  background: linear-gradient(135deg, #1e3a8a, #1e40af);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.3);
-}
-
-.btn-secondary {
-  background: linear-gradient(135deg, #f59e0b, #fbbf24);
-  transition: all 0.3s ease;
-}
-
-.btn-secondary:hover {
-  background: linear-gradient(135deg, #d97706, #f59e0b);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px -5px rgba(245, 158, 11, 0.3);
 }
