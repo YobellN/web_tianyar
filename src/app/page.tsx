@@ -4,7 +4,6 @@ import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import VideoProfile from '@/components/VideoProfile';
 import InfoCards from '@/components/InfoCards';
-import CultureSection from '@/components/CultureSection';
 import Statistics from '@/components/Statistics';
 import NewsSection from '@/components/NewsSection';
 import Footer from '@/components/Footer';
@@ -16,7 +15,6 @@ export default function Home() {
       <Hero />
       <VideoProfile />
       <InfoCards />
-      {/* <CultureSection /> */}
       <Statistics />
       <NewsSection />
       <Footer />
