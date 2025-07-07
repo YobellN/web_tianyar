@@ -56,14 +56,14 @@ export default function UMKMPage() {
     }
   ];
 
-  const kategoriUMKM = [
-    { nama: "Kuliner", jumlah: 25, icon: "🍽️" },
-    { nama: "Kerajinan", jumlah: 20, icon: "🎨" },
-    { nama: "Fashion", jumlah: 15, icon: "👗" },
-    { nama: "Akomodasi", jumlah: 10, icon: "🏠" },
-    { nama: "Kesehatan", jumlah: 8, icon: "🌿" },
-    { nama: "Lainnya", jumlah: 12, icon: "🛍️" }
-  ];
+  // const kategoriUMKM = [
+  //   { nama: "Kuliner", jumlah: 25, icon: "🍽️" },
+  //   { nama: "Kerajinan", jumlah: 20, icon: "🎨" },
+  //   { nama: "Fashion", jumlah: 15, icon: "👗" },
+  //   { nama: "Akomodasi", jumlah: 10, icon: "🏠" },
+  //   { nama: "Kesehatan", jumlah: 8, icon: "🌿" },
+  //   { nama: "Lainnya", jumlah: 12, icon: "🛍️" }
+  // ];
 
   return (
     <div className="min-h-screen">
