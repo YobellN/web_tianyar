@@ -10,7 +10,7 @@ export default function UMKMPage() {
       nama: "Warung Sate Lilit Bu Made",
       kategori: "Kuliner",
       deskripsi: "Sate lilit ikan dengan bumbu tradisional Bali yang autentik",
-      gambar: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+      gambar: "/wisata/savana.png",
       kontak: "+62 812-3456-7890",
       rating: 4.8
     },
@@ -18,7 +18,7 @@ export default function UMKMPage() {
       nama: "Kerajinan Anyaman Pak Wayan",
       kategori: "Kerajinan",
       deskripsi: "Tas, topi, dan dekorasi dari anyaman bambu dan pandan",
-      gambar: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+      gambar: "/wisata/savana.png",
       kontak: "+62 813-4567-8901",
       rating: 4.7
     },
@@ -26,7 +26,7 @@ export default function UMKMPage() {
       nama: "Toko Kain Endek Ibu Ketut",
       kategori: "Fashion",
       deskripsi: "Kain endek dan pakaian tradisional Bali berkualitas tinggi",
-      gambar: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+      gambar: "/wisata/savana.png",
       kontak: "+62 814-5678-9012",
       rating: 4.9
     },
@@ -34,7 +34,7 @@ export default function UMKMPage() {
       nama: "Kopi Robusta Tianyar",
       kategori: "Minuman",
       deskripsi: "Kopi robusta premium dari kebun sendiri dengan cita rasa khas",
-      gambar: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+      gambar: "/wisata/savana.png",
       kontak: "+62 815-6789-0123",
       rating: 4.6
     },
@@ -42,7 +42,7 @@ export default function UMKMPage() {
       nama: "Homestay Desa Asri",
       kategori: "Akomodasi",
       deskripsi: "Penginapan dengan suasana desa yang nyaman dan ramah",
-      gambar: "https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+      gambar: "/wisata/savana.png",
       kontak: "+62 816-7890-1234",
       rating: 4.5
     },
@@ -50,7 +50,7 @@ export default function UMKMPage() {
       nama: "Jamu Tradisional Ni Luh",
       kategori: "Kesehatan",
       deskripsi: "Jamu dan obat herbal tradisional untuk kesehatan keluarga",
-      gambar: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+      gambar: "/wisata/savana.png",
       kontak: "+62 817-8901-2345",
       rating: 4.4
     }
@@ -127,6 +127,8 @@ export default function UMKMPage() {
                   <Image
                     src={umkm.gambar}
                     alt={umkm.nama}
+                    layout="fill"
+                    objectFit="cover"
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute top-4 left-4">
@@ -192,7 +194,7 @@ export default function UMKMPage() {
       </section>
 
       {/* Success Stories */}
-      <section className="py-16 bg-white">
+      {/* <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 animate-fade-in">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Kisah Sukses</h2>
@@ -237,7 +239,7 @@ export default function UMKMPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-16 bg-[#204357] text-white">

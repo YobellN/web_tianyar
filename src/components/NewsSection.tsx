@@ -6,19 +6,19 @@ export default function NewsSection() {
       title: "Festival Budaya Tianyar 2025",
       excerpt: "Perayaan tahunan yang menampilkan berbagai pertunjukan seni dan budaya tradisional Bali",
       date: "15 Januari 2025",
-      image: "https://images.pexels.com/photos/1666021/pexels-photo-1666021.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop"
+      image: "/wisata/savana.png"
     },
     {
       title: "Pembangunan Infrastruktur Jalan Desa",
       excerpt: "Proyek perbaikan jalan utama desa untuk meningkatkan aksesibilitas wisatawan",
       date: "10 Januari 2025",
-      image: "https://images.pexels.com/photos/1051838/pexels-photo-1051838.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop"
+      image: "/wisata/savana.png"
     },
     {
       title: "Pelatihan UMKM Digital Marketing",
       excerpt: "Program pelatihan untuk meningkatkan kemampuan pemasaran digital pelaku UMKM",
       date: "5 Januari 2025",
-      image: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop"
+      image: "/wisata/savana.png"
     }
   ];
 
@@ -39,8 +39,10 @@ export default function NewsSection() {
             <article key={index} className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden animate-slide-up">
               <div className="h-48 overflow-hidden">
                 <Image
-                  src={item.image} 
-                  alt={item.title}
+                  width={400}
+                  height={250}
+                  src={item.image}
+                  alt="/savana.png"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>

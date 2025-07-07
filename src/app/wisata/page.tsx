@@ -9,42 +9,42 @@ export default function WisataPage() {
     {
       nama: "Air Terjun Sekumpul",
       deskripsi: "Air terjun spektakuler dengan ketinggian 80 meter yang dikelilingi hutan tropis",
-      gambar: "https://images.pexels.com/photos/1166209/pexels-photo-1166209.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&fit=crop",
+      gambar: "/wisata/savana.png",
       kategori: "Alam",
       rating: 4.8
     },
     {
       nama: "Pura Lempuyang",
       deskripsi: "Pura kuno dengan pemandangan Gunung Agung yang menakjubkan",
-      gambar: "https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&fit=crop",
+      gambar: "/wisata/savana.png",
       kategori: "Budaya",
       rating: 4.9
     },
     {
       nama: "Pantai Virgin",
       deskripsi: "Pantai tersembunyi dengan pasir putih dan air laut yang jernih",
-      gambar: "https://images.pexels.com/photos/1032650/pexels-photo-1032650.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&fit=crop",
+      gambar: "/wisata/savana.png",
       kategori: "Pantai",
       rating: 4.7
     },
     {
       nama: "Desa Wisata Tenganan",
       deskripsi: "Desa tradisional Bali Aga dengan budaya dan arsitektur unik",
-      gambar: "https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&fit=crop",
+      gambar: "/wisata/savana.png",
       kategori: "Budaya",
       rating: 4.6
     },
     {
       nama: "Taman Ujung",
       deskripsi: "Istana air dengan arsitektur yang memadukan gaya Bali dan Eropa",
-      gambar: "https://images.pexels.com/photos/1666021/pexels-photo-1666021.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&fit=crop",
+      gambar: "/wisata/savana.png",
       kategori: "Sejarah",
       rating: 4.5
     },
     {
       nama: "Bukit Asah",
       deskripsi: "Spot sunrise terbaik dengan pemandangan laut dan pulau-pulau kecil",
-      gambar: "https://images.pexels.com/photos/1032650/pexels-photo-1032650.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&fit=crop",
+      gambar: "/wisata/savana.png",
       kategori: "Alam",
       rating: 4.4
     }
@@ -119,6 +119,7 @@ export default function WisataPage() {
                   <Image
                     src={item.gambar}
                     alt={item.nama}
+                    layout="fill"
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute top-4 left-4">

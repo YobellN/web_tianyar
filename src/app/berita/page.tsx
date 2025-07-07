@@ -9,7 +9,7 @@ export default function BeritaPage() {
     judul: "Festival Budaya Tianyar 2025 Sukses Digelar",
     excerpt: "Festival tahunan yang menampilkan berbagai pertunjukan seni dan budaya tradisional Bali berhasil menarik ribuan pengunjung dari berbagai daerah",
     tanggal: "20 Januari 2025",
-    gambar: "https://images.pexels.com/photos/1666021/pexels-photo-1666021.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop",
+    gambar: "/wisata/savana.png",
     kategori: "Budaya"
   };
 
@@ -18,42 +18,42 @@ export default function BeritaPage() {
       judul: "Pembangunan Infrastruktur Jalan Desa Tahap II Dimulai",
       excerpt: "Proyek lanjutan perbaikan jalan utama desa untuk meningkatkan aksesibilitas wisatawan dan masyarakat",
       tanggal: "18 Januari 2025",
-      gambar: "https://images.pexels.com/photos/1051838/pexels-photo-1051838.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop",
+      gambar: "/wisata/savana.png",
       kategori: "Pembangunan"
     },
     {
       judul: "Pelatihan UMKM Digital Marketing Batch 3",
       excerpt: "Program pelatihan ketiga untuk meningkatkan kemampuan pemasaran digital pelaku UMKM lokal",
       tanggal: "15 Januari 2025",
-      gambar: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop",
+      gambar: "/wisata/savana.png",
       kategori: "UMKM"
     },
     {
       judul: "Desa Tianyar Raih Penghargaan Desa Wisata Terbaik",
       excerpt: "Prestasi membanggakan atas upaya pengembangan pariwisata berkelanjutan dan pelestarian budaya",
       tanggal: "12 Januari 2025",
-      gambar: "https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop",
+      gambar: "/wisata/savana.png",
       kategori: "Prestasi"
     },
     {
       judul: "Program Bantuan Bibit Tanaman untuk Petani",
       excerpt: "Distribusi bibit unggul untuk meningkatkan produktivitas pertanian dan ketahanan pangan desa",
       tanggal: "10 Januari 2025",
-      gambar: "https://images.pexels.com/photos/1166209/pexels-photo-1166209.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop",
+      gambar: "/wisata/savana.png",
       kategori: "Pertanian"
     },
     {
       judul: "Upacara Melasti Jelang Hari Raya Nyepi",
       excerpt: "Persiapan upacara penyucian tradisional yang akan digelar di pantai sebagai rangkaian Hari Raya Nyepi",
       tanggal: "8 Januari 2025",
-      gambar: "https://images.pexels.com/photos/1666021/pexels-photo-1666021.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop",
+      gambar: "/wisata/savana.png",
       kategori: "Budaya"
     },
     {
       judul: "Kerjasama dengan Universitas untuk Penelitian Lingkungan",
       excerpt: "Kolaborasi penelitian tentang konservasi alam dan pengembangan ekowisata berkelanjutan",
       tanggal: "5 Januari 2025",
-      gambar: "https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop",
+      gambar: "/wisata/savana.png",
       kategori: "Lingkungan"
     }
   ];
@@ -94,6 +94,8 @@ export default function BeritaPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative animate-slide-up">
               <Image
+                width={500}
+                height={500}
                 src={beritaUtama.gambar}
                 alt={beritaUtama.judul}
                 className="rounded-xl shadow-lg w-full h-80 object-cover"
@@ -125,8 +127,8 @@ export default function BeritaPage() {
               <button
                 key={index}
                 className={`px-6 py-2 rounded-full transition-colors ${index === 0
-                    ? 'bg-[#204357] text-white'
-                    : 'bg-white text-gray-700 hover:bg-gray-100 border'
+                  ? 'bg-[#204357] text-white'
+                  : 'bg-white text-gray-700 hover:bg-gray-100 border'
                   }`}
               >
                 {kategori}
@@ -149,6 +151,7 @@ export default function BeritaPage() {
               <article key={index} className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden animate-slide-up">
                 <div className="relative h-48 overflow-hidden">
                   <Image
+                    layout='fill'
                     src={berita.gambar}
                     alt={berita.judul}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"

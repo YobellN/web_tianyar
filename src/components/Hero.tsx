@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Hero() {
   return (
     <section className="relative bg-gradient-to-br from-[#204357] to-blue-800 text-white">
@@ -17,12 +19,12 @@ export default function Hero() {
             Menjelajahi Keindahan Alam, Budaya, dan Tradisi Bali yang Autentik
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up">
-            <button className="bg-white text-[#204357] px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors duration-200">
+            <Link href={"https://maps.app.goo.gl/btxcEquRA1ghxYfe7"} className="bg-white text-[#204357] px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors duration-200">
               Jelajahi Desa
-            </button>
-            <button className="bg-amber-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-amber-600 transition-colors duration-200">
+            </Link>
+            <Link href="/wisata" className="bg-amber-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-amber-600 transition-colors duration-200">
               Lihat Wisata
-            </button>
+            </Link>
           </div>
         </div>
       </div>
