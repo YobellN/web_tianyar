@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function NewsSection() {
   const news = [
     {
@@ -21,7 +23,7 @@ export default function NewsSection() {
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-amber-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -36,7 +38,7 @@ export default function NewsSection() {
           {news.map((item, index) => (
             <article key={index} className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden animate-slide-up">
               <div className="h-48 overflow-hidden">
-                <img 
+                <Image
                   src={item.image} 
                   alt={item.title}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"

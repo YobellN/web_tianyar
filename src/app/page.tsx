@@ -16,7 +16,7 @@ export default function Home() {
       <Hero />
       <VideoProfile />
       <InfoCards />
-      <CultureSection />
+      {/* <CultureSection /> */}
       <Statistics />
       <NewsSection />
       <Footer />

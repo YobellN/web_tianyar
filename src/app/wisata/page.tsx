@@ -2,6 +2,7 @@
 
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import Image from 'next/image';
 
 export default function WisataPage() {
   const destinasi = [
@@ -59,10 +60,10 @@ export default function WisataPage() {
   return (
     <div className="min-h-screen">
       <Header />
-      
+
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-[#204357] to-blue-800 text-white pt-20">
-        <div 
+      <section className="relative bg-gradient-to-br from-[#204357] to-blue-800 text-white">
+        <div
           className="relative py-24 bg-cover bg-center"
           style={{
             backgroundImage: "url('https://images.pexels.com/photos/1166209/pexels-photo-1166209.jpeg?auto=compress&cs=tinysrgb&w=1920&h=600&fit=crop')"
@@ -110,13 +111,13 @@ export default function WisataPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Destinasi Populer</h2>
             <p className="text-lg text-gray-600">Tempat-tempat menakjubkan yang wajib dikunjungi</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {destinasi.map((item, index) => (
               <div key={index} className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden animate-slide-up">
                 <div className="relative h-48 overflow-hidden">
-                  <img 
-                    src={item.gambar} 
+                  <Image
+                    src={item.gambar}
                     alt={item.nama}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                   />
@@ -150,7 +151,7 @@ export default function WisataPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Aktivitas Wisata</h2>
             <p className="text-lg text-gray-600">Berbagai kegiatan menarik yang bisa dilakukan</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {aktivitas.map((item, index) => (
               <div key={index} className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 p-6 text-center animate-slide-up">
@@ -170,7 +171,7 @@ export default function WisataPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Tips Berwisata</h2>
             <p className="text-lg text-gray-600">Panduan untuk pengalaman wisata yang optimal</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-gradient-to-br from-[#204357]/10 to-blue-100 rounded-xl p-6 animate-slide-up">
               <h3 className="text-xl font-semibold text-[#204357] mb-4">Waktu Terbaik Berkunjung</h3>
@@ -181,7 +182,7 @@ export default function WisataPage() {
                 <li>• Weekday lebih sepi dibanding weekend</li>
               </ul>
             </div>
-            
+
             <div className="bg-gradient-to-br from-amber-100 to-orange-100 rounded-xl p-6 animate-slide-up">
               <h3 className="text-xl font-semibold text-amber-700 mb-4">Yang Perlu Dibawa</h3>
               <ul className="space-y-2 text-gray-700 text-sm">

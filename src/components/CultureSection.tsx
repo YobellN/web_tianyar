@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function CultureSection() {
   const tradisi = [
     {
@@ -58,7 +60,7 @@ export default function CultureSection() {
                 className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden animate-slide-up"
               >
                 <div className="h-48 overflow-hidden">
-                  <img 
+                  <Image
                     src={item.gambar} 
                     alt={item.nama}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"

@@ -2,6 +2,7 @@
 
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import Image from 'next/image';
 
 export default function UMKMPage() {
   const umkmData = [
@@ -67,10 +68,10 @@ export default function UMKMPage() {
   return (
     <div className="min-h-screen">
       <Header />
-      
+
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-[#204357] to-blue-800 text-white pt-20">
-        <div 
+      <section className="relative bg-gradient-to-br from-[#204357] to-blue-800 text-white">
+        <div
           className="relative py-24 bg-cover bg-center"
           style={{
             backgroundImage: "url('https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1920&h=600&fit=crop')"
@@ -88,27 +89,7 @@ export default function UMKMPage() {
         </div>
       </section>
 
-      {/* Statistik UMKM */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 animate-fade-in">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">UMKM dalam Angka</h2>
-            <p className="text-lg text-gray-600">Kontribusi UMKM terhadap perekonomian desa</p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {kategoriUMKM.map((kategori, index) => (
-              <div key={index} className="bg-gradient-to-br from-[#204357]/10 to-blue-100 rounded-xl p-6 text-center hover:shadow-md transition-shadow duration-200 animate-slide-up">
-                <div className="text-3xl mb-3">{kategori.icon}</div>
-                <div className="text-2xl font-bold text-[#204357] mb-1">{kategori.jumlah}</div>
-                <div className="text-sm text-gray-700">{kategori.nama}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Filter Section */}
+  
       <section className="py-8 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-4">
@@ -138,13 +119,13 @@ export default function UMKMPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Direktori UMKM</h2>
             <p className="text-lg text-gray-600">Temukan produk dan layanan terbaik dari masyarakat lokal</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {umkmData.map((umkm, index) => (
               <div key={index} className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden animate-slide-up">
                 <div className="relative h-48 overflow-hidden">
-                  <img 
-                    src={umkm.gambar} 
+                  <Image
+                    src={umkm.gambar}
                     alt={umkm.nama}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                   />
@@ -181,26 +162,26 @@ export default function UMKMPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Program Pemberdayaan</h2>
             <p className="text-lg text-gray-600">Inisiatif untuk mengembangkan UMKM lokal</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 p-6 text-center animate-slide-up">
               <div className="text-3xl mb-4">📚</div>
               <h3 className="text-lg font-semibold text-gray-900 mb-3">Pelatihan Bisnis</h3>
               <p className="text-gray-600 text-sm">Workshop manajemen usaha dan keuangan</p>
             </div>
-            
+
             <div className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 p-6 text-center animate-slide-up">
               <div className="text-3xl mb-4">💻</div>
               <h3 className="text-lg font-semibold text-gray-900 mb-3">Digital Marketing</h3>
               <p className="text-gray-600 text-sm">Pelatihan pemasaran online dan media sosial</p>
             </div>
-            
+
             <div className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 p-6 text-center animate-slide-up">
               <div className="text-3xl mb-4">💰</div>
               <h3 className="text-lg font-semibold text-gray-900 mb-3">Akses Permodalan</h3>
               <p className="text-gray-600 text-sm">Bantuan modal usaha dengan bunga rendah</p>
             </div>
-            
+
             <div className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 p-6 text-center animate-slide-up">
               <div className="text-3xl mb-4">🏪</div>
               <h3 className="text-lg font-semibold text-gray-900 mb-3">Pasar Online</h3>
@@ -217,12 +198,12 @@ export default function UMKMPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Kisah Sukses</h2>
             <p className="text-lg text-gray-600">Inspirasi dari pelaku UMKM yang telah berkembang</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-gradient-to-br from-[#204357]/10 to-blue-100 rounded-xl p-8 animate-slide-up">
               <div className="flex items-center mb-4">
-                <img 
-                  src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" 
+                <Image
+                  src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop"
                   alt="Bu Made"
                   className="w-16 h-16 rounded-full object-cover mr-4"
                 />
@@ -232,15 +213,15 @@ export default function UMKMPage() {
                 </div>
               </div>
               <p className="text-gray-700 italic text-sm">
-                "Berkat pelatihan digital marketing, omzet warung saya meningkat 300% dalam 6 bulan. 
+                "Berkat pelatihan digital marketing, omzet warung saya meningkat 300% dalam 6 bulan.
                 Sekarang pesanan datang dari berbagai daerah melalui media sosial."
               </p>
             </div>
-            
+
             <div className="bg-gradient-to-br from-amber-100 to-orange-100 rounded-xl p-8 animate-slide-up">
               <div className="flex items-center mb-4">
-                <img 
-                  src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" 
+                <Image
+                  src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop"
                   alt="Pak Wayan"
                   className="w-16 h-16 rounded-full object-cover mr-4"
                 />
@@ -250,7 +231,7 @@ export default function UMKMPage() {
                 </div>
               </div>
               <p className="text-gray-700 italic text-sm">
-                "Dengan bantuan modal usaha, saya bisa membeli peralatan modern. 
+                "Dengan bantuan modal usaha, saya bisa membeli peralatan modern.
                 Produksi meningkat dan kini produk saya dijual hingga ke luar negeri."
               </p>
             </div>
