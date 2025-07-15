@@ -1,20 +1,20 @@
+import { statistikData } from '@/data/statistikData';
+
 export default function Statistics() {
   const stats = [
-    { number: "2,500", label: "Penduduk", icon: "👥" },
-    { number: "450", label: "Keluarga", icon: "🏠" },
-    { number: "15", label: "Destinasi Wisata", icon: "🏞️" },
-    { number: "80", label: "UMKM Aktif", icon: "🏪" }
+    { number: statistikData.penduduk, label: "Penduduk", icon: "👥" },
+    { number: statistikData.keluarga, label: "Keluarga", icon: "🏠" },
+    { number: statistikData.destinasiWisata, label: "Destinasi Wisata", icon: "🏞️" },
+    { number: statistikData.umkmAktif, label: "UMKM Aktif", icon: "🏪" }
   ];
 
   return (
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 animate-fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Desa Tianyar dalam Angka
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Data Desa</h2>
           <p className="text-lg text-gray-600">
-            Data terkini tentang kondisi demografis dan potensi desa
+            Informasi terkini tentang Desa Tianyar
           </p>
         </div>
         

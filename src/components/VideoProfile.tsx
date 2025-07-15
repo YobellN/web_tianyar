@@ -31,40 +31,41 @@ export default function VideoProfile() {
             
             <div className="space-y-4 text-gray-600 mb-8">
               <p className="leading-relaxed">
-                Desa Tianyar terletak di Kabupaten Karangasem, Bali Timur, sekitar 77 km dari 
-                Denpasar dengan waktu tempuh sekitar 2,5 jam. Desa ini dikenal dengan suasana 
-                pedesaan yang asri dan masyarakat yang ramah.
+                Desa Tianyar terletak di Kecamatan Kubu, Kabupaten Karangasem, Bali Timur. 
+                Desa ini memiliki potensi wisata alam yang indah dengan pantai, bukit, dan 
+                pemandangan laut yang menawan.
               </p>
               
               <p className="leading-relaxed">
-                Dengan luas wilayah 1.698 hektar dan jumlah penduduk sekitar 2.500 jiwa, 
-                Desa Tianyar memiliki potensi wisata alam yang luar biasa, mulai dari pantai, 
-                air terjun, hingga perbukitan yang menawan.
+                Dengan luas wilayah 847 hektar dan penduduk 3.247 jiwa, desa ini terbagi 
+                menjadi 5 banjar dinas. Masyarakat bermata pencaharian utama sebagai petani, 
+                nelayan, dan pelaku UMKM.
               </p>
               
               <p className="leading-relaxed">
-                Masyarakat desa masih menjaga tradisi dan budaya Bali yang autentik, 
-                menjadikan Tianyar sebagai destinasi wisata budaya yang menarik untuk dikunjungi.
+                Desa Tianyar terus mengembangkan potensi wisata dan ekonomi kreatif untuk 
+                meningkatkan kesejahteraan masyarakat dengan tetap menjaga kelestarian alam 
+                dan budaya lokal.
               </p>
             </div>
 
             {/* Key Features */}
             <div className="grid grid-cols-2 gap-4 mb-8">
               <div className="bg-gray-50 rounded-lg p-4">
-                <div className="text-2xl font-bold text-[#204357] mb-1">1.698</div>
+                <div className="text-2xl font-bold text-[#204357] mb-1">847</div>
                 <div className="text-sm text-gray-600">Hektar Luas Wilayah</div>
               </div>
               <div className="bg-gray-50 rounded-lg p-4">
-                <div className="text-2xl font-bold text-[#204357] mb-1">2.500</div>
+                <div className="text-2xl font-bold text-[#204357] mb-1">3.247</div>
                 <div className="text-sm text-gray-600">Jiwa Penduduk</div>
               </div>
               <div className="bg-gray-50 rounded-lg p-4">
-                <div className="text-2xl font-bold text-[#204357] mb-1">77 KM</div>
-                <div className="text-sm text-gray-600">Dari Denpasar</div>
+                <div className="text-2xl font-bold text-[#204357] mb-1">5</div>
+                <div className="text-sm text-gray-600">Banjar Dinas</div>
               </div>
               <div className="bg-gray-50 rounded-lg p-4">
-                <div className="text-2xl font-bold text-[#204357] mb-1">15+</div>
-                <div className="text-sm text-gray-600">Destinasi Wisata</div>
+                <div className="text-2xl font-bold text-[#204357] mb-1">156</div>
+                <div className="text-sm text-gray-600">UMKM Aktif</div>
               </div>
             </div>
 

@@ -6,59 +6,59 @@ import Image from 'next/image';
 
 export default function BeritaPage() {
   const beritaUtama = {
-    judul: "Festival Budaya Tianyar 2025 Sukses Digelar",
-    excerpt: "Festival tahunan yang menampilkan berbagai pertunjukan seni dan budaya tradisional Bali berhasil menarik ribuan pengunjung dari berbagai daerah",
+    judul: "Program Digitalisasi UMKM Desa Tianyar Diluncurkan",
+    excerpt: "Inisiatif baru untuk membantu UMKM lokal memasarkan produk secara online dan meningkatkan penjualan melalui platform digital",
     tanggal: "20 Januari 2025",
-    gambar: "/wisata/savana.png",
-    kategori: "Budaya"
+    gambar: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800",
+    kategori: "Ekonomi"
   };
 
   const beritaTerbaru = [
     {
-      judul: "Pembangunan Infrastruktur Jalan Desa Tahap II Dimulai",
-      excerpt: "Proyek lanjutan perbaikan jalan utama desa untuk meningkatkan aksesibilitas wisatawan dan masyarakat",
+      judul: "Perbaikan Akses Jalan Menuju Destinasi Wisata",
+      excerpt: "Pemerintah desa melakukan perbaikan jalan untuk memudahkan akses wisatawan ke berbagai destinasi",
       tanggal: "18 Januari 2025",
-      gambar: "/wisata/savana.png",
+      gambar: "https://images.pexels.com/photos/1666021/pexels-photo-1666021.jpeg?auto=compress&cs=tinysrgb&w=400",
       kategori: "Pembangunan"
     },
     {
-      judul: "Pelatihan UMKM Digital Marketing Batch 3",
-      excerpt: "Program pelatihan ketiga untuk meningkatkan kemampuan pemasaran digital pelaku UMKM lokal",
+      judul: "Pelatihan Keterampilan untuk Pemuda Desa",
+      excerpt: "Program pelatihan keterampilan digital dan wirausaha untuk generasi muda Desa Tianyar",
       tanggal: "15 Januari 2025",
-      gambar: "/wisata/savana.png",
-      kategori: "UMKM"
+      gambar: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=400",
+      kategori: "Pendidikan"
     },
     {
-      judul: "Desa Tianyar Raih Penghargaan Desa Wisata Terbaik",
-      excerpt: "Prestasi membanggakan atas upaya pengembangan pariwisata berkelanjutan dan pelestarian budaya",
+      judul: "Festival Budaya Desa Tianyar 2025",
+      excerpt: "Perayaan budaya tahunan dengan pertunjukan seni tradisional dan pameran produk UMKM lokal",
       tanggal: "12 Januari 2025",
-      gambar: "/wisata/savana.png",
-      kategori: "Prestasi"
-    },
-    {
-      judul: "Program Bantuan Bibit Tanaman untuk Petani",
-      excerpt: "Distribusi bibit unggul untuk meningkatkan produktivitas pertanian dan ketahanan pangan desa",
-      tanggal: "10 Januari 2025",
-      gambar: "/wisata/savana.png",
-      kategori: "Pertanian"
-    },
-    {
-      judul: "Upacara Melasti Jelang Hari Raya Nyepi",
-      excerpt: "Persiapan upacara penyucian tradisional yang akan digelar di pantai sebagai rangkaian Hari Raya Nyepi",
-      tanggal: "8 Januari 2025",
-      gambar: "/wisata/savana.png",
+      gambar: "https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=400",
       kategori: "Budaya"
     },
     {
-      judul: "Kerjasama dengan Universitas untuk Penelitian Lingkungan",
-      excerpt: "Kolaborasi penelitian tentang konservasi alam dan pengembangan ekowisata berkelanjutan",
-      tanggal: "5 Januari 2025",
-      gambar: "/wisata/savana.png",
+      judul: "Program Bantuan Bibit untuk Petani Lokal",
+      excerpt: "Pemerintah desa memberikan bantuan bibit unggul untuk meningkatkan hasil pertanian",
+      tanggal: "10 Januari 2025",
+      gambar: "https://images.pexels.com/photos/1166209/pexels-photo-1166209.jpeg?auto=compress&cs=tinysrgb&w=400",
+      kategori: "Pertanian"
+    },
+    {
+      judul: "Gotong Royong Pembersihan Pantai",
+      excerpt: "Kegiatan bersih-bersih pantai melibatkan seluruh masyarakat untuk menjaga kelestarian lingkungan",
+      tanggal: "8 Januari 2025",
+      gambar: "https://images.pexels.com/photos/1166209/pexels-photo-1166209.jpeg?auto=compress&cs=tinysrgb&w=400",
       kategori: "Lingkungan"
+    },
+    {
+      judul: "Pembentukan Kelompok Sadar Wisata",
+      excerpt: "Inisiatif pembentukan pokdarwis untuk mengembangkan dan mengelola potensi wisata desa",
+      tanggal: "5 Januari 2025",
+      gambar: "https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=400",
+      kategori: "Pariwisata"
     }
   ];
 
-  const kategoriBerita = ["Semua", "Budaya", "Pembangunan", "UMKM", "Prestasi", "Pertanian", "Lingkungan"];
+  const kategoriBerita = ["Semua", "Ekonomi", "Pembangunan", "Pendidikan", "Budaya", "Pertanian", "Lingkungan", "Pariwisata"];
 
   return (
     <div className="min-h-screen">
@@ -200,12 +200,12 @@ export default function BeritaPage() {
               <div className="flex items-start">
                 <div className="text-2xl mr-4">📢</div>
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Jadwal Pelayanan Administrasi</h3>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Pelayanan Kantor Desa</h3>
                   <p className="text-gray-600 mb-3 text-sm">
-                    Kantor desa buka setiap hari Senin-Jumat pukul 08:00-15:00 WITA.
-                    Untuk pelayanan khusus dapat menghubungi nomor yang tersedia.
+                    Kantor desa buka Senin-Jumat pukul 08:00-15:00 WITA. 
+                    Pelayanan administrasi kependudukan dan surat-menyurat.
                   </p>
-                  <span className="text-sm text-amber-700 font-medium">Berlaku mulai 1 Februari 2025</span>
+                  <span className="text-sm text-amber-700 font-medium">Info: (0363) 123456</span>
                 </div>
               </div>
             </div>
@@ -214,12 +214,12 @@ export default function BeritaPage() {
               <div className="flex items-start">
                 <div className="text-2xl mr-4">🌱</div>
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Program Penghijauan Desa</h3>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Program Penghijauan</h3>
                   <p className="text-gray-600 mb-3 text-sm">
-                    Ajakan kepada seluruh masyarakat untuk berpartisipasi dalam program penanaman 1000 pohon
-                    di area desa dan sekitar sumber mata air.
+                    Program penanaman pohon di area desa untuk menjaga kelestarian lingkungan 
+                    dan mencegah erosi tanah.
                   </p>
-                  <span className="text-sm text-green-700 font-medium">Pendaftaran dibuka hingga 28 Februari</span>
+                  <span className="text-sm text-green-700 font-medium">Setiap hari Minggu pagi</span>
                 </div>
               </div>
             </div>
@@ -230,14 +230,14 @@ export default function BeritaPage() {
       {/* Newsletter Subscription */}
       <section className="py-16 bg-[#204357] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Berlangganan Newsletter</h2>
-          <p className="text-xl mb-8 opacity-90">Dapatkan berita dan informasi terbaru langsung di email Anda</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Ikuti Perkembangan Desa</h2>
+          <p className="text-xl mb-8 opacity-90">Dapatkan informasi terbaru tentang kegiatan dan program desa</p>
 
           <div className="max-w-md mx-auto">
             <div className="flex flex-col sm:flex-row gap-4">
               <input
                 type="email"
-                placeholder="Masukkan email Anda"
+                placeholder="Email Anda"
                 className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white"
               />
               <button className="bg-white text-[#204357] px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
@@ -245,7 +245,7 @@ export default function BeritaPage() {
               </button>
             </div>
             <p className="text-sm opacity-75 mt-3">
-              Kami menghormati privasi Anda. Berhenti berlangganan kapan saja.
+              Informasi hanya tentang kegiatan desa. Tidak ada spam.
             </p>
           </div>
         </div>

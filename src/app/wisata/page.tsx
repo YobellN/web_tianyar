@@ -3,52 +3,18 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
+import Link from 'next/link';
+import { useState } from 'react';
+import { wisataData } from '@/data/wisataData';
 
 export default function WisataPage() {
-  const destinasi = [
-    {
-      nama: "Air Terjun Sekumpul",
-      deskripsi: "Air terjun spektakuler dengan ketinggian 80 meter yang dikelilingi hutan tropis",
-      gambar: "/wisata/savana.png",
-      kategori: "Alam",
-      rating: 4.8
-    },
-    {
-      nama: "Pura Lempuyang",
-      deskripsi: "Pura kuno dengan pemandangan Gunung Agung yang menakjubkan",
-      gambar: "/wisata/savana.png",
-      kategori: "Budaya",
-      rating: 4.9
-    },
-    {
-      nama: "Pantai Virgin",
-      deskripsi: "Pantai tersembunyi dengan pasir putih dan air laut yang jernih",
-      gambar: "/wisata/savana.png",
-      kategori: "Pantai",
-      rating: 4.7
-    },
-    {
-      nama: "Desa Wisata Tenganan",
-      deskripsi: "Desa tradisional Bali Aga dengan budaya dan arsitektur unik",
-      gambar: "/wisata/savana.png",
-      kategori: "Budaya",
-      rating: 4.6
-    },
-    {
-      nama: "Taman Ujung",
-      deskripsi: "Istana air dengan arsitektur yang memadukan gaya Bali dan Eropa",
-      gambar: "/wisata/savana.png",
-      kategori: "Sejarah",
-      rating: 4.5
-    },
-    {
-      nama: "Bukit Asah",
-      deskripsi: "Spot sunrise terbaik dengan pemandangan laut dan pulau-pulau kecil",
-      gambar: "/wisata/savana.png",
-      kategori: "Alam",
-      rating: 4.4
-    }
-  ];
+  const [filterKategori, setFilterKategori] = useState('Semua');
+  
+  const kategoriList = ['Semua', 'Alam', 'Budaya', 'Pantai', 'Sejarah'];
+  
+  const destinasiFiltered = filterKategori === 'Semua' 
+    ? wisataData 
+    : wisataData.filter(item => item.kategori === filterKategori);
 
   const aktivitas = [
     { nama: "Trekking", icon: "🥾", deskripsi: "Jelajahi jalur pendakian menuju air terjun dan puncak bukit" },
@@ -85,21 +51,19 @@ export default function WisataPage() {
       <section className="py-8 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-[#204357] text-white px-6 py-2 rounded-full hover:bg-[#1a3a4a] transition-colors">
-              Semua
-            </button>
-            <button className="bg-white text-gray-700 px-6 py-2 rounded-full hover:bg-gray-100 transition-colors border">
-              Alam
-            </button>
-            <button className="bg-white text-gray-700 px-6 py-2 rounded-full hover:bg-gray-100 transition-colors border">
-              Budaya
-            </button>
-            <button className="bg-white text-gray-700 px-6 py-2 rounded-full hover:bg-gray-100 transition-colors border">
-              Pantai
-            </button>
-            <button className="bg-white text-gray-700 px-6 py-2 rounded-full hover:bg-gray-100 transition-colors border">
-              Sejarah
-            </button>
+            {kategoriList.map((kategori) => (
+              <button
+                key={kategori}
+                onClick={() => setFilterKategori(kategori)}
+                className={`px-6 py-2 rounded-full transition-colors ${
+                  filterKategori === kategori
+                    ? 'bg-[#204357] text-white'
+                    : 'bg-white text-gray-700 hover:bg-gray-100 border'
+                }`}
+              >
+                {kategori}
+              </button>
+            ))}
           </div>
         </div>
       </section>
@@ -108,12 +72,12 @@ export default function WisataPage() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 animate-fade-in">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Destinasi Populer</h2>
-            <p className="text-lg text-gray-600">Tempat-tempat menakjubkan yang wajib dikunjungi</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Destinasi Wisata</h2>
+            <p className="text-lg text-gray-600">Jelajahi keindahan alam dan budaya Desa Tianyar</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {destinasi.map((item, index) => (
+            {destinasiFiltered.map((item, index) => (
               <div key={index} className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden animate-slide-up">
                 <div className="relative h-48 overflow-hidden">
                   <Image
@@ -135,9 +99,12 @@ export default function WisataPage() {
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">{item.nama}</h3>
                   <p className="text-gray-600 mb-4 text-sm">{item.deskripsi}</p>
-                  <button className="w-full bg-[#204357] text-white py-2 rounded-lg hover:bg-[#1a3a4a] transition-colors">
+                  <Link 
+                    href={`/wisata/${item.id}`}
+                    className="block w-full bg-[#204357] text-white py-2 rounded-lg hover:bg-[#1a3a4a] transition-colors text-center"
+                  >
                     Lihat Detail
-                  </button>
+                  </Link>
                 </div>
               </div>
             ))}
@@ -200,14 +167,11 @@ export default function WisataPage() {
       {/* CTA Section */}
       <section className="py-16 bg-[#204357] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Siap Menjelajahi Desa Tianyar?</h2>
-          <p className="text-xl mb-8 opacity-90">Hubungi guide lokal kami untuk pengalaman wisata yang tak terlupakan</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Butuh Bantuan?</h2>
+          <p className="text-xl mb-8 opacity-90">Hubungi guide lokal untuk informasi lebih lanjut</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-[#204357] px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
               Hubungi Guide
-            </button>
-            <button className="bg-amber-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-amber-600 transition-colors">
-              Download Peta
             </button>
           </div>
         </div>

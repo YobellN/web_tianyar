@@ -3,22 +3,22 @@ import Image from "next/image";
 export default function NewsSection() {
   const news = [
     {
-      title: "Festival Budaya Tianyar 2025",
-      excerpt: "Perayaan tahunan yang menampilkan berbagai pertunjukan seni dan budaya tradisional Bali",
+      title: "Pelatihan Digital Marketing untuk UMKM",
+      excerpt: "Program pelatihan pemasaran digital untuk meningkatkan penjualan UMKM lokal",
+      date: "20 Januari 2025",
+      image: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=400"
+    },
+    {
+      title: "Perbaikan Jalan Menuju Pantai",
+      excerpt: "Perbaikan akses jalan menuju destinasi wisata pantai untuk kemudahan wisatawan",
       date: "15 Januari 2025",
-      image: "/wisata/savana.png"
+      image: "https://images.pexels.com/photos/1666021/pexels-photo-1666021.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
     {
-      title: "Pembangunan Infrastruktur Jalan Desa",
-      excerpt: "Proyek perbaikan jalan utama desa untuk meningkatkan aksesibilitas wisatawan",
+      title: "Festival Budaya Desa Tianyar",
+      excerpt: "Perayaan budaya tahunan dengan pertunjukan seni tradisional dan pameran UMKM",
       date: "10 Januari 2025",
-      image: "/wisata/savana.png"
-    },
-    {
-      title: "Pelatihan UMKM Digital Marketing",
-      excerpt: "Program pelatihan untuk meningkatkan kemampuan pemasaran digital pelaku UMKM",
-      date: "5 Januari 2025",
-      image: "/wisata/savana.png"
+      image: "https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=400"
     }
   ];
 
@@ -65,7 +65,7 @@ export default function NewsSection() {
         
         <div className="text-center mt-8">
           <button className="bg-[#204357] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#1a3a4a] transition-colors duration-200">
-            Lihat Semua Berita
+            Berita Lainnya
           </button>
         </div>
       </div>
