@@ -33,7 +33,8 @@ export default function DetailWisataPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-24">
+      <section className="relative">
+        <div className="absolute top-0 w-full h-24 bg-gradient-to-b from-black/50 to-transparent z-10"></div>
         <div className="relative h-96 overflow-hidden">
           <Image
             src={wisata.gambar}

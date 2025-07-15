@@ -70,6 +70,13 @@ export default function Header() {
               }`}>
                 Berita
               </Link>
+              <Link href="/banjar" className={`px-3 py-2 text-sm font-medium transition-colors duration-300 ${
+                isScrolled 
+                  ? 'text-gray-600 hover:text-[#204357]' 
+                  : 'text-white/90 hover:text-white'
+              }`}>
+                Banjar
+              </Link>
             </div>
           </nav>
 
@@ -123,6 +130,13 @@ export default function Header() {
                   : 'text-white/90 hover:text-white'
               }`}>
                 Berita
+              </Link>
+              <Link href="/banjar" className={`block px-3 py-2 text-base font-medium transition-colors duration-300 ${
+                isScrolled 
+                  ? 'text-gray-600 hover:text-[#204357]' 
+                  : 'text-white/90 hover:text-white'
+              }`}>
+                Banjar
               </Link>
             </div>
           </div>

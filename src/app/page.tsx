@@ -14,7 +14,6 @@ export default function Home() {
       <Header />
       <Hero />
       <VideoProfile />
-      <InfoCards />
       <Statistics />
       <NewsSection />
       <Footer />
