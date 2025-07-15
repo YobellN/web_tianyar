@@ -33,7 +33,7 @@ export default function DetailWisataPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-20">
+      <section className="relative pt-24">
         <div className="relative h-96 overflow-hidden">
           <Image
             src={wisata.gambar}
@@ -42,18 +42,18 @@ export default function DetailWisataPage() {
             className="object-cover"
           />
           <div className="absolute inset-0 bg-black/40"></div>
-          <div className="absolute bottom-8 left-8 text-white">
+          <div className="absolute bottom-8 left-4 sm:left-8 text-white">
             <div className="mb-2">
               <span className="bg-[#204357] px-3 py-1 rounded-full text-sm font-medium">
                 {wisata.kategori}
               </span>
             </div>
-            <h1 className="text-4xl font-bold mb-2">{wisata.nama}</h1>
+            <h1 className="text-2xl sm:text-4xl font-bold mb-2">{wisata.nama}</h1>
             <div className="flex items-center">
               <span className="text-amber-400">⭐</span>
               <span className="ml-1 font-medium">{wisata.rating}</span>
               <span className="mx-2">•</span>
-              <span>{wisata.lokasi}</span>
+              <span className="text-sm sm:text-base">{wisata.lokasi}</span>
             </div>
           </div>
         </div>
