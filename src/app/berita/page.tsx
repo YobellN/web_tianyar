@@ -6,8 +6,8 @@ import Image from 'next/image';
 
 export default function BeritaPage() {
   const beritaUtama = {
-    judul: "Program Digitalisasi UMKM Desa Tianyar Diluncurkan",
-    excerpt: "Inisiatif baru untuk membantu UMKM lokal memasarkan produk secara online dan meningkatkan penjualan melalui platform digital",
+    judul: "Program Bantuan UMKM Desa Tianyar Dimulai",
+    excerpt: "Program baru untuk membantu UMKM lokal jualan online dan meningkatkan penjualan",
     tanggal: "20 Januari 2025",
     gambar: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800",
     kategori: "Ekonomi"
@@ -15,43 +15,43 @@ export default function BeritaPage() {
 
   const beritaTerbaru = [
     {
-      judul: "Perbaikan Akses Jalan Menuju Destinasi Wisata",
-      excerpt: "Pemerintah desa melakukan perbaikan jalan untuk memudahkan akses wisatawan ke berbagai destinasi",
+      judul: "Jalan ke Tempat Wisata Diperbaiki",
+      excerpt: "Pemerintah desa perbaiki jalan supaya wisatawan lebih mudah ke tempat wisata",
       tanggal: "18 Januari 2025",
       gambar: "https://images.pexels.com/photos/1666021/pexels-photo-1666021.jpeg?auto=compress&cs=tinysrgb&w=400",
       kategori: "Pembangunan"
     },
     {
-      judul: "Pelatihan Keterampilan untuk Pemuda Desa",
-      excerpt: "Program pelatihan keterampilan digital dan wirausaha untuk generasi muda Desa Tianyar",
+      judul: "Pelatihan untuk Pemuda Desa",
+      excerpt: "Program pelatihan digital dan wirausaha untuk anak muda Desa Tianyar",
       tanggal: "15 Januari 2025",
       gambar: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=400",
       kategori: "Pendidikan"
     },
     {
-      judul: "Festival Budaya Desa Tianyar 2025",
-      excerpt: "Perayaan budaya tahunan dengan pertunjukan seni tradisional dan pameran produk UMKM lokal",
+      judul: "Acara Budaya Desa Tianyar 2025",
+      excerpt: "Acara budaya tahunan dengan pertunjukan seni dan pameran produk UMKM",
       tanggal: "12 Januari 2025",
       gambar: "https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=400",
       kategori: "Budaya"
     },
     {
-      judul: "Program Bantuan Bibit untuk Petani Lokal",
-      excerpt: "Pemerintah desa memberikan bantuan bibit unggul untuk meningkatkan hasil pertanian",
+      judul: "Bantuan Bibit untuk Petani",
+      excerpt: "Pemerintah desa kasih bantuan bibit bagus untuk petani lokal",
       tanggal: "10 Januari 2025",
       gambar: "https://images.pexels.com/photos/1166209/pexels-photo-1166209.jpeg?auto=compress&cs=tinysrgb&w=400",
       kategori: "Pertanian"
     },
     {
-      judul: "Gotong Royong Pembersihan Pantai",
-      excerpt: "Kegiatan bersih-bersih pantai melibatkan seluruh masyarakat untuk menjaga kelestarian lingkungan",
+      judul: "Gotong Royong Bersih Pantai",
+      excerpt: "Warga bergotong royong bersih-bersih pantai untuk jaga lingkungan",
       tanggal: "8 Januari 2025",
       gambar: "https://images.pexels.com/photos/1166209/pexels-photo-1166209.jpeg?auto=compress&cs=tinysrgb&w=400",
       kategori: "Lingkungan"
     },
     {
-      judul: "Pembentukan Kelompok Sadar Wisata",
-      excerpt: "Inisiatif pembentukan pokdarwis untuk mengembangkan dan mengelola potensi wisata desa",
+      judul: "Kelompok Sadar Wisata Dibentuk",
+      excerpt: "Dibentuk kelompok sadar wisata untuk kembangkan wisata desa",
       tanggal: "5 Januari 2025",
       gambar: "https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=400",
       kategori: "Pariwisata"
@@ -143,7 +143,7 @@ export default function BeritaPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 animate-fade-in">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Berita Terbaru</h2>
-            <p className="text-lg text-gray-600">Ikuti perkembangan dan kegiatan terbaru di Desa Tianyar</p>
+            <p className="text-lg text-gray-600">Kegiatan terbaru di Desa Tianyar</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -169,7 +169,7 @@ export default function BeritaPage() {
                   </h3>
                   <p className="text-gray-600 mb-4 text-sm">{berita.excerpt}</p>
                   <button className="text-[#204357] font-medium hover:text-[#1a3a4a] flex items-center text-sm">
-                    Baca Selengkapnya
+                    Selengkapnya
                     <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
@@ -181,7 +181,7 @@ export default function BeritaPage() {
 
           <div className="text-center mt-12">
             <button className="bg-[#204357] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#1a3a4a] transition-colors">
-              Muat Berita Lainnya
+              Lihat Lainnya
             </button>
           </div>
         </div>
@@ -191,8 +191,8 @@ export default function BeritaPage() {
       <section className="py-16 bg-amber-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 animate-fade-in">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Pengumuman Penting</h2>
-            <p className="text-lg text-gray-600">Informasi penting untuk masyarakat desa</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Pengumuman</h2>
+            <p className="text-lg text-gray-600">Informasi penting untuk warga desa</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -202,8 +202,8 @@ export default function BeritaPage() {
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">Pelayanan Kantor Desa</h3>
                   <p className="text-gray-600 mb-3 text-sm">
-                    Kantor desa buka Senin-Jumat pukul 08:00-15:00 WITA. 
-                    Pelayanan administrasi kependudukan dan surat-menyurat.
+                    Kantor desa buka Senin-Jumat jam 08:00-15:00 WITA. 
+                    Melayani urusan surat-menyurat dan administrasi.
                   </p>
                   <span className="text-sm text-amber-700 font-medium">Info: (0363) 123456</span>
                 </div>
@@ -216,8 +216,7 @@ export default function BeritaPage() {
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">Program Penghijauan</h3>
                   <p className="text-gray-600 mb-3 text-sm">
-                    Program penanaman pohon di area desa untuk menjaga kelestarian lingkungan 
-                    dan mencegah erosi tanah.
+                    Program tanam pohon di desa untuk jaga lingkungan dan cegah longsor.
                   </p>
                   <span className="text-sm text-green-700 font-medium">Setiap hari Minggu pagi</span>
                 </div>
@@ -230,8 +229,8 @@ export default function BeritaPage() {
       {/* Newsletter Subscription */}
       <section className="py-16 bg-[#204357] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Ikuti Perkembangan Desa</h2>
-          <p className="text-xl mb-8 opacity-90">Dapatkan informasi terbaru tentang kegiatan dan program desa</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Ikuti Info Desa</h2>
+          <p className="text-xl mb-8 opacity-90">Dapatkan info terbaru tentang kegiatan desa</p>
 
           <div className="max-w-md mx-auto">
             <div className="flex flex-col sm:flex-row gap-4">
@@ -245,7 +244,7 @@ export default function BeritaPage() {
               </button>
             </div>
             <p className="text-sm opacity-75 mt-3">
-              Informasi hanya tentang kegiatan desa. Tidak ada spam.
+              Hanya info kegiatan desa. Tidak ada spam.
             </p>
           </div>
         </div>

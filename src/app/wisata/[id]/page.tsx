@@ -72,7 +72,7 @@ export default function DetailWisataPage() {
 
               <div className="mb-8">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Fasilitas</h3>
-                <div className="grid grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 gap-3">
                   {wisata.fasilitas.map((fasilitas, index) => (
                     <div key={index} className="flex items-center">
                       <span className="w-2 h-2 bg-[#204357] rounded-full mr-3"></span>
@@ -127,12 +127,9 @@ export default function DetailWisataPage() {
                 </div>
 
                 <div className="mt-6 pt-6 border-t border-gray-200">
-                  <button className="w-full bg-[#204357] text-white py-3 rounded-lg font-medium hover:bg-[#1a3a4a] transition-colors mb-3">
-                    Lihat di Maps
-                  </button>
                   <Link 
                     href="/wisata"
-                    className="block w-full text-center border border-gray-300 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors"
+                    className="block w-full text-center bg-[#204357] text-white py-3 rounded-lg font-medium hover:bg-[#1a3a4a] transition-colors mb-3"
                   >
                     Kembali ke Wisata
                   </Link>

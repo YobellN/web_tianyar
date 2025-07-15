@@ -1,10 +1,10 @@
 export const statistikData = {
   penduduk: "3.247",
-  keluarga: "812",
-  destinasiWisata: "12",
-  umkmAktif: "156",
+  keluarga: "812", 
+  destinasiWisata: "6",
+  umkmAktif: "45",
   luasWilayah: "847",
-  banjarDinas: "5"
+  banjarDinas: "4"
 };
 
 export const demografiData = [

@@ -4,7 +4,7 @@ export default function Statistics() {
   const stats = [
     { number: statistikData.penduduk, label: "Penduduk", icon: "👥" },
     { number: statistikData.keluarga, label: "Keluarga", icon: "🏠" },
-    { number: statistikData.destinasiWisata, label: "Destinasi Wisata", icon: "🏞️" },
+    { number: statistikData.destinasiWisata, label: "Tempat Wisata", icon: "🏞️" },
     { number: statistikData.umkmAktif, label: "UMKM Aktif", icon: "🏪" }
   ];
 
@@ -12,9 +12,9 @@ export default function Statistics() {
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 animate-fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Data Desa</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Data Desa Tianyar</h2>
           <p className="text-lg text-gray-600">
-            Informasi terkini tentang Desa Tianyar
+            Informasi terbaru tentang desa
           </p>
         </div>
         

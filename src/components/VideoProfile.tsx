@@ -26,26 +26,23 @@ export default function VideoProfile() {
             </div>
             
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Mengenal Lebih Dekat Desa Tianyar
+              Tentang Desa Tianyar
             </h2>
             
             <div className="space-y-4 text-gray-600 mb-8">
               <p className="leading-relaxed">
-                Desa Tianyar terletak di Kecamatan Kubu, Kabupaten Karangasem, Bali Timur. 
-                Desa ini memiliki potensi wisata alam yang indah dengan pantai, bukit, dan 
-                pemandangan laut yang menawan.
+                Desa Tianyar terletak di Kecamatan Kubu, Kabupaten Karangasem. 
+                Desa ini punya pantai, bukit, dan pemandangan laut yang bagus untuk wisata.
               </p>
               
               <p className="leading-relaxed">
-                Dengan luas wilayah 847 hektar dan penduduk 3.247 jiwa, desa ini terbagi 
-                menjadi 5 banjar dinas. Masyarakat bermata pencaharian utama sebagai petani, 
-                nelayan, dan pelaku UMKM.
+                Luas desa 847 hektar dengan 3.247 penduduk yang terbagi dalam 4 banjar. 
+                Warga bekerja sebagai petani, nelayan, dan punya usaha kecil.
               </p>
               
               <p className="leading-relaxed">
-                Desa Tianyar terus mengembangkan potensi wisata dan ekonomi kreatif untuk 
-                meningkatkan kesejahteraan masyarakat dengan tetap menjaga kelestarian alam 
-                dan budaya lokal.
+                Desa terus mengembangkan wisata dan usaha lokal untuk kesejahteraan warga 
+                sambil menjaga alam dan budaya setempat.
               </p>
             </div>
 
@@ -57,20 +54,20 @@ export default function VideoProfile() {
               </div>
               <div className="bg-gray-50 rounded-lg p-4">
                 <div className="text-2xl font-bold text-[#204357] mb-1">3.247</div>
-                <div className="text-sm text-gray-600">Jiwa Penduduk</div>
+                <div className="text-sm text-gray-600">Penduduk</div>
               </div>
               <div className="bg-gray-50 rounded-lg p-4">
-                <div className="text-2xl font-bold text-[#204357] mb-1">5</div>
-                <div className="text-sm text-gray-600">Banjar Dinas</div>
+                <div className="text-2xl font-bold text-[#204357] mb-1">4</div>
+                <div className="text-sm text-gray-600">Banjar</div>
               </div>
               <div className="bg-gray-50 rounded-lg p-4">
-                <div className="text-2xl font-bold text-[#204357] mb-1">156</div>
-                <div className="text-sm text-gray-600">UMKM Aktif</div>
+                <div className="text-2xl font-bold text-[#204357] mb-1">45</div>
+                <div className="text-sm text-gray-600">UMKM</div>
               </div>
             </div>
 
             <button className="bg-[#204357] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#1a3a4a] transition-colors duration-200">
-              Pelajari Lebih Lanjut
+              Selengkapnya
             </button>
           </div>
         </div>

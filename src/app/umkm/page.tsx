@@ -79,8 +79,7 @@ export default function UMKMPage() {
                   <Image
                     src={umkm.gambar}
                     alt={umkm.nama}
-                    layout="fill"
-                    objectFit="cover"
+                    fill
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute top-4 left-4">
@@ -123,33 +122,33 @@ export default function UMKMPage() {
       <section className="py-16 bg-amber-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 animate-fade-in">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Program Pemberdayaan</h2>
-            <p className="text-lg text-gray-600">Inisiatif untuk mengembangkan UMKM lokal</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Dukungan UMKM</h2>
+            <p className="text-lg text-gray-600">Program untuk mengembangkan usaha lokal</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 p-6 text-center animate-slide-up">
               <div className="text-3xl mb-4">📚</div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Pelatihan Bisnis</h3>
-              <p className="text-gray-600 text-sm">Workshop manajemen usaha dan keuangan</p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Pelatihan Usaha</h3>
+              <p className="text-gray-600 text-sm">Bimbingan mengelola usaha dan keuangan</p>
             </div>
 
             <div className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 p-6 text-center animate-slide-up">
               <div className="text-3xl mb-4">💻</div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Digital Marketing</h3>
-              <p className="text-gray-600 text-sm">Pelatihan pemasaran online dan media sosial</p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Pemasaran Online</h3>
+              <p className="text-gray-600 text-sm">Belajar jualan online dan media sosial</p>
             </div>
 
             <div className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 p-6 text-center animate-slide-up">
               <div className="text-3xl mb-4">💰</div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Akses Permodalan</h3>
-              <p className="text-gray-600 text-sm">Bantuan modal usaha dengan bunga rendah</p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Bantuan Modal</h3>
+              <p className="text-gray-600 text-sm">Akses modal usaha untuk pengembangan</p>
             </div>
 
             <div className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 p-6 text-center animate-slide-up">
               <div className="text-3xl mb-4">🏪</div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Pasar Online</h3>
-              <p className="text-gray-600 text-sm">Platform e-commerce untuk produk lokal</p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Tempat Jualan</h3>
+              <p className="text-gray-600 text-sm">Bantuan tempat dan platform jualan</p>
             </div>
           </div>
         </div>
@@ -206,8 +205,8 @@ export default function UMKMPage() {
       {/* CTA Section */}
       <section className="py-16 bg-[#204357] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Ingin Bergabung?</h2>
-          <p className="text-xl mb-8 opacity-90">Daftarkan UMKM Anda untuk mendapat dukungan pengembangan</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Punya Usaha?</h2>
+          <p className="text-xl mb-8 opacity-90">Daftarkan usaha Anda untuk mendapat dukungan</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-[#204357] px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
               Daftar UMKM

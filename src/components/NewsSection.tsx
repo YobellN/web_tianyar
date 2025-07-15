@@ -3,20 +3,20 @@ import Image from "next/image";
 export default function NewsSection() {
   const news = [
     {
-      title: "Pelatihan Digital Marketing untuk UMKM",
-      excerpt: "Program pelatihan pemasaran digital untuk meningkatkan penjualan UMKM lokal",
+      title: "Pelatihan Jualan Online untuk UMKM",
+      excerpt: "Program belajar jualan online untuk UMKM desa agar bisa jual lebih banyak",
       date: "20 Januari 2025",
       image: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
     {
-      title: "Perbaikan Jalan Menuju Pantai",
-      excerpt: "Perbaikan akses jalan menuju destinasi wisata pantai untuk kemudahan wisatawan",
+      title: "Jalan ke Pantai Diperbaiki",
+      excerpt: "Jalan menuju pantai diperbaiki supaya wisatawan lebih mudah berkunjung",
       date: "15 Januari 2025",
       image: "https://images.pexels.com/photos/1666021/pexels-photo-1666021.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
     {
-      title: "Festival Budaya Desa Tianyar",
-      excerpt: "Perayaan budaya tahunan dengan pertunjukan seni tradisional dan pameran UMKM",
+      title: "Acara Budaya Desa Tianyar",
+      excerpt: "Acara budaya tahunan dengan pertunjukan seni dan pameran produk UMKM",
       date: "10 Januari 2025",
       image: "https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=400"
     }
@@ -27,10 +27,10 @@ export default function NewsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Berita & Kegiatan Terbaru
+            Berita & Kegiatan
           </h2>
           <p className="text-lg text-gray-600">
-            Ikuti perkembangan dan kegiatan terbaru di Desa Tianyar
+            Kegiatan terbaru di Desa Tianyar
           </p>
         </div>
         
@@ -53,7 +53,7 @@ export default function NewsSection() {
                 </h3>
                 <p className="text-gray-600 mb-4 text-sm">{item.excerpt}</p>
                 <button className="text-[#204357] font-medium hover:text-[#1a3a4a] flex items-center text-sm">
-                  Baca Selengkapnya
+                  Selengkapnya
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
@@ -65,7 +65,7 @@ export default function NewsSection() {
         
         <div className="text-center mt-8">
           <button className="bg-[#204357] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#1a3a4a] transition-colors duration-200">
-            Berita Lainnya
+            Lihat Semua
           </button>
         </div>
       </div>
