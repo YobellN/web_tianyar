@@ -46,18 +46,6 @@ export default function NewsSection() {
             </div>
           ))}
         </div>
-        
-        <div className="text-center mt-8">
-          <div className="bg-gradient-to-r from-[#204357] to-blue-700 text-white rounded-xl p-6 max-w-2xl mx-auto">
-            <h3 className="text-xl font-bold mb-2">Kontak Kantor Desa</h3>
-            <p className="text-sm opacity-90 mb-3">Untuk informasi lebih lanjut tentang layanan desa</p>
-            <div className="text-sm">
-              <p>📍 Kantor Desa Tianyar, Karangasem, Bali</p>
-              <p>📞 +62 xxx-xxxx-xxxx</p>
-              <p>✉️ info@desatianyar.id</p>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

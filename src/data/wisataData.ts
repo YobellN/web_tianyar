@@ -17,109 +17,178 @@ export const wisataData: WisataItem[] = [
   {
     id: "pantai-tianyar",
     nama: "Pantai Tianyar",
-    deskripsi: "Pantai dengan pasir hitam vulkanik dan pemandangan laut yang indah",
-    deskripsiLengkap: "Pantai Tianyar adalah pantai dengan karakteristik pasir hitam vulkanik yang khas Bali Timur. Pantai ini menawarkan pemandangan laut lepas yang luas dengan ombak yang cukup tenang. Cocok untuk bersantai, menikmati sunset, dan aktivitas memancing. Pantai ini masih alami dan belum terlalu ramai pengunjung.",
-    gambar: "https://images.pexels.com/photos/1166209/pexels-photo-1166209.jpeg?auto=compress&cs=tinysrgb&w=800",
+    deskripsi: "Pantai dengan pasir hitam vulkanik dan pemandangan Gunung Agung",
+    deskripsiLengkap:
+      "Pantai Tianyar adalah destinasi wisata alam di pesisir utara Bali yang memiliki pasir hitam vulkanik, suasana tenang, dan pemandangan Gunung Agung yang megah. Pantai ini juga menjadi habitat konservasi terumbu karang dan tempat warga lokal beraktivitas seperti memancing dan mencari kerang.",
+    gambar:
+      "https://images.pexels.com/photos/1166209/pexels-photo-1166209.jpeg?auto=compress&cs=tinysrgb&w=800",
     kategori: "Pantai",
-    rating: 4.3,
+    rating: 4.4,
     lokasi: "Desa Tianyar, Kubu, Karangasem",
     jamBuka: "24 jam",
     tiketMasuk: "Gratis",
-    fasilitas: ["Parkir", "Warung lokal", "Toilet umum"],
+    fasilitas: ["Parkir", "Warung lokal", "Tempat duduk"],
     tips: [
-      "Datang sore hari untuk menikmati sunset",
-      "Bawa alas kaki yang kuat karena pasir vulkanik",
-      "Hati-hati dengan ombak saat berenang"
+      "Bawa topi atau payung karena area cukup terbuka",
+      "Datang pagi hari untuk cuaca sejuk",
+      "Cocok untuk healing dan jalan santai"
     ]
   },
   {
-    id: "bukit-asah",
-    nama: "Bukit Asah",
-    deskripsi: "Spot terbaik untuk melihat sunrise dengan pemandangan laut dan pulau",
-    deskripsiLengkap: "Bukit Asah terletak di sebelah timur Desa Tianyar dan merupakan spot favorit untuk menyaksikan matahari terbit. Dari atas bukit, pengunjung dapat melihat pemandangan laut lepas, Pulau Nusa Penida di kejauhan, dan aktivitas nelayan di pagi hari. Tempat ini juga populer untuk camping dan fotografi.",
-    gambar: "https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=800",
+    id: "savana-tianyar",
+    nama: "Savana Tianyar",
+    deskripsi: "Padang savana luas dengan pemandangan Gunung Agung",
+    deskripsiLengkap:
+      "Savana Tianyar adalah padang rumput luas yang terletak di kaki Gunung Agung, cocok untuk camping, bersepeda motor trail, atau sekadar menikmati pemandangan alam terbuka. Tempat ini populer di kalangan fotografer dan pencinta alam karena pemandangan sunrise dan sunset-nya yang memukau.",
+    gambar:
+      "https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=800",
     kategori: "Alam",
-    rating: 4.5,
-    lokasi: "Bukit Asah, Desa Tianyar",
-    jamBuka: "24 jam",
-    tiketMasuk: "Rp 5.000/orang",
-    fasilitas: ["Area parkir", "Spot camping", "Warung kopi"],
-    tips: [
-      "Datang jam 5 pagi untuk sunrise terbaik",
-      "Bawa jaket karena udara dingin di pagi hari",
-      "Berhati-hati saat berkendara di malam hari"
-    ]
-  },
-  {
-    id: "pura-goa-lawah",
-    nama: "Pura Goa Lawah",
-    deskripsi: "Pura suci dengan goa yang dihuni ribuan kelelawar",
-    deskripsiLengkap: "Pura Goa Lawah adalah salah satu pura penting di Bali yang terletak tidak jauh dari Desa Tianyar. Pura ini terkenal karena memiliki goa yang dihuni oleh ribuan kelelawar. Tempat ini memiliki nilai spiritual tinggi bagi umat Hindu dan menawarkan arsitektur pura yang indah dengan latar belakang laut.",
-    gambar: "https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&w=800",
-    kategori: "Budaya",
     rating: 4.6,
-    lokasi: "Pesinggahan, Klungkung (dekat Tianyar)",
-    jamBuka: "06:00 - 18:00 WITA",
-    tiketMasuk: "Rp 15.000/orang",
-    fasilitas: ["Parkir", "Toilet", "Warung", "Pemandu lokal"],
-    tips: [
-      "Kenakan pakaian sopan dan sarung",
-      "Hormati aturan dan tradisi setempat",
-      "Jangan gunakan flash saat foto di area goa"
-    ]
-  },
-  {
-    id: "taman-ujung",
-    nama: "Taman Ujung",
-    deskripsi: "Bekas istana air dengan arsitektur yang memadukan gaya Bali dan Eropa",
-    deskripsiLengkap: "Taman Ujung atau Taman Sukasada adalah bekas istana air yang dibangun oleh Raja Karangasem pada tahun 1909. Taman ini memiliki arsitektur unik yang memadukan gaya Bali, Jawa, dan Eropa. Terdapat kolam-kolam besar, jembatan, dan bangunan yang sangat fotogenik dengan latar belakang pemandangan laut.",
-    gambar: "https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&w=800",
-    kategori: "Sejarah",
-    rating: 4.7,
-    lokasi: "Tumbu, Karangasem (15 menit dari Tianyar)",
-    jamBuka: "08:00 - 18:00 WITA",
-    tiketMasuk: "Rp 20.000/orang",
-    fasilitas: ["Parkir luas", "Toilet", "Warung", "Area foto"],
-    tips: [
-      "Datang pagi atau sore untuk foto terbaik",
-      "Jelajahi semua area taman",
-      "Bawa kamera untuk spot foto menarik"
-    ]
-  },
-  {
-    id: "pantai-virgin",
-    nama: "Pantai Virgin (Perasi)",
-    deskripsi: "Pantai tersembunyi dengan pasir putih dan air jernih",
-    deskripsiLengkap: "Pantai Virgin atau Pantai Perasi adalah pantai tersembunyi yang masih alami dengan pasir putih bersih dan air laut jernih. Pantai ini cocok untuk berenang, snorkeling, dan bersantai. Lokasinya yang agak tersembunyi membuat pantai ini tidak terlalu ramai dan masih mempertahankan keindahan alamnya.",
-    gambar: "https://images.pexels.com/photos/1166209/pexels-photo-1166209.jpeg?auto=compress&cs=tinysrgb&w=800",
-    kategori: "Pantai",
-    rating: 4.4,
-    lokasi: "Perasi, Karangasem (20 menit dari Tianyar)",
+    lokasi: "Perbukitan Desa Tianyar, Kubu, Karangasem",
     jamBuka: "24 jam",
-    tiketMasuk: "Rp 10.000/orang",
-    fasilitas: ["Parkir", "Warung sederhana", "Penyewaan alat snorkeling"],
+    tiketMasuk: "Gratis / Donasi sukarela",
+    fasilitas: ["Area camping", "Tempat parkir terbuka"],
     tips: [
-      "Bawa perlengkapan snorkeling sendiri",
-      "Datang pagi untuk air yang lebih jernih",
-      "Jaga kebersihan pantai"
+      "Gunakan kendaraan yang kuat untuk menuju lokasi",
+      "Bawa jaket karena angin cukup kencang",
+      "Jaga kebersihan dan jangan membuang sampah sembarangan"
     ]
   },
   {
-    id: "desa-tenganan",
-    nama: "Desa Tenganan",
-    deskripsi: "Desa tradisional Bali Aga dengan budaya yang masih asli",
-    deskripsiLengkap: "Desa Tenganan adalah salah satu desa Bali Aga (Bali asli) yang masih mempertahankan tradisi leluhur. Desa ini terkenal dengan kain tenun gringsing yang hanya diproduksi di sini. Pengunjung dapat melihat kehidupan masyarakat tradisional, arsitektur rumah adat, dan proses pembuatan kerajinan lokal.",
-    gambar: "https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=800",
-    kategori: "Budaya",
-    rating: 4.2,
-    lokasi: "Tenganan, Manggis, Karangasem",
-    jamBuka: "08:00 - 17:00 WITA",
-    tiketMasuk: "Rp 10.000/orang",
-    fasilitas: ["Parkir", "Toilet", "Toko kerajinan"],
+    id: "konservasi-terumbu-karang",
+    nama: "North Bali Reef Conservation",
+    deskripsi: "Program konservasi terumbu karang di pesisir Tianyar",
+    deskripsiLengkap:
+      "North Bali Reef Conservation adalah proyek lingkungan yang berbasis di Desa Tianyar. Program ini melibatkan relawan dari seluruh dunia untuk membangun struktur terumbu buatan dan mengedukasi masyarakat lokal tentang pentingnya menjaga ekosistem laut. Pengunjung bisa belajar langsung tentang konservasi dan melihat aktivitas penyelaman.",
+    gambar:
+      "https://images.pexels.com/photos/54322/starfish-underwater-reef-coral-54322.jpeg?auto=compress&cs=tinysrgb&w=800",
+    kategori: "Edukasi",
+    rating: 4.8,
+    lokasi: "Pantai Desa Tianyar, Kubu, Karangasem",
+    jamBuka: "09:00 - 17:00 WITA",
+    tiketMasuk: "Gratis (Donasi disarankan)",
+    fasilitas: ["Pusat informasi", "Relawan lokal", "Alat selam"],
     tips: [
-      "Hormati adat dan tradisi setempat",
-      "Jangan sembarangan mengambil foto",
-      "Beli kerajinan langsung dari pengrajin"
+      "Hubungi pengelola terlebih dahulu jika ingin tur edukasi",
+      "Gunakan alas kaki anti selip jika menyusuri pantai berbatu",
+      "Ikut serta dalam kegiatan relawan jika memungkinkan"
     ]
   }
 ];
+
+wisataData.push(
+  {
+    id: "pura-segara-tianyar",
+    nama: "Pura Segara Tianyar",
+    deskripsi: "Pura laut di pesisir Tianyar dengan nuansa spiritual",
+    deskripsiLengkap:
+      "Pura Segara Tianyar adalah tempat ibadah umat Hindu yang terletak di pinggir pantai Tianyar. Selain digunakan untuk upacara Melasti, pura ini juga memiliki pemandangan laut yang indah, menjadikannya tempat spiritual dan wisata religi yang menarik.",
+    gambar: "https://images.pexels.com/photos/374870/pexels-photo-374870.jpeg?auto=compress&cs=tinysrgb&w=800",
+    kategori: "Spiritual",
+    rating: 4.3,
+    lokasi: "Pesisir Desa Tianyar, Kubu, Karangasem",
+    jamBuka: "06:00 - 18:00 WITA",
+    tiketMasuk: "Gratis",
+    fasilitas: ["Parkir", "Tempat duduk", "Toilet"],
+    tips: [
+      "Kenakan pakaian adat atau pakaian sopan",
+      "Waktu terbaik: pagi atau sore",
+      "Jangan ganggu umat yang bersembahyang"
+    ]
+  },
+  {
+    id: "embung-tianyar",
+    nama: "Embung Tianyar",
+    deskripsi: "Waduk buatan untuk irigasi, cocok untuk wisata edukasi",
+    deskripsiLengkap:
+      "Embung Tianyar merupakan waduk kecil yang berfungsi sebagai cadangan air untuk irigasi sawah dan kebun warga. Tempat ini juga sering digunakan untuk edukasi pertanian, kegiatan Pramuka, dan rekreasi keluarga pada sore hari.",
+    gambar: "https://images.pexels.com/photos/666839/pexels-photo-666839.jpeg?auto=compress&cs=tinysrgb&w=800",
+    kategori: "Edukasi",
+    rating: 4.2,
+    lokasi: "Desa Tianyar Barat, Karangasem",
+    jamBuka: "08:00 - 17:00 WITA",
+    tiketMasuk: "Gratis",
+    fasilitas: ["Area duduk", "Papan edukasi", "Parkir"],
+    tips: [
+      "Bawa topi/sunblock jika siang hari",
+      "Cocok untuk kegiatan edukatif anak-anak",
+      "Bisa dijadikan tempat observasi burung lokal"
+    ]
+  },
+  {
+    id: "bukit-batu-kursi-tianyar",
+    nama: "Bukit Batu Kursi Tianyar",
+    deskripsi: "Bukit dengan jalur trekking ringan dan pemandangan laut",
+    deskripsiLengkap:
+      "Bukit Batu Kursi menawarkan pengalaman mendaki ringan dengan jalur alami di atas perbukitan Tianyar. Dari puncaknya, pengunjung dapat melihat laut Bali, Gunung Agung, serta padang savana yang luas. Cocok untuk pecinta alam dan olahraga ringan.",
+    gambar: "https://images.pexels.com/photos/672358/pexels-photo-672358.jpeg?auto=compress&cs=tinysrgb&w=800",
+    kategori: "Alam",
+    rating: 4.5,
+    lokasi: "Tianyar Tengah, Karangasem",
+    jamBuka: "05:00 - 18:00 WITA",
+    tiketMasuk: "Gratis",
+    fasilitas: ["Area parkir seadanya", "Batu duduk alami"],
+    tips: [
+      "Datang pagi hari agar tidak terlalu panas",
+      "Gunakan sepatu trekking/sandal gunung",
+      "Bawa air minum sendiri"
+    ]
+  },
+  {
+    id: "pusat-budaya-tianyar",
+    nama: "Pusat Budaya Desa Tianyar",
+    deskripsi: "Pusat pelestarian budaya lokal dan kerajinan tradisional",
+    deskripsiLengkap:
+      "Pusat Budaya Desa Tianyar adalah tempat pengembangan budaya dan seni tradisional seperti tari Bali, gamelan, dan kerajinan tangan. Di sini, pengunjung bisa belajar membuat anyaman, melihat pertunjukan tari, dan membeli produk lokal langsung dari warga.",
+    gambar: "https://images.pexels.com/photos/4473493/pexels-photo-4473493.jpeg?auto=compress&cs=tinysrgb&w=800",
+    kategori: "Budaya",
+    rating: 4.4,
+    lokasi: "Tianyar Tengah, Karangasem",
+    jamBuka: "08:00 - 17:00 WITA",
+    tiketMasuk: "Gratis / Donasi sukarela",
+    fasilitas: ["Pendopo budaya", "Pemandu lokal", "Toko kerajinan"],
+    tips: [
+      "Tanyakan jadwal pertunjukan kepada pengelola",
+      "Beli langsung dari pengrajin untuk dukung ekonomi lokal",
+      "Hormati proses pelatihan atau upacara adat"
+    ]
+  },
+  {
+    id: "spot-sunrise-seraya",
+    nama: "Spot Sunrise Seraya Barat",
+    deskripsi: "Spot puncak pegunungan untuk melihat matahari terbit",
+    deskripsiLengkap:
+      "Terletak di ketinggian barat daya Tianyar, spot ini menawarkan panorama menakjubkan saat matahari terbit, dengan latar Gunung Agung dan laut Bali. Jalur menuju lokasi cukup menantang, namun sebanding dengan keindahan alamnya.",
+    gambar: "https://images.pexels.com/photos/462118/pexels-photo-462118.jpeg?auto=compress&cs=tinysrgb&w=800",
+    kategori: "Alam",
+    rating: 4.7,
+    lokasi: "Seraya Barat, perbatasan Tianyar",
+    jamBuka: "24 jam",
+    tiketMasuk: "Gratis",
+    fasilitas: ["Tempat parkir alami", "Area tenda seadanya"],
+    tips: [
+      "Datang sebelum jam 5 pagi untuk sunrise",
+      "Gunakan kendaraan off-road",
+      "Bawa senter jika datang subuh"
+    ]
+  },
+  {
+    id: "kampung-inggris-tianyar",
+    nama: "Kampung Inggris Tianyar",
+    deskripsi: "Tempat belajar bahasa Inggris dan pengembangan pemuda",
+    deskripsiLengkap:
+      "Kampung Inggris Tianyar adalah pusat belajar informal yang digagas oleh pemuda desa untuk meningkatkan kemampuan bahasa Inggris warga lokal. Program ini terbuka untuk semua usia dan sering dikunjungi oleh relawan asing. Suasananya santai, edukatif, dan mendorong kepercayaan diri dalam berbicara.",
+    gambar: "https://images.pexels.com/photos/3184301/pexels-photo-3184301.jpeg?auto=compress&cs=tinysrgb&w=800",
+    kategori: "Edukasi",
+    rating: 4.9,
+    lokasi: "Tianyar Timur, Karangasem",
+    jamBuka: "Senin - Sabtu, 09:00 - 18:00 WITA",
+    tiketMasuk: "Gratis (donasi opsional)",
+    fasilitas: ["Ruang kelas terbuka", "Pustaka mini", "Wi-Fi terbatas"],
+    tips: [
+      "Datang dengan niat belajar dan terbuka berkomunikasi",
+      "Cocok untuk relawan atau pelajar lokal",
+      "Tanyakan jadwal kelas melalui sosial media mereka"
+    ]
+  }
+);

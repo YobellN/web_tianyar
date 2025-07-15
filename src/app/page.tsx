@@ -3,7 +3,6 @@
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import VideoProfile from '@/components/VideoProfile';
-import InfoCards from '@/components/InfoCards';
 import Statistics from '@/components/Statistics';
 import NewsSection from '@/components/NewsSection';
 import Footer from '@/components/Footer';

@@ -225,31 +225,6 @@ export default function BeritaPage() {
           </div>
         </div>
       </section>
-
-      {/* Newsletter Subscription */}
-      <section className="py-16 bg-[#204357] text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Ikuti Info Desa</h2>
-          <p className="text-xl mb-8 opacity-90">Dapatkan info terbaru tentang kegiatan desa</p>
-
-          <div className="max-w-md mx-auto">
-            <div className="flex flex-col sm:flex-row gap-4">
-              <input
-                type="email"
-                placeholder="Email Anda"
-                className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white"
-              />
-              <button className="bg-white text-[#204357] px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Berlangganan
-              </button>
-            </div>
-            <p className="text-sm opacity-75 mt-3">
-              Hanya info kegiatan desa. Tidak ada spam.
-            </p>
-          </div>
-        </div>
-      </section>
-
       <Footer />
     </div>
   );
