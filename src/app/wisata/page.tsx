@@ -153,6 +153,18 @@ export default function WisataPage() {
 
             <div className="bg-gradient-to-br from-amber-100 to-orange-100 rounded-xl p-6 animate-slide-up">
               <h3 className="text-xl font-semibold text-amber-700 mb-4">Yang Perlu Dibawa</h3>
+              <ul className="space-y-2 text-gray-700 text-sm">
+                <li>• Kamera untuk mengabadikan momen</li>
+                <li>• Sunscreen dan topi</li>
+                <li>• Air minum yang cukup</li>
+                <li>• Sepatu yang nyaman</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
     </div>
   );
 }
