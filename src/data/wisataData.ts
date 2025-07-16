@@ -21,7 +21,7 @@ export const wisataData: WisataItem[] = [
     deskripsiLengkap:
       "Pantai Tianyar adalah destinasi wisata alam di pesisir utara Bali yang memiliki pasir hitam vulkanik, suasana tenang, dan pemandangan Gunung Agung yang megah. Pantai ini juga menjadi habitat konservasi terumbu karang dan tempat warga lokal beraktivitas seperti memancing dan mencari kerang.",
     gambar:
-      "https://images.pexels.com/photos/1166209/pexels-photo-1166209.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "/wisata/pantai_tianyar.jpg",
     kategori: "Pantai",
     rating: 4.4,
     lokasi: "Desa Tianyar, Kubu, Karangasem",
@@ -37,11 +37,11 @@ export const wisataData: WisataItem[] = [
   {
     id: "savana-tianyar",
     nama: "Savana Tianyar",
-    deskripsi: "Padang savana luas dengan pemandangan Gunung Agung",
+    deskripsi: "Padang savana luas dengan pemandangan ke Laut Bali",
     deskripsiLengkap:
       "Savana Tianyar adalah padang rumput luas yang terletak di kaki Gunung Agung, cocok untuk camping, bersepeda motor trail, atau sekadar menikmati pemandangan alam terbuka. Tempat ini populer di kalangan fotografer dan pencinta alam karena pemandangan sunrise dan sunset-nya yang memukau.",
     gambar:
-      "https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "/wisata/savana_tianyar.JPG",
     kategori: "Alam",
     rating: 4.6,
     lokasi: "Perbukitan Desa Tianyar, Kubu, Karangasem",
@@ -54,6 +54,25 @@ export const wisataData: WisataItem[] = [
       "Jaga kebersihan dan jangan membuang sampah sembarangan"
     ]
   },
+    {
+    id: "kampung-inggris-tianyar",
+    nama: "Kampung Inggris Tianyar",
+    deskripsi: "Tempat belajar bahasa Inggris dan pengembangan pemuda",
+    deskripsiLengkap:
+      "Kampung Inggris Tianyar adalah pusat belajar informal yang digagas oleh pemuda desa untuk meningkatkan kemampuan bahasa Inggris warga lokal. Program ini terbuka untuk semua usia dan sering dikunjungi oleh relawan asing. Suasananya santai, edukatif, dan mendorong kepercayaan diri dalam berbicara.",
+    gambar: "/wisata/kampung_inggris.jpg",
+    kategori: "Edukasi",
+    rating: 4.9,
+    lokasi: "Tianyar Timur, Karangasem",
+    jamBuka: "Senin - Sabtu, 09:00 - 18:00 WITA",
+    tiketMasuk: "Gratis (donasi opsional)",
+    fasilitas: ["Ruang kelas terbuka", "Pustaka mini", "Wi-Fi terbatas"],
+    tips: [
+      "Datang dengan niat belajar dan terbuka berkomunikasi",
+      "Cocok untuk relawan atau pelajar lokal",
+      "Tanyakan jadwal kelas melalui sosial media mereka"
+    ]
+  },
   {
     id: "konservasi-terumbu-karang",
     nama: "North Bali Reef Conservation",
@@ -61,7 +80,7 @@ export const wisataData: WisataItem[] = [
     deskripsiLengkap:
       "North Bali Reef Conservation adalah proyek lingkungan yang berbasis di Desa Tianyar. Program ini melibatkan relawan dari seluruh dunia untuk membangun struktur terumbu buatan dan mengedukasi masyarakat lokal tentang pentingnya menjaga ekosistem laut. Pengunjung bisa belajar langsung tentang konservasi dan melihat aktivitas penyelaman.",
     gambar:
-      "https://images.pexels.com/photos/54322/starfish-underwater-reef-coral-54322.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "/wisata/north_bali_reef_conservation.jpg",
     kategori: "Edukasi",
     rating: 4.8,
     lokasi: "Pantai Desa Tianyar, Kubu, Karangasem",
@@ -73,10 +92,7 @@ export const wisataData: WisataItem[] = [
       "Gunakan alas kaki anti selip jika menyusuri pantai berbatu",
       "Ikut serta dalam kegiatan relawan jika memungkinkan"
     ]
-  }
-];
-
-wisataData.push(
+  },
   {
     id: "pura-segara-tianyar",
     nama: "Pura Segara Tianyar",
@@ -171,24 +187,5 @@ wisataData.push(
       "Gunakan kendaraan off-road",
       "Bawa senter jika datang subuh"
     ]
-  },
-  {
-    id: "kampung-inggris-tianyar",
-    nama: "Kampung Inggris Tianyar",
-    deskripsi: "Tempat belajar bahasa Inggris dan pengembangan pemuda",
-    deskripsiLengkap:
-      "Kampung Inggris Tianyar adalah pusat belajar informal yang digagas oleh pemuda desa untuk meningkatkan kemampuan bahasa Inggris warga lokal. Program ini terbuka untuk semua usia dan sering dikunjungi oleh relawan asing. Suasananya santai, edukatif, dan mendorong kepercayaan diri dalam berbicara.",
-    gambar: "https://images.pexels.com/photos/3184301/pexels-photo-3184301.jpeg?auto=compress&cs=tinysrgb&w=800",
-    kategori: "Edukasi",
-    rating: 4.9,
-    lokasi: "Tianyar Timur, Karangasem",
-    jamBuka: "Senin - Sabtu, 09:00 - 18:00 WITA",
-    tiketMasuk: "Gratis (donasi opsional)",
-    fasilitas: ["Ruang kelas terbuka", "Pustaka mini", "Wi-Fi terbatas"],
-    tips: [
-      "Datang dengan niat belajar dan terbuka berkomunikasi",
-      "Cocok untuk relawan atau pelajar lokal",
-      "Tanyakan jadwal kelas melalui sosial media mereka"
-    ]
   }
-);
+];

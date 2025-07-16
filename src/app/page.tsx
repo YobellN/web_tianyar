@@ -3,7 +3,6 @@
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import VideoProfile from '@/components/VideoProfile';
-import Statistics from '@/components/Statistics';
 import NewsSection from '@/components/NewsSection';
 import Footer from '@/components/Footer';
 
@@ -13,7 +12,6 @@ export default function Home() {
       <Header />
       <Hero />
       <VideoProfile />
-      <Statistics />
       <NewsSection />
       <Footer />
     </div>

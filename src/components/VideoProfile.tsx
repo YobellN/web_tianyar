@@ -24,24 +24,24 @@ export default function VideoProfile() {
                 Video Profile
               </span>
             </div>
-            
+
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Tentang Desa Tianyar
             </h2>
-            
+
             <div className="space-y-4 text-gray-600 mb-8">
               <p className="leading-relaxed">
-                Desa Tianyar terletak di Kecamatan Kubu, Kabupaten Karangasem. 
+                Desa Tianyar terletak di Kecamatan Kubu, Kabupaten Karangasem.
                 Desa ini punya pantai, bukit, dan pemandangan laut yang bagus untuk wisata.
               </p>
-              
+
               <p className="leading-relaxed">
-                Luas desa 847 hektar dengan 3.247 penduduk yang terbagi dalam 4 banjar. 
+                Luas desa 847 hektar dengan 3.247 penduduk yang terbagi dalam 4 banjar.
                 Warga bekerja sebagai petani, nelayan, dan punya usaha kecil.
               </p>
-              
+
               <p className="leading-relaxed">
-                Desa terus mengembangkan wisata dan usaha lokal untuk kesejahteraan warga 
+                Desa terus mengembangkan wisata dan usaha lokal untuk kesejahteraan warga
                 sambil menjaga alam dan budaya setempat.
               </p>
             </div>
@@ -53,16 +53,16 @@ export default function VideoProfile() {
                 <div className="text-sm text-gray-600">Hektar Luas Wilayah</div>
               </div>
               <div className="bg-gray-50 rounded-lg p-4">
-                <div className="text-2xl font-bold text-[#204357] mb-1">3.247</div>
-                <div className="text-sm text-gray-600">Penduduk</div>
-              </div>
-              <div className="bg-gray-50 rounded-lg p-4">
                 <div className="text-2xl font-bold text-[#204357] mb-1">4</div>
                 <div className="text-sm text-gray-600">Banjar</div>
               </div>
               <div className="bg-gray-50 rounded-lg p-4">
-                <div className="text-2xl font-bold text-[#204357] mb-1">45</div>
-                <div className="text-sm text-gray-600">UMKM</div>
+                <div className="text-2xl font-bold text-[#204357] mb-1">14865</div>
+                <div className="text-sm text-gray-600">Penduduk</div>
+              </div>
+              <div className="bg-gray-50 rounded-lg p-4">
+                <div className="text-2xl font-bold text-[#204357] mb-1">3775</div>
+                <div className="text-sm text-gray-600">Keluarga</div>
               </div>
             </div>
 
