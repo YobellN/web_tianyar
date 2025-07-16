@@ -21,7 +21,7 @@ export const wisataData: WisataItem[] = [
     deskripsiLengkap:
       "Pantai Tianyar adalah destinasi wisata alam di pesisir utara Bali yang memiliki pasir hitam vulkanik, suasana tenang, dan pemandangan Gunung Agung yang megah. Pantai ini juga menjadi habitat konservasi terumbu karang dan tempat warga lokal beraktivitas seperti memancing dan mencari kerang.",
     gambar:
-      "/wisata/pantai_tianyar.jpg",
+      "/wisata/pantai_tianyar.JPG",
     kategori: "Pantai",
     rating: 4.4,
     lokasi: "Desa Tianyar, Kubu, Karangasem",
@@ -60,7 +60,7 @@ export const wisataData: WisataItem[] = [
     deskripsi: "Tempat belajar bahasa Inggris dan pengembangan pemuda",
     deskripsiLengkap:
       "Kampung Inggris Tianyar adalah pusat belajar informal yang digagas oleh pemuda desa untuk meningkatkan kemampuan bahasa Inggris warga lokal. Program ini terbuka untuk semua usia dan sering dikunjungi oleh relawan asing. Suasananya santai, edukatif, dan mendorong kepercayaan diri dalam berbicara.",
-    gambar: "/wisata/kampung_inggris.jpg",
+    gambar: "/wisata/kampung_inggris.JPG",
     kategori: "Edukasi",
     rating: 4.9,
     lokasi: "Tianyar Timur, Karangasem",
@@ -80,7 +80,7 @@ export const wisataData: WisataItem[] = [
     deskripsiLengkap:
       "North Bali Reef Conservation adalah proyek lingkungan yang berbasis di Desa Tianyar. Program ini melibatkan relawan dari seluruh dunia untuk membangun struktur terumbu buatan dan mengedukasi masyarakat lokal tentang pentingnya menjaga ekosistem laut. Pengunjung bisa belajar langsung tentang konservasi dan melihat aktivitas penyelaman.",
     gambar:
-      "/wisata/north_bali_reef_conservation.jpg",
+      "/wisata/north_bali_reef_conservation.JPG",
     kategori: "Edukasi",
     rating: 4.8,
     lokasi: "Pantai Desa Tianyar, Kubu, Karangasem",
