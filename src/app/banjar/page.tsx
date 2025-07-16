@@ -1,11 +1,52 @@
 'use client';
 
+import { useEffect } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import JsonLd from '@/components/JsonLd';
 
 export default function BanjarPage() {
+  useEffect(() => {
+    document.title = 'Banjar Dinas | Desa Tianyar';
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Informasi lengkap tentang 4 Banjar Dinas di Desa Tianyar: Paleg, Tunas Sari, Eka Adnyana, dan Dharma Winangun.');
+    }
+  }, []);
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'AdministrativeArea',
+    name: 'Banjar Dinas Desa Tianyar',
+    description: 'Pembagian wilayah administratif Desa Tianyar menjadi 4 Banjar Dinas',
+    url: 'https://desatianyar.id/banjar',
+    containsPlace: [
+      {
+        '@type': 'Place',
+        name: 'Banjar Dinas Paleg',
+        description: 'Banjar Dinas di wilayah utara Desa Tianyar'
+      },
+      {
+        '@type': 'Place', 
+        name: 'Banjar Dinas Tunas Sari',
+        description: 'Banjar Dinas di wilayah tengah Desa Tianyar'
+      },
+      {
+        '@type': 'Place',
+        name: 'Banjar Dinas Eka Adnyana', 
+        description: 'Banjar Dinas di wilayah timur Desa Tianyar'
+      },
+      {
+        '@type': 'Place',
+        name: 'Banjar Dinas Dharma Winangun',
+        description: 'Banjar Dinas di wilayah selatan Desa Tianyar'
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen">
+      <JsonLd data={jsonLd} />
       <Header />
       <section className="relative bg-gradient-to-br from-[#204357] to-blue-800 text-white">
         <div

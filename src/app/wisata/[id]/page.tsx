@@ -1,17 +1,29 @@
 'use client';
 
+import { useEffect } from 'react';
 import { useParams } from 'next/navigation';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
 import Link from 'next/link';
 import { wisataData } from '@/data/wisataData';
+import JsonLd from '@/components/JsonLd';
 
 export default function DetailWisataPage() {
   const params = useParams();
   const id = params.id as string;
   
   const wisata = wisataData.find(item => item.id === id);
+
+  useEffect(() => {
+    if (wisata) {
+      document.title = `${wisata.nama} | Desa Tianyar`;
+      const metaDescription = document.querySelector('meta[name="description"]');
+      if (metaDescription) {
+        metaDescription.setAttribute('content', `${wisata.deskripsiLengkap.substring(0, 160)}...`);
+      }
+    }
+  }, [wisata]);
 
   if (!wisata) {
     return (
@@ -28,8 +40,37 @@ export default function DetailWisataPage() {
     );
   }
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'TouristAttraction',
+    name: wisata.nama,
+    description: wisata.deskripsiLengkap,
+    image: wisata.gambar,
+    url: `https://desatianyar.id/wisata/${wisata.id}`,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: wisata.lokasi,
+      addressLocality: 'Tianyar',
+      addressRegion: 'Karangasem',
+      addressCountry: 'ID'
+    },
+    openingHours: wisata.jamBuka,
+    isAccessibleForFree: wisata.tiketMasuk === 'Gratis',
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: wisata.rating,
+      bestRating: 5,
+      worstRating: 1
+    },
+    amenityFeature: wisata.fasilitas.map(fasilitas => ({
+      '@type': 'LocationFeatureSpecification',
+      name: fasilitas
+    }))
+  };
+
   return (
     <div className="min-h-screen">
+      <JsonLd data={jsonLd} />
       <Header />
       
       {/* Hero Section */}

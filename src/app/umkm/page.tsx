@@ -1,12 +1,22 @@
 'use client';
 
+import { useEffect } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
 import { useState } from 'react';
 import { umkmData } from '@/data/umkmData';
+import JsonLd from '@/components/JsonLd';
 
 export default function UMKMPage() {
+  useEffect(() => {
+    document.title = 'UMKM Desa Tianyar | Desa Tianyar';
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Dukung produk lokal UMKM Desa Tianyar: kuliner tradisional, kerajinan tangan, homestay, dan produk unggulan lainnya.');
+    }
+  }, []);
+
   const [filterKategori, setFilterKategori] = useState('Semua');
   
   const kategoriList = ['Semua', 'Kuliner', 'Kerajinan', 'Fashion', 'Akomodasi', 'Kesehatan', 'Minuman'];
@@ -19,8 +29,38 @@ export default function UMKMPage() {
     window.open(`https://wa.me/${kontak.replace(/[^0-9]/g, '')}`, '_blank');
   };
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    name: 'UMKM Desa Tianyar',
+    description: 'Kumpulan usaha mikro kecil menengah di Desa Tianyar yang menyediakan produk lokal berkualitas',
+    url: 'https://desatianyar.id/umkm',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Tianyar',
+      addressRegion: 'Karangasem',
+      addressCountry: 'ID'
+    },
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Produk UMKM Tianyar',
+      itemListElement: umkmData.map((umkm, index) => ({
+        '@type': 'Offer',
+        position: index + 1,
+        itemOffered: {
+          '@type': 'Product',
+          name: umkm.nama,
+          description: umkm.deskripsi,
+          category: umkm.kategori,
+          image: umkm.gambar
+        }
+      }))
+    }
+  };
+
   return (
     <div className="min-h-screen">
+      <JsonLd data={jsonLd} />
       <Header />
 
       {/* Hero Section */}

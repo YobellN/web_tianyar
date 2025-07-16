@@ -1,13 +1,24 @@
 'use client';
 
+import { useEffect } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import { wisataData } from '@/data/wisataData';
+import JsonLd from '@/components/JsonLd';
 
 export default function WisataPage() {
+  useEffect(() => {
+    // Update page title and meta description
+    document.title = 'Destinasi Wisata | Desa Tianyar';
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Jelajahi destinasi wisata terbaik di Desa Tianyar: pantai, savana, budaya, dan edukasi. Temukan keindahan tersembunyi Bali Timur.');
+    }
+  }, []);
+
   const [filterKategori, setFilterKategori] = useState('Semua');
   
   const kategoriList = ['Semua', 'Alam', 'Budaya', 'Pantai', 'Sejarah'];
@@ -23,8 +34,31 @@ export default function WisataPage() {
     { nama: "Kuliner", icon: "🍽️", deskripsi: "Cicipi makanan tradisional Bali yang autentik" }
   ];
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'TouristDestination',
+    name: 'Destinasi Wisata Desa Tianyar',
+    description: 'Kumpulan destinasi wisata alam, budaya, dan edukasi di Desa Tianyar, Karangasem, Bali',
+    url: 'https://desatianyar.id/wisata',
+    image: 'https://images.pexels.com/photos/1166209/pexels-photo-1166209.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Tianyar',
+      addressRegion: 'Karangasem',
+      addressCountry: 'ID'
+    },
+    touristType: ['Wisatawan alam', 'Wisatawan budaya', 'Fotografer', 'Backpacker'],
+    includesAttraction: wisataData.map(wisata => ({
+      '@type': 'TouristAttraction',
+      name: wisata.nama,
+      description: wisata.deskripsi,
+      image: wisata.gambar
+    }))
+  };
+
   return (
     <div className="min-h-screen">
+      <JsonLd data={jsonLd} />
       <Header />
 
       {/* Hero Section */}
