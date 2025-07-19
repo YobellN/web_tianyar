@@ -1,7 +1,10 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Header() {
+  const { language, setLanguage, translations } = useLanguage();
+  const t = translations[language];
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -47,40 +50,69 @@ export default function Header() {
                   ? 'text-gray-600 hover:text-[#204357]' 
                   : 'text-white/90 hover:text-white'
               }`}>
-                Beranda
+                {t.nav.home}
               </Link>
               <Link href="/wisata" className={`px-3 py-2 text-sm font-medium transition-colors duration-300 ${
                 isScrolled 
                   ? 'text-gray-600 hover:text-[#204357]' 
                   : 'text-white/90 hover:text-white'
               }`}>
-                Wisata
+                {t.nav.tourism}
               </Link>
               <Link href="/umkm" className={`px-3 py-2 text-sm font-medium transition-colors duration-300 ${
                 isScrolled 
                   ? 'text-gray-600 hover:text-[#204357]' 
                   : 'text-white/90 hover:text-white'
               }`}>
-                UMKM
+                {t.nav.umkm}
               </Link>
               <Link href="/penginapan" className={`px-3 py-2 text-sm font-medium transition-colors duration-300 ${
                 isScrolled 
                   ? 'text-gray-600 hover:text-[#204357]' 
                   : 'text-white/90 hover:text-white'
               }`}>
-                Penginapan
+                {t.nav.accommodation}
               </Link>
               <Link href="/banjar" className={`px-3 py-2 text-sm font-medium transition-colors duration-300 ${
                 isScrolled 
                   ? 'text-gray-600 hover:text-[#204357]' 
                   : 'text-white/90 hover:text-white'
               }`}>
-                Banjar
+                {t.nav.banjar}
               </Link>
             </div>
           </nav>
 
-          <div className="md:hidden">
+          {/* Language Toggle */}
+          <div className="flex items-center space-x-4">
+            <div className="flex items-center bg-white/10 backdrop-blur-sm rounded-full p-1">
+              <button
+                onClick={() => setLanguage('id')}
+                className={`px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200 ${
+                  language === 'id'
+                    ? 'bg-white text-[#204357]'
+                    : isScrolled
+                    ? 'text-gray-600 hover:text-[#204357]'
+                    : 'text-white/80 hover:text-white'
+                }`}
+              >
+                ID
+              </button>
+              <button
+                onClick={() => setLanguage('en')}
+                className={`px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200 ${
+                  language === 'en'
+                    ? 'bg-white text-[#204357]'
+                    : isScrolled
+                    ? 'text-gray-600 hover:text-[#204357]'
+                    : 'text-white/80 hover:text-white'
+                }`}
+              >
+                EN
+              </button>
+            </div>
+
+            <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className={`focus:outline-none p-2 transition-colors duration-300 ${
@@ -93,6 +125,7 @@ export default function Header() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             </button>
+            </div>
           </div>
         </div>
 
@@ -108,35 +141,35 @@ export default function Header() {
                   ? 'text-gray-600 hover:text-[#204357]' 
                   : 'text-white/90 hover:text-white'
               }`}>
-                Beranda
+                {t.nav.home}
               </Link>
               <Link href="/wisata" className={`block px-3 py-2 text-base font-medium transition-colors duration-300 ${
                 isScrolled 
                   ? 'text-gray-600 hover:text-[#204357]' 
                   : 'text-white/90 hover:text-white'
               }`}>
-                Wisata
+                {t.nav.tourism}
               </Link>
               <Link href="/umkm" className={`block px-3 py-2 text-base font-medium transition-colors duration-300 ${
                 isScrolled 
                   ? 'text-gray-600 hover:text-[#204357]' 
                   : 'text-white/90 hover:text-white'
               }`}>
-                UMKM
+                {t.nav.umkm}
               </Link>
               <Link href="/penginapan" className={`block px-3 py-2 text-base font-medium transition-colors duration-300 ${
                 isScrolled 
                   ? 'text-gray-600 hover:text-[#204357]' 
                   : 'text-white/90 hover:text-white'
               }`}>
-                Penginapan
+                {t.nav.accommodation}
               </Link>
               <Link href="/banjar" className={`block px-3 py-2 text-base font-medium transition-colors duration-300 ${
                 isScrolled 
                   ? 'text-gray-600 hover:text-[#204357]' 
                   : 'text-white/90 hover:text-white'
               }`}>
-                Banjar
+                {t.nav.banjar}
               </Link>
             </div>
           </div>
