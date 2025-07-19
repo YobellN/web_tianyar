@@ -71,25 +71,26 @@ export default function HistorySection() {
               <div className="mb-6 flex-grow">
                 <h4 className="text-lg font-semibold text-gray-800 mb-4">{t.history.government.leadersTitle}</h4>
                 <div className="space-y-2 text-sm">
-                  {t.history.government.leaders.map((leader, index) => (
-                    <div key={index} className="flex justify-between">
-                      <span className="text-gray-700">{leader.name}</span>
-                      <span className="text-gray-500">{leader.period}</span>
-                    </div>
-                  ))}
+                  {t.history.government.leaders.map(
+                    (leader: { name: string; period: string }, index: number) => (
+                      <div key={index} className="flex justify-between">
+                        <span className="text-gray-700">{leader.name}</span>
+                        <span className="text-gray-500">{leader.period}</span>
+                      </div>
+                    )
+                  )}
                 </div>
               </div>
 
               <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg p-6">
-                <h4 className="text-lg font-semibold text-green-700 mb-3">{t.history.government.expansion.title}</h4>
-                <div className="space-y-3 text-sm">
-                  {t.history.government.expansion.villages.map((village, index) => (
+                {t.history.government.expansion.villages.map(
+                  (village: { name: string; areas: string }, index: number) => (
                     <div key={index}>
                       <h5 className="font-medium text-gray-800">{village.name}</h5>
                       <p className="text-gray-600">{village.areas}</p>
                     </div>
-                  ))}
-                </div>
+                  )
+                )}
               </div>
             </div>
           </div>
