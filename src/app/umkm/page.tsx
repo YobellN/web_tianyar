@@ -7,6 +7,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { umkmData } from '@/data/umkmData';
 import JsonLd from '@/components/JsonLd';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function UMKMPage() {
   const { language, translations } = useLanguage();

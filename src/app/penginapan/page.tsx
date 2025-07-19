@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import Image from 'next/image';
 import { penginapanData } from '@/data/penginapanData';
 import JsonLd from '@/components/JsonLd';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function PenginapanPage() {
   const { language, translations } = useLanguage();

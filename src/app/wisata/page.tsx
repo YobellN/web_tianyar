@@ -8,6 +8,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { wisataData } from '@/data/wisataData';
 import JsonLd from '@/components/JsonLd';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function WisataPage() {
   const { language, translations } = useLanguage();
