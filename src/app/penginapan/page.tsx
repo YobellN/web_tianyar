@@ -8,21 +8,34 @@ import { penginapanData } from '@/data/penginapanData';
 import JsonLd from '@/components/JsonLd';
 
 export default function PenginapanPage() {
+  const { language, translations } = useLanguage();
+  const t = translations[language];
+
   useEffect(() => {
-    document.title = 'Penginapan | Desa Tianyar';
+    document.title = language === 'id' ? 'Penginapan | Desa Tianyar' : 'Accommodation | Tianyar Village';
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Temukan berbagai pilihan penginapan di Desa Tianyar: villa, homestay, lodge, camping, dan akomodasi tradisional dengan pemandangan alam yang menakjubkan.');
+      metaDescription.setAttribute('content', 
+        language === 'id' 
+          ? 'Temukan berbagai pilihan penginapan di Desa Tianyar: villa, homestay, lodge, camping, dan akomodasi tradisional dengan pemandangan alam yang menakjubkan.'
+          : 'Find various accommodation options in Tianyar Village: villas, homestays, lodges, camping, and traditional accommodations with stunning natural views.'
+      );
     }
-  }, []);
+  }, [language]);
 
   const [filterTipe, setFilterTipe] = useState('Semua');
   
-  const tipeList = ['Semua', 'Villa', 'Homestay', 'Guesthouse', 'Lodge', 'Camping', 'Resort', 'Bungalow', 'Rumah Tradisional'];
+  const tipeList = language === 'id' 
+    ? ['Semua', 'Villa', 'Homestay', 'Guesthouse', 'Lodge', 'Camping', 'Resort', 'Bungalow', 'Rumah Tradisional']
+    : ['All', 'Villa', 'Homestay', 'Guesthouse', 'Lodge', 'Camping', 'Resort', 'Bungalow', 'Traditional House'];
   
-  const penginapanFiltered = filterTipe === 'Semua' 
+  const penginapanFiltered = filterTipe === 'Semua' || filterTipe === 'All'
     ? penginapanData 
-    : penginapanData.filter(item => item.tipe === filterTipe);
+    : penginapanData.filter(item => 
+        language === 'id' ? item.tipe === filterTipe :
+        (filterTipe === 'Traditional House' && item.tipe === 'Rumah Tradisional') ||
+        (filterTipe !== 'Traditional House' && item.tipe === filterTipe)
+      );
 
   const handleKontak = (kontak: string) => {
     window.open(`https://wa.me/${kontak.replace(/[^0-9]/g, '')}`, '_blank');
@@ -73,10 +86,13 @@ export default function PenginapanPage() {
           <div className="absolute inset-0 bg-[#204357]/70"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fade-in">
-              Penginapan di Tianyar
+              {language === 'id' ? 'Penginapan di Tianyar' : 'Accommodation in Tianyar'}
             </h1>
             <p className="text-xl opacity-90 animate-slide-up">
-              Temukan Akomodasi Terbaik untuk Pengalaman Menginap yang Berkesan
+              {language === 'id' 
+                ? 'Temukan Akomodasi Terbaik untuk Pengalaman Menginap yang Berkesan'
+                : 'Find the Best Accommodation for a Memorable Stay Experience'
+              }
             </p>
           </div>
         </div>
@@ -107,8 +123,15 @@ export default function PenginapanPage() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 animate-fade-in">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Pilihan Penginapan</h2>
-            <p className="text-lg text-gray-600">Akomodasi berkualitas dengan pemandangan alam yang menakjubkan</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              {language === 'id' ? 'Pilihan Penginapan' : 'Accommodation Options'}
+            </h2>
+            <p className="text-lg text-gray-600">
+              {language === 'id' 
+                ? 'Akomodasi berkualitas dengan pemandangan alam yang menakjubkan'
+                : 'Quality accommodation with stunning natural views'
+              }
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -138,13 +161,15 @@ export default function PenginapanPage() {
                   <div className="space-y-2 mb-4">
                     <div className="text-sm text-gray-500">
                       <p>📍 {penginapan.alamat}</p>
-                      <p>👥 Kapasitas: {penginapan.kapasitas}</p>
+                      <p>👥 {language === 'id' ? 'Kapasitas' : 'Capacity'}: {penginapan.kapasitas}</p>
                       <p className="font-medium text-[#204357]">💰 {penginapan.harga}</p>
                     </div>
                   </div>
 
                   <div className="mb-4">
-                    <h4 className="text-sm font-medium text-gray-700 mb-2">Fasilitas:</h4>
+                    <h4 className="text-sm font-medium text-gray-700 mb-2">
+                      {language === 'id' ? 'Fasilitas:' : 'Facilities:'}
+                    </h4>
                     <div className="flex flex-wrap gap-1">
                       {penginapan.fasilitas.slice(0, 3).map((fasilitas, idx) => (
                         <span key={idx} className="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs">
@@ -153,7 +178,7 @@ export default function PenginapanPage() {
                       ))}
                       {penginapan.fasilitas.length > 3 && (
                         <span className="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs">
-                          +{penginapan.fasilitas.length - 3} lainnya
+                          +{penginapan.fasilitas.length - 3} {language === 'id' ? 'lainnya' : 'more'}
                         </span>
                       )}
                     </div>
@@ -168,7 +193,7 @@ export default function PenginapanPage() {
                       onClick={() => handleKontak(penginapan.kontak)}
                       className="bg-[#204357] text-white px-4 py-2 rounded-lg hover:bg-[#1a3a4a] transition-colors text-sm"
                     >
-                      Hubungi
+                      {language === 'id' ? 'Hubungi' : 'Contact'}
                     </button>
                   </div>
                 </div>
@@ -182,27 +207,55 @@ export default function PenginapanPage() {
       <section className="py-16 bg-amber-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 animate-fade-in">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Tips Menginap di Tianyar</h2>
-            <p className="text-lg text-gray-600">Panduan untuk pengalaman menginap yang nyaman</p>
+           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+             {language === 'id' ? 'Tips Menginap di Tianyar' : 'Tips for Staying in Tianyar'}
+           </h2>
+           <p className="text-lg text-gray-600">
+             {language === 'id' 
+               ? 'Panduan untuk pengalaman menginap yang nyaman'
+               : 'Guide for a comfortable stay experience'
+             }
+           </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="bg-white rounded-xl shadow-sm p-6 text-center animate-slide-up">
               <div className="text-4xl mb-4">📅</div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Booking Lebih Awal</h3>
-              <p className="text-gray-600 text-sm">Reservasi minimal 3 hari sebelumnya, terutama saat musim liburan dan akhir pekan</p>
+             <h3 className="text-xl font-semibold text-gray-900 mb-3">
+               {language === 'id' ? 'Booking Lebih Awal' : 'Book in Advance'}
+             </h3>
+             <p className="text-gray-600 text-sm">
+               {language === 'id' 
+                 ? 'Reservasi minimal 3 hari sebelumnya, terutama saat musim liburan dan akhir pekan'
+                 : 'Make reservations at least 3 days in advance, especially during holidays and weekends'
+               }
+             </p>
             </div>
 
             <div className="bg-white rounded-xl shadow-sm p-6 text-center animate-slide-up">
               <div className="text-4xl mb-4">🎒</div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Persiapan</h3>
-              <p className="text-gray-600 text-sm">Bawa jaket untuk malam hari, sunscreen, dan obat-obatan pribadi</p>
+             <h3 className="text-xl font-semibold text-gray-900 mb-3">
+               {language === 'id' ? 'Persiapan' : 'Preparation'}
+             </h3>
+             <p className="text-gray-600 text-sm">
+               {language === 'id' 
+                 ? 'Bawa jaket untuk malam hari, sunscreen, dan obat-obatan pribadi'
+                 : 'Bring a jacket for the night, sunscreen, and personal medications'
+               }
+             </p>
             </div>
 
             <div className="bg-white rounded-xl shadow-sm p-6 text-center animate-slide-up">
               <div className="text-4xl mb-4">🤝</div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Hormati Budaya</h3>
-              <p className="text-gray-600 text-sm">Jaga kebersihan, hormati adat istiadat lokal, dan berinteraksi dengan ramah</p>
+             <h3 className="text-xl font-semibold text-gray-900 mb-3">
+               {language === 'id' ? 'Hormati Budaya' : 'Respect Culture'}
+             </h3>
+             <p className="text-gray-600 text-sm">
+               {language === 'id' 
+                 ? 'Jaga kebersihan, hormati adat istiadat lokal, dan berinteraksi dengan ramah'
+                 : 'Keep clean, respect local customs, and interact friendly'
+               }
+             </p>
             </div>
           </div>
         </div>

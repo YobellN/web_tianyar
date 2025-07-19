@@ -17,7 +17,8 @@ const translations = {
       tourism: 'Wisata',
       umkm: 'UMKM',
       accommodation: 'Penginapan',
-      banjar: 'Banjar'
+      banjar: 'Banjar',
+      gallery: 'Galeri'
     },
     hero: {
       welcome: 'Selamat Datang di',
@@ -123,7 +124,8 @@ const translations = {
       tourism: 'Tourism',
       umkm: 'Local Business',
       accommodation: 'Accommodation',
-      banjar: 'Banjar'
+      banjar: 'Banjar',
+      gallery: 'Gallery'
     },
     hero: {
       welcome: 'Welcome to',

@@ -9,21 +9,37 @@ import { umkmData } from '@/data/umkmData';
 import JsonLd from '@/components/JsonLd';
 
 export default function UMKMPage() {
+  const { language, translations } = useLanguage();
+  const t = translations[language];
+
   useEffect(() => {
-    document.title = 'UMKM Desa Tianyar | Desa Tianyar';
+    document.title = language === 'id' ? 'UMKM Desa Tianyar | Desa Tianyar' : 'Local Business | Tianyar Village';
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Dukung produk lokal UMKM Desa Tianyar: kuliner tradisional, kerajinan tangan, homestay, dan produk unggulan lainnya.');
+      metaDescription.setAttribute('content', 
+        language === 'id' 
+          ? 'Dukung produk lokal UMKM Desa Tianyar: kuliner tradisional, kerajinan tangan, homestay, dan produk unggulan lainnya.'
+          : 'Support local products from Tianyar Village: traditional cuisine, handicrafts, homestays, and other featured products.'
+      );
     }
-  }, []);
+  }, [language]);
 
   const [filterKategori, setFilterKategori] = useState('Semua');
   
-  const kategoriList = ['Semua', 'Kuliner', 'Kerajinan', 'Fashion', 'Akomodasi', 'Kesehatan', 'Minuman'];
+  const kategoriList = language === 'id' 
+    ? ['Semua', 'Kuliner', 'Kerajinan', 'Akomodasi', 'Kesehatan', 'Minuman']
+    : ['All', 'Culinary', 'Crafts', 'Accommodation', 'Health', 'Beverages'];
   
-  const umkmFiltered = filterKategori === 'Semua' 
+  const umkmFiltered = filterKategori === 'Semua' || filterKategori === 'All'
     ? umkmData 
-    : umkmData.filter(item => item.kategori === filterKategori);
+    : umkmData.filter(item => 
+        language === 'id' ? item.kategori === filterKategori :
+        (filterKategori === 'Culinary' && item.kategori === 'Kuliner') ||
+        (filterKategori === 'Crafts' && item.kategori === 'Kerajinan') ||
+        (filterKategori === 'Accommodation' && item.kategori === 'Akomodasi') ||
+        (filterKategori === 'Health' && item.kategori === 'Kesehatan') ||
+        (filterKategori === 'Beverages' && item.kategori === 'Minuman')
+      );
 
   const handleKontak = (kontak: string) => {
     window.open(`https://wa.me/${kontak.replace(/[^0-9]/g, '')}`, '_blank');
@@ -74,10 +90,13 @@ export default function UMKMPage() {
           <div className="absolute inset-0 bg-[#204357]/70"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fade-in">
-              UMKM Desa Tianyar
+              {language === 'id' ? 'UMKM Desa Tianyar' : 'Tianyar Village Local Business'}
             </h1>
             <p className="text-xl opacity-90 animate-slide-up">
-              Dukung Produk Lokal, Majukan Ekonomi Desa
+              {language === 'id' 
+                ? 'Dukung Produk Lokal, Majukan Ekonomi Desa'
+                : 'Support Local Products, Advance Village Economy'
+              }
             </p>
           </div>
         </div>
@@ -108,8 +127,15 @@ export default function UMKMPage() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 animate-fade-in">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">UMKM Desa Tianyar</h2>
-            <p className="text-lg text-gray-600">Produk dan layanan berkualitas dari masyarakat lokal</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              {language === 'id' ? 'UMKM Desa Tianyar' : 'Tianyar Village Local Business'}
+            </h2>
+            <p className="text-lg text-gray-600">
+              {language === 'id' 
+                ? 'Produk dan layanan berkualitas dari masyarakat lokal'
+                : 'Quality products and services from local community'
+              }
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -148,7 +174,7 @@ export default function UMKMPage() {
                       onClick={() => handleKontak(umkm.kontak)}
                       className="bg-[#204357] text-white px-4 py-2 rounded-lg hover:bg-[#1a3a4a] transition-colors text-sm"
                     >
-                      Hubungi
+                     {language === 'id' ? 'Hubungi' : 'Contact'}
                     </button>
                   </div>
                 </div>

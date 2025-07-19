@@ -73,6 +73,13 @@ export default function Header() {
               }`}>
                 {t.nav.accommodation}
               </Link>
+              <Link href="/galeri" className={`px-3 py-2 text-sm font-medium transition-colors duration-300 ${
+                isScrolled 
+                  ? 'text-gray-600 hover:text-[#204357]' 
+                  : 'text-white/90 hover:text-white'
+              }`}>
+                {t.nav.gallery}
+              </Link>
             </div>
           </nav>
 
@@ -156,6 +163,13 @@ export default function Header() {
                   : 'text-white/90 hover:text-white'
               }`}>
                 {t.nav.accommodation}
+              </Link>
+              <Link href="/galeri" className={`block px-3 py-2 text-base font-medium transition-colors duration-300 ${
+                isScrolled 
+                  ? 'text-gray-600 hover:text-[#204357]' 
+                  : 'text-white/90 hover:text-white'
+              }`}>
+                {t.nav.gallery}
               </Link>
             </div>
           </div>

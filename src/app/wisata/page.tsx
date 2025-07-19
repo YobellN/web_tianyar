@@ -10,28 +10,48 @@ import { wisataData } from '@/data/wisataData';
 import JsonLd from '@/components/JsonLd';
 
 export default function WisataPage() {
+  const { language, translations } = useLanguage();
+  const t = translations[language];
+
   useEffect(() => {
-    // Update page title and meta description
-    document.title = 'Destinasi Wisata | Desa Tianyar';
+    document.title = language === 'id' ? 'Destinasi Wisata | Desa Tianyar' : 'Tourism Destinations | Tianyar Village';
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Jelajahi destinasi wisata terbaik di Desa Tianyar: pantai, savana, budaya, dan edukasi. Temukan keindahan tersembunyi Bali Timur.');
+      metaDescription.setAttribute('content', 
+        language === 'id' 
+          ? 'Jelajahi destinasi wisata terbaik di Desa Tianyar: pantai, savana, budaya, dan edukasi. Temukan keindahan tersembunyi Bali Timur.'
+          : 'Explore the best tourist destinations in Tianyar Village: beaches, savannas, culture, and education. Discover the hidden beauty of East Bali.'
+      );
     }
-  }, []);
+  }, [language]);
 
   const [filterKategori, setFilterKategori] = useState('Semua');
   
-  const kategoriList = ['Semua', 'Alam', 'Budaya', 'Pantai', 'Edukasi'];
+  const kategoriList = language === 'id' 
+    ? ['Semua', 'Alam', 'Budaya', 'Pantai', 'Edukasi', 'Spiritual']
+    : ['All', 'Nature', 'Culture', 'Beach', 'Education', 'Spiritual'];
   
-  const destinasiFiltered = filterKategori === 'Semua' 
+  const destinasiFiltered = filterKategori === 'Semua' || filterKategori === 'All'
     ? wisataData 
-    : wisataData.filter(item => item.kategori === filterKategori);
+    : wisataData.filter(item => 
+        language === 'id' ? item.kategori === filterKategori : 
+        (filterKategori === 'Nature' && item.kategori === 'Alam') ||
+        (filterKategori === 'Culture' && item.kategori === 'Budaya') ||
+        (filterKategori === 'Beach' && item.kategori === 'Pantai') ||
+        (filterKategori === 'Education' && item.kategori === 'Edukasi') ||
+        (filterKategori === 'Spiritual' && item.kategori === 'Spiritual')
+      );
 
-  const aktivitas = [
+  const aktivitas = language === 'id' ? [
     { nama: "Trekking", icon: "🥾", deskripsi: "Jelajahi jalur pendakian menuju air terjun dan puncak bukit" },
     { nama: "Snorkeling", icon: "🤿", deskripsi: "Nikmati keindahan bawah laut dengan terumbu karang yang indah" },
     { nama: "Fotografi", icon: "📸", deskripsi: "Abadikan momen indah di spot-spot fotogenik" },
     { nama: "Kuliner", icon: "🍽️", deskripsi: "Cicipi makanan tradisional Bali yang autentik" }
+  ] : [
+    { nama: "Trekking", icon: "🥾", deskripsi: "Explore hiking trails to waterfalls and hilltops" },
+    { nama: "Snorkeling", icon: "🤿", deskripsi: "Enjoy underwater beauty with beautiful coral reefs" },
+    { nama: "Photography", icon: "📸", deskripsi: "Capture beautiful moments at photogenic spots" },
+    { nama: "Culinary", icon: "🍽️", deskripsi: "Taste authentic traditional Balinese food" }
   ];
 
   const jsonLd = {
@@ -72,10 +92,13 @@ export default function WisataPage() {
           <div className="absolute inset-0 bg-[#204357]/70"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fade-in">
-              Destinasi Wisata
+              {language === 'id' ? 'Destinasi Wisata' : 'Tourism Destinations'}
             </h1>
             <p className="text-xl opacity-90 animate-slide-up">
-              Jelajahi Keindahan Alam dan Budaya Desa Tianyar
+              {language === 'id' 
+                ? 'Jelajahi Keindahan Alam dan Budaya Desa Tianyar'
+                : 'Explore the Natural Beauty and Culture of Tianyar Village'
+              }
             </p>
           </div>
         </div>
@@ -106,8 +129,15 @@ export default function WisataPage() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 animate-fade-in">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Destinasi Wisata</h2>
-            <p className="text-lg text-gray-600">Jelajahi keindahan alam dan budaya Desa Tianyar</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              {language === 'id' ? 'Destinasi Wisata' : 'Tourism Destinations'}
+            </h2>
+            <p className="text-lg text-gray-600">
+              {language === 'id' 
+                ? 'Jelajahi keindahan alam dan budaya Desa Tianyar'
+                : 'Explore the natural beauty and culture of Tianyar Village'
+              }
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -137,7 +167,7 @@ export default function WisataPage() {
                     href={`/wisata/${item.id}`}
                     className="block w-full bg-[#204357] text-white py-2 rounded-lg hover:bg-[#1a3a4a] transition-colors text-center"
                   >
-                    Lihat Detail
+                    {language === 'id' ? 'Lihat Detail' : 'View Details'}
                   </Link>
                 </div>
               </div>
@@ -150,8 +180,15 @@ export default function WisataPage() {
       <section className="py-16 bg-amber-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 animate-fade-in">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Aktivitas di Tianyar</h2>
-            <p className="text-lg text-gray-600">Kegiatan yang bisa dilakukan di desa</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              {language === 'id' ? 'Aktivitas di Tianyar' : 'Activities in Tianyar'}
+            </h2>
+            <p className="text-lg text-gray-600">
+              {language === 'id' 
+                ? 'Kegiatan yang bisa dilakukan di desa'
+                : 'Activities you can do in the village'
+              }
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -170,28 +207,61 @@ export default function WisataPage() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 animate-fade-in">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Tips Berkunjung</h2>
-            <p className="text-lg text-gray-600">Panduan praktis untuk wisata di Tianyar</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              {language === 'id' ? 'Tips Berkunjung' : 'Visiting Tips'}
+            </h2>
+            <p className="text-lg text-gray-600">
+              {language === 'id' 
+                ? 'Panduan praktis untuk wisata di Tianyar'
+                : 'Practical guide for tourism in Tianyar'
+              }
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-gradient-to-br from-[#204357]/10 to-blue-100 rounded-xl p-6 animate-slide-up">
-              <h3 className="text-xl font-semibold text-[#204357] mb-4">Waktu Terbaik Berkunjung</h3>
+              <h3 className="text-xl font-semibold text-[#204357] mb-4">
+                {language === 'id' ? 'Waktu Terbaik Berkunjung' : 'Best Time to Visit'}
+              </h3>
               <ul className="space-y-2 text-gray-700 text-sm">
-                <li>• Pagi hari (06:00-10:00) untuk cuaca sejuk</li>
-                <li>• Sore hari (16:00-18:00) untuk sunset</li>
-                <li>• Musim kemarau (April-Oktober) lebih nyaman</li>
-                <li>• Hari kerja lebih sepi pengunjung</li>
+                {language === 'id' ? (
+                  <>
+                    <li>• Pagi hari (06:00-10:00) untuk cuaca sejuk</li>
+                    <li>• Sore hari (16:00-18:00) untuk sunset</li>
+                    <li>• Musim kemarau (April-Oktober) lebih nyaman</li>
+                    <li>• Hari kerja lebih sepi pengunjung</li>
+                  </>
+                ) : (
+                  <>
+                    <li>• Morning (06:00-10:00) for cool weather</li>
+                    <li>• Evening (16:00-18:00) for sunset</li>
+                    <li>• Dry season (April-October) more comfortable</li>
+                    <li>• Weekdays are less crowded</li>
+                  </>
+                )}
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-amber-100 to-orange-100 rounded-xl p-6 animate-slide-up">
-              <h3 className="text-xl font-semibold text-amber-700 mb-4">Yang Perlu Dibawa</h3>
+              <h3 className="text-xl font-semibold text-amber-700 mb-4">
+                {language === 'id' ? 'Yang Perlu Dibawa' : 'What to Bring'}
+              </h3>
               <ul className="space-y-2 text-gray-700 text-sm">
-                <li>• Kamera untuk mengabadikan momen</li>
-                <li>• Sunscreen dan topi</li>
-                <li>• Air minum yang cukup</li>
-                <li>• Sepatu yang nyaman</li>
+                {language === 'id' ? (
+                  <>
+                    <li>• Kamera untuk mengabadikan momen</li>
+                    <li>• Sunscreen dan topi</li>
+                    <li>• Air minum yang cukup</li>
+                    <li>• Sepatu yang nyaman</li>
+                  </>
+                ) : (
+                  <>
+                    <li>• Camera to capture moments</li>
+                    <li>• Sunscreen and hat</li>
+                    <li>• Enough drinking water</li>
+                    <li>• Comfortable shoes</li>
+                  </>
+                )}
               </ul>
             </div>
           </div>
