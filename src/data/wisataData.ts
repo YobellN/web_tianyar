@@ -81,7 +81,7 @@ export const wisataData: WisataItem[] = [
       "North Bali Reef Conservation adalah proyek lingkungan yang berbasis di Desa Tianyar. Program ini melibatkan relawan dari seluruh dunia untuk membangun struktur terumbu buatan dan mengedukasi masyarakat lokal tentang pentingnya menjaga ekosistem laut. Pengunjung bisa belajar langsung tentang konservasi dan melihat aktivitas penyelaman.",
     gambar:
       "/wisata/north_bali_reef_conservation.JPG",
-    kategori: "Edukasi",
+    kategori: "Alam",
     rating: 4.8,
     lokasi: "Pantai Desa Tianyar, Kubu, Karangasem",
     jamBuka: "09:00 - 17:00 WITA",

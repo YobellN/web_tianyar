@@ -21,7 +21,7 @@ export default function WisataPage() {
 
   const [filterKategori, setFilterKategori] = useState('Semua');
   
-  const kategoriList = ['Semua', 'Alam', 'Budaya', 'Pantai', 'Sejarah'];
+  const kategoriList = ['Semua', 'Alam', 'Budaya', 'Pantai', 'Edukasi'];
   
   const destinasiFiltered = filterKategori === 'Semua' 
     ? wisataData 
