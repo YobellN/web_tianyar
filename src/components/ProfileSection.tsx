@@ -76,7 +76,7 @@ export default function ProfileSection() {
                 </p>
                 
                 <div className="space-y-3">
-                  {t.profile.administrative.banjars.map((banjar, index) => {
+                  {t.profile.administrative.banjars.map((banjar: string, index: number) => {
                     const colors = ['blue', 'green', 'amber', 'red'];
                     const color = colors[index];
                     return (
@@ -101,7 +101,7 @@ export default function ProfileSection() {
                 </p>
                 
                 <div className="space-y-3 mb-6">
-                  {t.profile.traditional.pakramans.map((pakraman, index) => (
+                  {t.profile.traditional.pakramans.map((pakraman: string, index: number) => (
                     <div key={index} className="flex items-center p-3 bg-white rounded-lg shadow-sm">
                       <div className="w-8 h-8 bg-amber-500 rounded-full flex items-center justify-center mr-3">
                         <span className="text-white text-sm font-bold">{index + 1}</span>
