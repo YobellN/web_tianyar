@@ -63,6 +63,13 @@ export default function Header() {
               }`}>
                 UMKM
               </Link>
+              <Link href="/penginapan" className={`px-3 py-2 text-sm font-medium transition-colors duration-300 ${
+                isScrolled 
+                  ? 'text-gray-600 hover:text-[#204357]' 
+                  : 'text-white/90 hover:text-white'
+              }`}>
+                Penginapan
+              </Link>
               <Link href="/banjar" className={`px-3 py-2 text-sm font-medium transition-colors duration-300 ${
                 isScrolled 
                   ? 'text-gray-600 hover:text-[#204357]' 
@@ -117,12 +124,12 @@ export default function Header() {
               }`}>
                 UMKM
               </Link>
-              <Link href="/berita" className={`block px-3 py-2 text-base font-medium transition-colors duration-300 ${
+              <Link href="/penginapan" className={`block px-3 py-2 text-base font-medium transition-colors duration-300 ${
                 isScrolled 
                   ? 'text-gray-600 hover:text-[#204357]' 
                   : 'text-white/90 hover:text-white'
               }`}>
-                Berita
+                Penginapan
               </Link>
               <Link href="/banjar" className={`block px-3 py-2 text-base font-medium transition-colors duration-300 ${
                 isScrolled 

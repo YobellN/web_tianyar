@@ -36,7 +36,8 @@ export default function Footer() {
               <li><Link href="/" className="text-gray-300 hover:text-white transition-colors text-sm">Beranda</Link></li>
               <li><Link href="/wisata" className="text-gray-300 hover:text-white transition-colors text-sm">Wisata</Link></li>
               <li><Link href="/umkm" className="text-gray-300 hover:text-white transition-colors text-sm">UMKM</Link></li>
-              <li><Link href="/berita" className="text-gray-300 hover:text-white transition-colors text-sm">Berita</Link></li>
+              <li><Link href="/penginapan" className="text-gray-300 hover:text-white transition-colors text-sm">Penginapan</Link></li>
+              <li><Link href="/banjar" className="text-gray-300 hover:text-white transition-colors text-sm">Banjar</Link></li>
             </ul>
           </div>
           

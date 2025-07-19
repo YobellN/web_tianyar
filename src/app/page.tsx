@@ -4,6 +4,8 @@ import { Metadata } from 'next';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import VideoProfile from '@/components/VideoProfile';
+import HistorySection from '@/components/HistorySection';
+import ProfileSection from '@/components/ProfileSection';
 import NewsSection from '@/components/NewsSection';
 import Footer from '@/components/Footer';
 import JsonLd from '@/components/JsonLd';
@@ -37,6 +39,8 @@ export default function Home() {
       <Header />
       <Hero />
       <VideoProfile />
+      <HistorySection />
+      <ProfileSection />
       <NewsSection />
       <Footer />
     </div>
