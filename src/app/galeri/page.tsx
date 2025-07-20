@@ -71,16 +71,6 @@ const galleryData: GalleryItem[] = [
     descriptionEn: "Stunning sunrise in Tianyar hills"
   },
   {
-    id: "kerajinan-tianyar-1",
-    title: "Kerajinan Lokal",
-    titleEn: "Local Crafts",
-    image: "https://images.pexels.com/photos/6069112/pexels-photo-6069112.jpeg?auto=compress&cs=tinysrgb&w=800",
-    category: "UMKM",
-    categoryEn: "Local Business",
-    description: "Kerajinan anyaman tradisional khas Tianyar",
-    descriptionEn: "Traditional woven crafts from Tianyar"
-  },
-  {
     id: "kuliner-tianyar-1",
     title: "Kuliner Tradisional",
     titleEn: "Traditional Cuisine",

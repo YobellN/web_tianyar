@@ -18,8 +18,8 @@ export default function WisataPage() {
     document.title = language === 'id' ? 'Destinasi Wisata | Desa Tianyar' : 'Tourism Destinations | Tianyar Village';
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 
-        language === 'id' 
+      metaDescription.setAttribute('content',
+        language === 'id'
           ? 'Jelajahi destinasi wisata terbaik di Desa Tianyar: pantai, savana, budaya, dan edukasi. Temukan keindahan tersembunyi Bali Timur.'
           : 'Explore the best tourist destinations in Tianyar Village: beaches, savannas, culture, and education. Discover the hidden beauty of East Bali.'
       );
@@ -27,21 +27,21 @@ export default function WisataPage() {
   }, [language]);
 
   const [filterKategori, setFilterKategori] = useState('Semua');
-  
-  const kategoriList = language === 'id' 
+
+  const kategoriList = language === 'id'
     ? ['Semua', 'Alam', 'Budaya', 'Pantai', 'Edukasi', 'Spiritual']
     : ['All', 'Nature', 'Culture', 'Beach', 'Education', 'Spiritual'];
-  
+
   const destinasiFiltered = filterKategori === 'Semua' || filterKategori === 'All'
-    ? wisataData 
-    : wisataData.filter(item => 
-        language === 'id' ? item.kategori === filterKategori : 
+    ? wisataData
+    : wisataData.filter(item =>
+      language === 'id' ? item.kategori === filterKategori :
         (filterKategori === 'Nature' && item.kategori === 'Alam') ||
         (filterKategori === 'Culture' && item.kategori === 'Budaya') ||
         (filterKategori === 'Beach' && item.kategori === 'Pantai') ||
         (filterKategori === 'Education' && item.kategori === 'Edukasi') ||
         (filterKategori === 'Spiritual' && item.kategori === 'Spiritual')
-      );
+    );
 
   const aktivitas = language === 'id' ? [
     { nama: "Trekking", icon: "🥾", deskripsi: "Jelajahi jalur pendakian menuju air terjun dan puncak bukit" },
@@ -96,7 +96,7 @@ export default function WisataPage() {
               {language === 'id' ? 'Destinasi Wisata' : 'Tourism Destinations'}
             </h1>
             <p className="text-xl opacity-90 animate-slide-up">
-              {language === 'id' 
+              {language === 'id'
                 ? 'Jelajahi Keindahan Alam dan Budaya Desa Tianyar'
                 : 'Explore the Natural Beauty and Culture of Tianyar Village'
               }
@@ -113,11 +113,10 @@ export default function WisataPage() {
               <button
                 key={kategori}
                 onClick={() => setFilterKategori(kategori)}
-                className={`px-6 py-2 rounded-full transition-colors ${
-                  filterKategori === kategori
-                    ? 'bg-[#204357] text-white'
-                    : 'bg-white text-gray-700 hover:bg-gray-100 border'
-                }`}
+                className={`px-6 py-2 rounded-full transition-colors ${filterKategori === kategori
+                  ? 'bg-[#204357] text-white'
+                  : 'bg-white text-gray-700 hover:bg-gray-100 border'
+                  }`}
               >
                 {kategori}
               </button>
@@ -134,7 +133,7 @@ export default function WisataPage() {
               {language === 'id' ? 'Destinasi Wisata' : 'Tourism Destinations'}
             </h2>
             <p className="text-lg text-gray-600">
-              {language === 'id' 
+              {language === 'id'
                 ? 'Jelajahi keindahan alam dan budaya Desa Tianyar'
                 : 'Explore the natural beauty and culture of Tianyar Village'
               }
@@ -156,15 +155,27 @@ export default function WisataPage() {
                       {item.kategori}
                     </span>
                   </div>
-                  <div className="absolute top-4 right-4 bg-white rounded-full px-2 py-1">
-                    <span className="text-amber-500">⭐</span>
-                    <span className="text-sm font-medium ml-1">{item.rating}</span>
-                  </div>
                 </div>
+
                 <div className="p-6">
+
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">{item.nama}</h3>
-                  <p className="text-gray-600 mb-4 text-sm">{item.deskripsi}</p>
-                  <Link 
+
+                  <p className="text-gray-600 mb-2 text-sm">{item.deskripsi}</p>
+                  <div className="text-sm text-gray-500 mb-4">
+                    <p>
+                      📍{'Lokasi: '}
+                      <Link
+                        href={item.lokasi}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 hover:underline"
+                      >
+                        {item.nama}
+                      </Link>
+                    </p>
+                  </div>
+                  <Link
                     href={`/wisata/${item.id}`}
                     className="block w-full bg-[#204357] text-white py-2 rounded-lg hover:bg-[#1a3a4a] transition-colors text-center"
                   >
@@ -185,7 +196,7 @@ export default function WisataPage() {
               {language === 'id' ? 'Aktivitas di Tianyar' : 'Activities in Tianyar'}
             </h2>
             <p className="text-lg text-gray-600">
-              {language === 'id' 
+              {language === 'id'
                 ? 'Kegiatan yang bisa dilakukan di desa'
                 : 'Activities you can do in the village'
               }
@@ -212,7 +223,7 @@ export default function WisataPage() {
               {language === 'id' ? 'Tips Berkunjung' : 'Visiting Tips'}
             </h2>
             <p className="text-lg text-gray-600">
-              {language === 'id' 
+              {language === 'id'
                 ? 'Panduan praktis untuk wisata di Tianyar'
                 : 'Practical guide for tourism in Tianyar'
               }

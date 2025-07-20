@@ -150,10 +150,6 @@ export default function PenginapanPage() {
                       {penginapan.tipe}
                     </span>
                   </div>
-                  <div className="absolute top-4 right-4 bg-white rounded-full px-2 py-1">
-                    <span className="text-amber-500">⭐</span>
-                    <span className="text-sm font-medium ml-1">{penginapan.rating}</span>
-                  </div>
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">{penginapan.nama}</h3>
@@ -162,8 +158,6 @@ export default function PenginapanPage() {
                   <div className="space-y-2 mb-4">
                     <div className="text-sm text-gray-500">
                       <p>📍 {penginapan.alamat}</p>
-                      <p>👥 {language === 'id' ? 'Kapasitas' : 'Capacity'}: {penginapan.kapasitas}</p>
-                      <p className="font-medium text-[#204357]">💰 {penginapan.harga}</p>
                     </div>
                   </div>
 
@@ -186,10 +180,6 @@ export default function PenginapanPage() {
                   </div>
 
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center">
-                      <span className="text-amber-500">⭐</span>
-                      <span className="text-sm font-medium ml-1">{penginapan.rating}</span>
-                    </div>
                     <button 
                       onClick={() => handleKontak(penginapan.kontak)}
                       className="bg-[#204357] text-white px-4 py-2 rounded-lg hover:bg-[#1a3a4a] transition-colors text-sm"

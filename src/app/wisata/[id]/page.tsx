@@ -58,7 +58,6 @@ export default function DetailWisataPage() {
     isAccessibleForFree: wisata.tiketMasuk === 'Gratis',
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: wisata.rating,
       bestRating: 5,
       worstRating: 1
     },
@@ -91,12 +90,6 @@ export default function DetailWisataPage() {
               </span>
             </div>
             <h1 className="text-2xl sm:text-4xl font-bold mb-2">{wisata.nama}</h1>
-            <div className="flex items-center">
-              <span className="text-amber-400">⭐</span>
-              <span className="ml-1 font-medium">{wisata.rating}</span>
-              <span className="mx-2">•</span>
-              <span className="text-sm sm:text-base">{wisata.lokasi}</span>
-            </div>
           </div>
         </div>
       </section>
@@ -145,7 +138,12 @@ export default function DetailWisataPage() {
                 <div className="space-y-4">
                   <div>
                     <div className="text-sm font-medium text-gray-500 mb-1">Lokasi</div>
-                    <div className="text-gray-900">{wisata.lokasi}</div>
+                    <div className="text-blue-600">
+                      <span className="mr-1">📍</span>
+                      <Link href={wisata.lokasi}>
+                      {wisata.nama}
+                      </Link>
+                    </div>
                   </div>
                   
                   <div>
@@ -158,14 +156,6 @@ export default function DetailWisataPage() {
                     <div className="text-gray-900">{wisata.tiketMasuk}</div>
                   </div>
                   
-                  <div>
-                    <div className="text-sm font-medium text-gray-500 mb-1">Rating</div>
-                    <div className="flex items-center">
-                      <span className="text-amber-500">⭐</span>
-                      <span className="ml-1 font-medium">{wisata.rating}</span>
-                      <span className="text-gray-500 ml-1">/5</span>
-                    </div>
-                  </div>
                 </div>
 
                 <div className="mt-6 pt-6 border-t border-gray-200">
