@@ -129,14 +129,6 @@ export default function UMKMPage() {
                       </Link>
                     </p>
                   </div>
-                  <div className="flex items-center justify-between">
-                    <button
-                      onClick={() => handleKontak(umkm.kontak)}
-                      className="bg-[#204357] text-white px-4 py-2 rounded-lg hover:bg-[#1a3a4a] transition-colors text-sm"
-                    >
-                      {language === 'id' ? 'Hubungi' : 'Contact'}
-                    </button>
-                  </div>
                 </div>
               </div>
             ))}
