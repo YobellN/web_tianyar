@@ -7,15 +7,15 @@ export default function Hero() {
   const t = translations[language];
 
   return (
-    <section className="relative bg-gradient-to-br from-[#204357] to-blue-800 text-white">
+    <section className="relative bg-gradient-to-br from-[#204357] to-blue-800 text-white min-h-screen">
       <div 
-        className="relative min-h-screen flex items-center justify-center bg-cover bg-center"
+        className="relative h-screen flex items-center justify-center bg-cover bg-center bg-fixed"
         style={{
           backgroundImage: "url('https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop')"
         }}
       >
-        <div className="absolute inset-0 bg-[#204357]/70"></div>
-        <div className="relative text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+        <div className="absolute inset-0 bg-[#204357]/70 z-0"></div>
+        <div className="relative text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto z-10">
           <motion.h1 
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
