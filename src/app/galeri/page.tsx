@@ -201,7 +201,7 @@ export default function GaleriPage() {
             {galleryFiltered.map((item, index) => (
               <AnimatedCard
                 key={index} 
-                delay={index * 0.05}
+                delay={index * 0.04}
                 className="group cursor-pointer"
                 onClick={() => setSelectedImage(item)}
               >

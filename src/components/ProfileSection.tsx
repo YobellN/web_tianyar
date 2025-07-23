@@ -20,7 +20,7 @@ export default function ProfileSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
           {/* Profil Utama */}
-          <AnimatedCard delay={0.1}>
+          <AnimatedCard delay={0.05}>
             <div className="bg-gradient-to-br from-[#204357]/10 to-blue-100 rounded-xl p-8 h-full flex flex-col">
               <h3 className="text-2xl font-bold text-[#204357] mb-6">{t.profile.geography.title}</h3>
               <p className="text-gray-700 leading-relaxed mb-6 flex-grow">
@@ -68,7 +68,7 @@ export default function ProfileSection() {
           </AnimatedCard>
 
           {/* Pembagian Wilayah */}
-          <AnimatedCard delay={0.2}>
+          <AnimatedCard delay={0.1}>
             <div className="space-y-6 h-full flex flex-col">
               {/* Wilayah Administratif */}
               <div className="bg-white rounded-xl shadow-sm p-8 flex-1">

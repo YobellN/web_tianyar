@@ -18,17 +18,17 @@ export default function AnimatedCard({
 }: AnimatedCardProps) {
   return (
     <motion.div
-      initial={{ y: 30, opacity: 0 }}
+      initial={{ y: 20, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
-      viewport={{ once: true, margin: "-50px" }}
+      viewport={{ once: true, margin: "-20px" }}
       transition={{ 
-        duration: 0.5, 
+        duration: 0.4, 
         delay,
-        ease: "easeOut"
+        ease: [0.25, 0.46, 0.45, 0.94]
       }}
       whileHover={{ 
         scale: hoverScale,
-        transition: { duration: 0.2 }
+        transition: { duration: 0.15, ease: "easeOut" }
       }}
       whileTap={{ scale: 0.98 }}
       className={className}

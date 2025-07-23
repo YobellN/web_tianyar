@@ -106,7 +106,7 @@ export default function UMKMPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {umkmData.map((umkm, index) => (
-              <AnimatedCard key={index} delay={index * 0.1} className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden">
+              <AnimatedCard key={index} delay={index * 0.06} className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden">
                 <div className="relative h-48 overflow-hidden">
                   <Image
                     src={umkm.gambar}
