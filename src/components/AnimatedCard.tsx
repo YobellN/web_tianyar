@@ -7,30 +7,23 @@ interface AnimatedCardProps {
   children: ReactNode;
   className?: string;
   delay?: number;
-  hoverScale?: number;
 }
 
 export default function AnimatedCard({ 
   children, 
   className = '', 
-  delay = 0,
-  hoverScale = 1.02
+  delay = 0
 }: AnimatedCardProps) {
   return (
     <motion.div
-      initial={{ y: 20, opacity: 0 }}
+      initial={{ opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
-      viewport={{ once: true, margin: "-20px" }}
+      viewport={{ once: true, margin: "-30px" }}
       transition={{ 
-        duration: 0.4, 
+        duration: 0.2, 
         delay,
-        ease: [0.25, 0.46, 0.45, 0.94]
+        ease: "easeOut"
       }}
-      whileHover={{ 
-        scale: hoverScale,
-        transition: { duration: 0.15, ease: "easeOut" }
-      }}
-      whileTap={{ scale: 0.98 }}
       className={className}
     >
       {children}

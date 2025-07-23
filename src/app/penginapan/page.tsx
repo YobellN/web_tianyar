@@ -118,7 +118,7 @@ export default function PenginapanPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {penginapanFiltered.map((penginapan, index) => (
-              <AnimatedCard key={index} delay={index * 0.06} className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden">
+              <AnimatedCard key={index} delay={index * 0.02} className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden">
                 <div className="relative h-48 overflow-hidden">
                   <Image
                     src={penginapan.gambar}
@@ -169,7 +169,7 @@ export default function PenginapanPage() {
           </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <AnimatedCard delay={0.1} className="bg-white rounded-xl shadow-sm p-6 text-center">
+            <AnimatedCard delay={0.05} className="bg-white rounded-xl shadow-sm p-6 text-center">
               <div className="text-4xl mb-4">📅</div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
                 {language === 'id' ? 'Booking Lebih Awal' : 'Book in Advance'}
@@ -195,7 +195,7 @@ export default function PenginapanPage() {
               </p>
             </AnimatedCard>
 
-            <AnimatedCard delay={0.16} className="bg-white rounded-xl shadow-sm p-6 text-center">
+            <AnimatedCard delay={0.11} className="bg-white rounded-xl shadow-sm p-6 text-center">
               <div className="text-4xl mb-4">🤝</div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
                 {language === 'id' ? 'Hormati Budaya' : 'Respect Culture'}

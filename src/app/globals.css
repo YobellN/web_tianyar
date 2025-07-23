@@ -34,51 +34,6 @@ html, body {
 }
 
 /* Smooth animations */
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slide-up {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes header-appear {
-  from {
-    opacity: 0;
-    transform: translateY(-100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fade-in {
-  animation: fade-in 0.8s ease-out;
-}
-
-.animate-slide-up {
-  animation: slide-up 0.8s ease-out;
-}
-
-.animate-header-appear {
-  animation: header-appear 0.3s ease-out;
-}
-
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;

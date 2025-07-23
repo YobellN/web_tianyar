@@ -20,7 +20,7 @@ export default function HistorySection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
           {/* Sejarah Utama */}
-          <AnimatedCard delay={0.05}>
+          <AnimatedCard delay={0.02}>
             <div className="bg-white rounded-xl shadow-sm p-8 h-full flex flex-col">
               <h3 className="text-2xl font-bold text-[#204357] mb-6">{t.history.origin.title}</h3>
               <p className="text-gray-600 leading-relaxed mb-6 flex-grow">
@@ -50,7 +50,7 @@ export default function HistorySection() {
           </AnimatedCard>
 
           {/* Timeline Pemerintahan */}
-          <AnimatedCard delay={0.1}>
+          <AnimatedCard delay={0.05}>
             <div className="bg-white rounded-xl shadow-sm p-8 h-full flex flex-col">
               <h3 className="text-2xl font-bold text-[#204357] mb-6">{t.history.government.title}</h3>
               

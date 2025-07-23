@@ -38,7 +38,7 @@ export default function NewsSection() {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {layanan.map((item, index) => (
-            <AnimatedCard key={index} delay={index * 0.08} className="bg-amber-50 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 p-6 text-center">
+            <AnimatedCard key={index} delay={index * 0.03} className="bg-amber-50 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 p-6 text-center">
               <div className="text-4xl mb-4">{item.icon}</div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">{item.title}</h3>
               <p className="text-gray-600 mb-4 text-sm">{item.excerpt}</p>

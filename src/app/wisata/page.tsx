@@ -144,7 +144,7 @@ export default function WisataPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {destinasiFiltered.map((item, index) => (
-              <AnimatedCard key={index} delay={index * 0.05} className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden">
+              <AnimatedCard key={index} delay={index * 0.02} className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden">
                 <div className="relative h-48 overflow-hidden">
                   <Image
                     src={item.gambar}
@@ -207,7 +207,7 @@ export default function WisataPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {aktivitas.map((item, index) => (
-              <AnimatedCard key={index} delay={index * 0.08} className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 p-6 text-center">
+              <AnimatedCard key={index} delay={index * 0.03} className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 p-6 text-center">
                 <div className="text-4xl mb-4">{item.icon}</div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">{item.nama}</h3>
                 <p className="text-gray-600 text-sm">{item.deskripsi}</p>
@@ -233,7 +233,7 @@ export default function WisataPage() {
           </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <AnimatedCard delay={0.1} className="bg-gradient-to-br from-[#204357]/10 to-blue-100 rounded-xl p-6">
+            <AnimatedCard delay={0.05} className="bg-gradient-to-br from-[#204357]/10 to-blue-100 rounded-xl p-6">
               <h3 className="text-xl font-semibold text-[#204357] mb-4">
                 {language === 'id' ? 'Waktu Terbaik Berkunjung' : 'Best Time to Visit'}
               </h3>
@@ -256,7 +256,7 @@ export default function WisataPage() {
               </ul>
             </AnimatedCard>
 
-            <AnimatedCard delay={0.2} className="bg-gradient-to-br from-amber-100 to-orange-100 rounded-xl p-6">
+            <AnimatedCard delay={0.08} className="bg-gradient-to-br from-amber-100 to-orange-100 rounded-xl p-6">
               <h3 className="text-xl font-semibold text-amber-700 mb-4">
                 {language === 'id' ? 'Yang Perlu Dibawa' : 'What to Bring'}
               </h3>
