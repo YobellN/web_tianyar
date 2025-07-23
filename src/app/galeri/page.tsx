@@ -199,9 +199,8 @@ export default function GaleriPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {galleryFiltered.map((item, index) => (
-              <AnimatedCard
+              <div
                 key={index} 
-                delay={index * 0.02}
                 className="group cursor-pointer"
                 onClick={() => setSelectedImage(item)}
               >
@@ -222,7 +221,7 @@ export default function GaleriPage() {
                     </p>
                   </div>
                 </div>
-              </AnimatedCard>
+              </div>
             ))}
           </div>
         </div>
