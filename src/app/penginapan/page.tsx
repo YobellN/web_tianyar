@@ -27,24 +27,6 @@ export default function PenginapanPage() {
     }
   }, [language]);
 
-  const [filterTipe, setFilterTipe] = useState('Semua');
-
-  const tipeList = language === 'id'
-    ? ['Semua', 'Villa', 'Homestay', 'Guesthouse', 'Lodge', 'Camping', 'Resort', 'Bungalow', 'Rumah Tradisional']
-    : ['All', 'Villa', 'Homestay', 'Guesthouse', 'Lodge', 'Camping', 'Resort', 'Bungalow', 'Traditional House'];
-
-  const penginapanFiltered = filterTipe === 'Semua' || filterTipe === 'All'
-    ? penginapanData
-    : penginapanData.filter(item =>
-      language === 'id' ? item.tipe === filterTipe :
-        (filterTipe === 'Traditional House' && item.tipe === 'Rumah Tradisional') ||
-        (filterTipe !== 'Traditional House' && item.tipe === filterTipe)
-    );
-
-  const handleKontak = (kontak: string) => {
-    window.open(`https://wa.me/${kontak.replace(/[^0-9]/g, '')}`, '_blank');
-  };
-
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'LodgingBusiness',
@@ -117,7 +99,7 @@ export default function PenginapanPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {penginapanFiltered.map((penginapan, index) => (
+            {penginapanData.map((penginapan, index) => (
               <div key={index} className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden">
                 <div className="relative h-48 overflow-hidden">
                   <Image

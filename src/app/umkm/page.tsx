@@ -8,8 +8,6 @@ import { umkmData } from '@/data/umkmData';
 import JsonLd from '@/components/JsonLd';
 import { useLanguage } from '@/contexts/LanguageContext';
 import Link from 'next/link';
-import AnimatedSection from '@/components/AnimatedSection';
-import AnimatedCard from '@/components/AnimatedCard';
 
 export default function UMKMPage() {
   const { language, translations } = useLanguage();
@@ -27,9 +25,6 @@ export default function UMKMPage() {
     }
   }, [language]);
 
-  const handleKontak = (kontak: string) => {
-    window.open(`https://wa.me/${kontak.replace(/[^0-9]/g, '')}`, '_blank');
-  };
 
   const jsonLd = {
     '@context': 'https://schema.org',

@@ -113,7 +113,8 @@ export const wisataData: WisataItem[] = [
   {
     id: "pura-puseh-tianyar",
     nama: "Pura Puseh Tianyar",
-    deskripsi: "Pura Desa Pakraman Tianyar, pusat kegiatan religi masyarakat lokal.",
+    deskripsi:
+      "Pura Desa Pakraman Tianyar, pusat kegiatan religi masyarakat lokal.",
     deskripsiLengkap:
       "Pura Puseh Tianyar adalah pura desa utama di Pakraman Tianyar, digunakan untuk upacara adat dan odalan secara rutin oleh warga Hindu Bali. Lingkungannya asri dengan taman terbuka, gapura tradisional, dan area teduh untuk bersembahyang atau refleksi.",
     gambar: "/wisata/pura_puseh.JPG",
@@ -131,7 +132,8 @@ export const wisataData: WisataItem[] = [
   {
     id: "pantai-ketapang-mas-tianyar",
     nama: "Pantai Ketapang Mas",
-    deskripsi: "Pantai berpasir gelap dengan latar jembatan kayu & perahu nelayan.",
+    deskripsi:
+      "Pantai berpasir gelap dengan latar jembatan kayu & perahu nelayan.",
     deskripsiLengkap:
       "Pantai Ketapang Mas di Desa Tianyar menawarkan pasir gelap yang kontras dengan air bening dan jembatan kayu panjang yang sering jadi spot foto. Ombaknya tenang sehingga cocok untuk berenang ringan dan sunset watching. Akses mudah dari jalan raya, dengan beberapa warung lokal di sekitar.",
     gambar: "/wisata/pantai_ketapang_mas.JPG",
@@ -146,5 +148,28 @@ export const wisataData: WisataItem[] = [
       "Hormati perahu dan nelayan lokal—jangan ganggu aktivitasnya",
     ],
   },
+  {
+    id: "embung-tianyar",
+    nama: "Embung Tianyar",
+    deskripsi:
+      "Waduk kecil untuk irigasi dan edukasi pertanian, cocok untuk rekreasi keluarga.",
+    deskripsiLengkap:
+      "Embung Tianyar adalah bendungan kecil yang dibangun sebagai cadangan air untuk irigasi sawah dan kebun warga Desa Tianyar. Letaknya cukup terpadu dengan alam sekitar, memberikan suasana tenang, dan sering dijadikan lokasi edukasi pertanian, rekreasi sore, serta spot fotografi alam. Area sekitar embung cocok untuk piknik keluarga dan observasi burung lokal saat musim migrasi.",
+    gambar: "/wisata/embung_tianyar.jpg",
+    kategori: "Alam",
+    lokasi: "https://maps.app.goo.gl/Yym6z6QHfDEb2LKL7",
+    jamBuka: "08:00 – 17:00 WITA",
+    tiketMasuk: "Gratis",
+    fasilitas: [
+      "Area duduk dan gazebo sederhana",
+      "Papan informasi edukasi pertanian",
+      "Parkir kendaraan",
+      "Jalur setapak jalan kaki",
+    ],
+    tips: [
+      "Bawa topi dan sunblock untuk siang hari",
+      "Cocok untuk foto saat sore hari dan golden hour",
+      "Hindari membuang sampah sembarangan",
+    ],
+  },
 ];
-

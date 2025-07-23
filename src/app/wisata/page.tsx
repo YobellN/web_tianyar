@@ -41,8 +41,7 @@ export default function WisataPage() {
         (filterKategori === 'Nature' && item.kategori === 'Alam') ||
         (filterKategori === 'Culture' && item.kategori === 'Budaya') ||
         (filterKategori === 'Beach' && item.kategori === 'Pantai') ||
-        (filterKategori === 'Education' && item.kategori === 'Edukasi') ||
-        (filterKategori === 'Spiritual' && item.kategori === 'Spiritual')
+        (filterKategori === 'Education' && item.kategori === 'Edukasi')
     );
 
   const aktivitas = language === 'id' ? [

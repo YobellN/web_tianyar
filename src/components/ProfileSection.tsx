@@ -26,6 +26,21 @@ export default function ProfileSection() {
               <p className="text-gray-700 leading-relaxed mb-6 flex-grow">
                 {t.profile.geography.description}
               </p>
+              <div className="bg-white rounded-lg p-6 mb-6">
+                <h3 className="text-2xl font-bold text-[#204357] mb-6 text-center">Peta Desa Tianyar</h3>
+                <div className="w-full aspect-video">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63181.88474249753!2d115.44755515629734!3d-8.216047854879521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd1fa10fc6d3ea3%3A0x5030bfbca8316c0!2sTianyar%2C%20Kubu%2C%20Karangasem%20Regency%2C%20Bali!5e0!3m2!1sen!2sid!4v1753261072289!5m2!1sen!2sid"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="w-full h-full rounded-md"
+                  ></iframe>
+                </div>
+              </div>
 
               <div className="bg-white rounded-lg p-6 mb-6">
                 <div className="text-center mb-4">
@@ -76,14 +91,14 @@ export default function ProfileSection() {
                 <p className="text-gray-600 mb-6">
                   {t.profile.administrative.description}
                 </p>
-                
+
                 <div className="space-y-3">
                   {t.profile.administrative.banjars.map((banjar: string, index: number) => {
                     const colors = ['blue', 'green', 'amber', 'red'];
                     const color = colors[index];
                     return (
                       <div key={index} className={`flex items-center p-3 bg-gradient-to-r from-${color}-50 to-${color}-100 rounded-lg`}>
-                        <div className={`w-3 h-3 bg-${color}-500 rounded-full mr-3`}></div>
+                        <div className={`w-3 h-3 bg-${color}-600 rounded-full mr-3`}></div>
                         <span className="font-medium text-gray-800">{banjar}</span>
                       </div>
                     );
@@ -101,7 +116,7 @@ export default function ProfileSection() {
                 <p className="text-gray-700 mb-6">
                   {t.profile.traditional.description}
                 </p>
-                
+
                 <div className="space-y-3 mb-6">
                   {t.profile.traditional.pakramans.map((pakraman: string, index: number) => (
                     <div key={index} className="flex items-center p-3 bg-white rounded-lg shadow-sm">
