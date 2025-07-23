@@ -8,6 +8,8 @@ import { umkmData } from '@/data/umkmData';
 import JsonLd from '@/components/JsonLd';
 import { useLanguage } from '@/contexts/LanguageContext';
 import Link from 'next/link';
+import AnimatedSection from '@/components/AnimatedSection';
+import AnimatedCard from '@/components/AnimatedCard';
 
 export default function UMKMPage() {
   const { language, translations } = useLanguage();
@@ -90,7 +92,7 @@ export default function UMKMPage() {
       {/* Daftar UMKM */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 animate-fade-in">
+          <AnimatedSection className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               {language === 'id' ? 'UMKM Desa Tianyar' : 'Tianyar Village Local Business'}
             </h2>
@@ -100,11 +102,11 @@ export default function UMKMPage() {
                 : 'Quality products and services from local community'
               }
             </p>
-          </div>
+          </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {umkmData.map((umkm, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden animate-slide-up">
+              <AnimatedCard key={index} delay={index * 0.1} className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden">
                 <div className="relative h-48 overflow-hidden">
                   <Image
                     src={umkm.gambar}
@@ -130,7 +132,7 @@ export default function UMKMPage() {
                     </p>
                   </div>
                 </div>
-              </div>
+              </AnimatedCard>
             ))}
           </div>
         </div>

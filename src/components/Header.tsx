@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Header() {
@@ -19,10 +20,13 @@ export default function Header() {
   }, []);
 
   return (
-    <header 
+    <motion.header 
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-white/95 backdrop-blur-sm shadow-lg animate-header-appear' 
+          ? 'bg-white/95 backdrop-blur-sm shadow-lg' 
           : 'bg-transparent'
       }`}
     >
@@ -113,7 +117,8 @@ export default function Header() {
             </div>
 
             <div className="md:hidden">
-            <button
+            <motion.button
+              whileTap={{ scale: 0.95 }}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className={`focus:outline-none p-2 transition-colors duration-300 ${
                 isScrolled 
@@ -124,13 +129,20 @@ export default function Header() {
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
-            </button>
+            </motion.button>
             </div>
           </div>
         </div>
 
-        {isMenuOpen && (
-          <div className="md:hidden">
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.div 
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className="md:hidden overflow-hidden"
+            >
             <div className={`px-2 pt-2 pb-3 space-y-1 border-t transition-colors duration-300 ${
               isScrolled 
                 ? 'bg-white border-gray-100' 
@@ -172,9 +184,10 @@ export default function Header() {
                 {t.nav.gallery}
               </Link>
             </div>
-          </div>
-        )}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
-    </header>
+    </motion.header>
   );
 }

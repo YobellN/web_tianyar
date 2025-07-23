@@ -9,6 +9,8 @@ import { useState } from 'react';
 import { wisataData } from '@/data/wisataData';
 import JsonLd from '@/components/JsonLd';
 import { useLanguage } from '@/contexts/LanguageContext';
+import AnimatedSection from '@/components/AnimatedSection';
+import AnimatedCard from '@/components/AnimatedCard';
 
 export default function WisataPage() {
   const { language, translations } = useLanguage();
@@ -128,7 +130,7 @@ export default function WisataPage() {
       {/* Destinasi Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 animate-fade-in">
+          <AnimatedSection className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               {language === 'id' ? 'Destinasi Wisata' : 'Tourism Destinations'}
             </h2>
@@ -138,11 +140,11 @@ export default function WisataPage() {
                 : 'Explore the natural beauty and culture of Tianyar Village'
               }
             </p>
-          </div>
+          </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {destinasiFiltered.map((item, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden animate-slide-up">
+              <AnimatedCard key={index} delay={index * 0.1} className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden">
                 <div className="relative h-48 overflow-hidden">
                   <Image
                     src={item.gambar}
@@ -182,7 +184,7 @@ export default function WisataPage() {
                     {language === 'id' ? 'Lihat Detail' : 'View Details'}
                   </Link>
                 </div>
-              </div>
+              </AnimatedCard>
             ))}
           </div>
         </div>
@@ -191,7 +193,7 @@ export default function WisataPage() {
       {/* Aktivitas Section */}
       <section className="py-16 bg-amber-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 animate-fade-in">
+          <AnimatedSection className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               {language === 'id' ? 'Aktivitas di Tianyar' : 'Activities in Tianyar'}
             </h2>
@@ -201,15 +203,15 @@ export default function WisataPage() {
                 : 'Activities you can do in the village'
               }
             </p>
-          </div>
+          </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {aktivitas.map((item, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 p-6 text-center animate-slide-up">
+              <AnimatedCard key={index} delay={index * 0.1} className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 p-6 text-center">
                 <div className="text-4xl mb-4">{item.icon}</div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">{item.nama}</h3>
                 <p className="text-gray-600 text-sm">{item.deskripsi}</p>
-              </div>
+              </AnimatedCard>
             ))}
           </div>
         </div>
@@ -218,7 +220,7 @@ export default function WisataPage() {
       {/* Tips Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 animate-fade-in">
+          <AnimatedSection className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               {language === 'id' ? 'Tips Berkunjung' : 'Visiting Tips'}
             </h2>
@@ -228,10 +230,10 @@ export default function WisataPage() {
                 : 'Practical guide for tourism in Tianyar'
               }
             </p>
-          </div>
+          </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-[#204357]/10 to-blue-100 rounded-xl p-6 animate-slide-up">
+            <AnimatedCard delay={0.1} className="bg-gradient-to-br from-[#204357]/10 to-blue-100 rounded-xl p-6">
               <h3 className="text-xl font-semibold text-[#204357] mb-4">
                 {language === 'id' ? 'Waktu Terbaik Berkunjung' : 'Best Time to Visit'}
               </h3>
@@ -252,9 +254,9 @@ export default function WisataPage() {
                   </>
                 )}
               </ul>
-            </div>
+            </AnimatedCard>
 
-            <div className="bg-gradient-to-br from-amber-100 to-orange-100 rounded-xl p-6 animate-slide-up">
+            <AnimatedCard delay={0.2} className="bg-gradient-to-br from-amber-100 to-orange-100 rounded-xl p-6">
               <h3 className="text-xl font-semibold text-amber-700 mb-4">
                 {language === 'id' ? 'Yang Perlu Dibawa' : 'What to Bring'}
               </h3>
@@ -275,7 +277,7 @@ export default function WisataPage() {
                   </>
                 )}
               </ul>
-            </div>
+            </AnimatedCard>
           </div>
         </div>
       </section>

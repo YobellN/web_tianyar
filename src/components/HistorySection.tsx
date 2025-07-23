@@ -1,3 +1,5 @@
+import AnimatedSection from './AnimatedSection';
+import AnimatedCard from './AnimatedCard';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function HistorySection() {
@@ -7,18 +9,18 @@ export default function HistorySection() {
   return (
     <section className="py-16 bg-gradient-to-br from-amber-50 to-orange-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 animate-fade-in">
+        <AnimatedSection className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             {t.history.title}
           </h2>
           <p className="text-lg text-gray-600">
             {t.history.subtitle}
           </p>
-        </div>
+        </AnimatedSection>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
           {/* Sejarah Utama */}
-          <div className="animate-slide-up">
+          <AnimatedCard delay={0.1}>
             <div className="bg-white rounded-xl shadow-sm p-8 h-full flex flex-col">
               <h3 className="text-2xl font-bold text-[#204357] mb-6">{t.history.origin.title}</h3>
               <p className="text-gray-600 leading-relaxed mb-6 flex-grow">
@@ -45,10 +47,10 @@ export default function HistorySection() {
                 </p>
               </div>
             </div>
-          </div>
+          </AnimatedCard>
 
           {/* Timeline Pemerintahan */}
-          <div className="animate-slide-up">
+          <AnimatedCard delay={0.2}>
             <div className="bg-white rounded-xl shadow-sm p-8 h-full flex flex-col">
               <h3 className="text-2xl font-bold text-[#204357] mb-6">{t.history.government.title}</h3>
               
@@ -93,7 +95,7 @@ export default function HistorySection() {
                 )}
               </div>
             </div>
-          </div>
+          </AnimatedCard>
         </div>
       </div>
     </section>

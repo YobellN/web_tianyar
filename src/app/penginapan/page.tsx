@@ -8,6 +8,8 @@ import { penginapanData } from '@/data/penginapanData';
 import JsonLd from '@/components/JsonLd';
 import { useLanguage } from '@/contexts/LanguageContext';
 import Link from 'next/link';
+import AnimatedSection from '@/components/AnimatedSection';
+import AnimatedCard from '@/components/AnimatedCard';
 
 export default function PenginapanPage() {
   const { language, translations } = useLanguage();
@@ -102,7 +104,7 @@ export default function PenginapanPage() {
 
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 animate-fade-in">
+          <AnimatedSection className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               {language === 'id' ? 'Pilihan Penginapan' : 'Accommodation Options'}
             </h2>
@@ -112,11 +114,11 @@ export default function PenginapanPage() {
                 : 'Quality accommodation with stunning natural views'
               }
             </p>
-          </div>
+          </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {penginapanFiltered.map((penginapan, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden animate-slide-up">
+              <AnimatedCard key={index} delay={index * 0.1} className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden">
                 <div className="relative h-48 overflow-hidden">
                   <Image
                     src={penginapan.gambar}
@@ -145,7 +147,7 @@ export default function PenginapanPage() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </AnimatedCard>
             ))}
           </div>
         </div>
@@ -154,7 +156,7 @@ export default function PenginapanPage() {
       {/* Tips Section */}
       <section className="py-16 bg-amber-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 animate-fade-in">
+          <AnimatedSection className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               {language === 'id' ? 'Tips Menginap di Tianyar' : 'Tips for Staying in Tianyar'}
             </h2>
@@ -164,10 +166,10 @@ export default function PenginapanPage() {
                 : 'Guide for a comfortable stay experience'
               }
             </p>
-          </div>
+          </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-white rounded-xl shadow-sm p-6 text-center animate-slide-up">
+            <AnimatedCard delay={0.1} className="bg-white rounded-xl shadow-sm p-6 text-center">
               <div className="text-4xl mb-4">📅</div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
                 {language === 'id' ? 'Booking Lebih Awal' : 'Book in Advance'}
@@ -178,9 +180,9 @@ export default function PenginapanPage() {
                   : 'Make reservations at least 3 days in advance, especially during holidays and weekends'
                 }
               </p>
-            </div>
+            </AnimatedCard>
 
-            <div className="bg-white rounded-xl shadow-sm p-6 text-center animate-slide-up">
+            <AnimatedCard delay={0.2} className="bg-white rounded-xl shadow-sm p-6 text-center">
               <div className="text-4xl mb-4">🎒</div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
                 {language === 'id' ? 'Persiapan' : 'Preparation'}
@@ -191,9 +193,9 @@ export default function PenginapanPage() {
                   : 'Bring a jacket for the night, sunscreen, and personal medications'
                 }
               </p>
-            </div>
+            </AnimatedCard>
 
-            <div className="bg-white rounded-xl shadow-sm p-6 text-center animate-slide-up">
+            <AnimatedCard delay={0.3} className="bg-white rounded-xl shadow-sm p-6 text-center">
               <div className="text-4xl mb-4">🤝</div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
                 {language === 'id' ? 'Hormati Budaya' : 'Respect Culture'}
@@ -204,7 +206,7 @@ export default function PenginapanPage() {
                   : 'Keep clean, respect local customs, and interact friendly'
                 }
               </p>
-            </div>
+            </AnimatedCard>
           </div>
         </div>
       </section>

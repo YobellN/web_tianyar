@@ -7,6 +7,9 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import JsonLd from '@/components/JsonLd';
+import AnimatedSection from '@/components/AnimatedSection';
+import AnimatedCard from '@/components/AnimatedCard';
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface GalleryItem {
   id: string;
@@ -196,9 +199,10 @@ export default function GaleriPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {galleryFiltered.map((item, index) => (
-              <div 
+              <AnimatedCard
                 key={index} 
-                className="group cursor-pointer animate-slide-up"
+                delay={index * 0.05}
+                className="group cursor-pointer"
                 onClick={() => setSelectedImage(item)}
               >
                 <div className="relative aspect-square overflow-hidden rounded-lg bg-gray-100">
@@ -218,40 +222,63 @@ export default function GaleriPage() {
                     </p>
                   </div>
                 </div>
-              </div>
+              </AnimatedCard>
             ))}
           </div>
         </div>
       </section>
 
       {/* Modal */}
-      {selectedImage && (
-        <div 
-          className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
-          onClick={() => setSelectedImage(null)}
-        >
-          <div className="relative max-w-4xl max-h-full">
-            <button
-              onClick={() => setSelectedImage(null)}
-              className="absolute -top-12 right-0 text-white hover:text-gray-300 text-2xl"
+      <AnimatePresence>
+        {selectedImage && (
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
+            onClick={() => setSelectedImage(null)}
+          >
+            <motion.div 
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="relative max-w-4xl max-h-full"
+              onClick={(e) => e.stopPropagation()}
             >
-              ✕
-            </button>
-            <div className="relative aspect-video bg-white rounded-lg overflow-hidden">
-              <Image
-                src={selectedImage.image}
-                alt={language === 'id' ? selectedImage.title : selectedImage.titleEn}
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="mt-4 text-white text-center">
-              <h3 className="text-xl font-semibold mb-2">
-                {language === 'id' ? selectedImage.title : selectedImage.titleEn}
-              </h3>
-              <p className="text-gray-300">
-                {language === 'id' ? selectedImage.description : selectedImage.descriptionEn}
-              </p>
+              <button
+                onClick={() => setSelectedImage(null)}
+                className="absolute -top-12 right-0 text-white hover:text-gray-300 text-2xl"
+              >
+                ✕
+              </button>
+              <div className="relative aspect-video bg-white rounded-lg overflow-hidden">
+                <Image
+                  src={selectedImage.image}
+                  alt={language === 'id' ? selectedImage.title : selectedImage.titleEn}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="mt-4 text-white text-center">
+                <h3 className="text-xl font-semibold mb-2">
+                  {language === 'id' ? selectedImage.title : selectedImage.titleEn}
+                </h3>
+                <p className="text-gray-300">
+                  {language === 'id' ? selectedImage.description : selectedImage.descriptionEn}
+                </p>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      <Footer />
+    </div>
+  );
+}
+
             </div>
           </div>
         </div>
