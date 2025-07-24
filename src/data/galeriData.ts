@@ -46,12 +46,18 @@ export const galleryData: GalleryItem[] = [
     id: "galeri-7",
     title: "Kapal Nelayan",
     titleEn: "Fisherman Boat",
-    image: "/galeri/galeri_7.jpg",
+    image: "/galeri/galeri_7.JPG",
   },
   {
     id: "galeri-8",
     title: "Savana Tianyar",
     titleEn: "Tianyar Savanna",
-    image: "/galeri/galeri_8.jpg",
+    image: "/galeri/galeri_8.JPG",
+  },
+  {
+    id: "galeri-9",
+    title: "Savana Tianyar",
+    titleEn: "Tianyar Savanna",
+    image: "/galeri/galeri_9.JPG",
   },
 ];
