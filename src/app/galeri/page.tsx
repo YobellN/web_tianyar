@@ -123,14 +123,15 @@ export default function GaleriPage() {
               >
                 ✕
               </button>
-              <div className="relative aspect-video bg-white rounded-lg overflow-hidden">
+                <div className="relative w-[90vw] max-w-2xl h-[60vw] max-h-[70vh] bg-white rounded-lg overflow-hidden mx-auto">
                 <Image
                   src={selectedImage.image}
                   alt={language === 'id' ? selectedImage.title : selectedImage.titleEn}
                   fill
                   className="object-cover"
+                  sizes="(max-width: 768px) 90vw, 700px"
                 />
-              </div>
+                </div>
               <div className="mt-4 text-white text-center">
                 <h3 className="text-xl font-semibold mb-2">
                   {language === 'id' ? selectedImage.title : selectedImage.titleEn}
