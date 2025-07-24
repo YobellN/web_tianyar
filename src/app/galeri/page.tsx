@@ -26,18 +26,8 @@ export default function GaleriPage() {
     }
   }, [language]);
 
-  const [filterKategori, setFilterKategori] = useState('Semua');
   const [selectedImage, setSelectedImage] = useState<GalleryItem | null>(null);
   
-  const kategoriList = language === 'id' 
-    ? ['Semua', 'Alam', 'Budaya', 'Pantai', 'Kehidupan', 'UMKM', 'Kuliner', 'Lingkungan']
-    : ['All', 'Nature', 'Culture', 'Beach', 'Life', 'Local Business', 'Culinary', 'Environment'];
-  
-  const galleryFiltered = filterKategori === 'Semua' || filterKategori === 'All'
-    ? galleryData 
-    : galleryData.filter(item => 
-        language === 'id' ? item.category === filterKategori : item.categoryEn === filterKategori
-      );
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -78,32 +68,11 @@ export default function GaleriPage() {
         </div>
       </section>
 
-      {/* Filter Section */}
-      <section className="py-8 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-4">
-            {kategoriList.map((kategori) => (
-              <button
-                key={kategori}
-                onClick={() => setFilterKategori(kategori)}
-                className={`px-6 py-2 rounded-full transition-colors ${
-                  filterKategori === kategori
-                    ? 'bg-[#204357] text-white'
-                    : 'bg-white text-gray-700 hover:bg-gray-100 border'
-                }`}
-              >
-                {kategori}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Gallery Grid */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {galleryFiltered.map((item, index) => (
+            {galleryData.map((item, index) => (
               <div
                 key={index} 
                 className="group cursor-pointer"
@@ -121,9 +90,6 @@ export default function GaleriPage() {
                     <h3 className="font-semibold text-lg mb-1">
                       {language === 'id' ? item.title : item.titleEn}
                     </h3>
-                    <p className="text-sm opacity-90">
-                      {language === 'id' ? item.category : item.categoryEn}
-                    </p>
                   </div>
                 </div>
               </div>
@@ -169,9 +135,6 @@ export default function GaleriPage() {
                 <h3 className="text-xl font-semibold mb-2">
                   {language === 'id' ? selectedImage.title : selectedImage.titleEn}
                 </h3>
-                <p className="text-gray-300">
-                  {language === 'id' ? selectedImage.description : selectedImage.descriptionEn}
-                </p>
               </div>
             </motion.div>
           </motion.div>

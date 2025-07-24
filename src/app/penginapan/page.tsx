@@ -49,7 +49,6 @@ export default function PenginapanPage() {
           '@type': 'LodgingBusiness',
           name: penginapan.nama,
           description: penginapan.deskripsi,
-          priceRange: penginapan.harga,
           image: penginapan.gambar
         }
       }))
