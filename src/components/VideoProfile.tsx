@@ -9,7 +9,7 @@ export default function VideoProfile() {
           <AnimatedSection>
             <div className="video-container shadow-xl rounded-xl overflow-hidden">
               <iframe
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                src="https://youtu.be/bJfUpcEj3Tc?si=iunPyjBJfGn63QQw"
                 title="Video Profile Desa Tianyar"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
