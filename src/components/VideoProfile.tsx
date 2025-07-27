@@ -67,10 +67,6 @@ export default function VideoProfile() {
                 <div className="text-sm text-gray-600">Keluarga</div>
               </div>
             </div>
-
-            <button className="bg-[#204357] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#1a3a4a] transition-colors duration-200">
-              Selengkapnya
-            </button>
           </AnimatedSection>
         </div>
       </div>
