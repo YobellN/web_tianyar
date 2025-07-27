@@ -39,7 +39,7 @@ export default function Footer() {
             <div className="space-y-2 text-gray-300 text-sm">
               <p>📍 Desa Tianyar, Karangasem, Bali</p>
               <p>📞 +62 815-5874-0655 </p>
-              <p>✉️ kkntianyar@gmail.com</p>
+              <p>✉️ desatianyar2@gmail.com</p>
             </div>
           </div>
         </div>
