@@ -116,6 +116,42 @@ const translations = {
         ],
         note: 'Desa Pakraman (Desa Adat) berperan penting dalam menjaga kearifan lokal, tata upacara adat, dan pelestarian budaya Bali yang telah diwariskan secara turun-temurun. Fungsi adat ini bersinergi dengan pemerintahan desa dalam menjaga keharmonisan dan ketertiban masyarakat.'
       }
+    },
+    services: {
+      title: 'Layanan Desa',
+      subtitle: 'Pelayanan yang tersedia untuk warga Desa Tianyar',
+      items: [
+        {
+          title: 'Pelayanan Administrasi',
+          description: 'Layanan surat-menyurat dan administrasi kependudukan untuk warga',
+          icon: '📋',
+          schedule: 'Senin - Jumat, 08:00 - 15:00 WITA'
+        },
+        {
+          title: 'Posyandu & Kesehatan',
+          description: 'Pelayanan kesehatan dasar dan pemeriksaan rutin untuk ibu dan anak',
+          icon: '🏥',
+          schedule: 'Setiap Rabu, 09:00 - 12:00 WITA'
+        },
+        {
+          title: 'Pemberdayaan UMKM',
+          description: 'Program pelatihan dan bantuan modal untuk pengembangan usaha lokal',
+          icon: '💼',
+          schedule: 'Setiap bulan'
+        }
+      ]
+    },
+    videoProfile: {
+      title: 'Tentang Desa Tianyar',
+      description1: 'Desa Tianyar terletak di Kecamatan Kubu, Kabupaten Karangasem. Desa ini punya pantai, bukit, dan pemandangan laut yang bagus untuk wisata.',
+      description2: 'Luas desa 847 hektar dengan 3.247 penduduk yang terbagi dalam 4 banjar. Warga bekerja sebagai petani, nelayan, dan punya usaha kecil.',
+      description3: 'Desa terus mengembangkan wisata dan usaha lokal untuk kesejahteraan warga sambil menjaga alam dan budaya setempat.',
+      stats: {
+        area: 'Hektar Luas Wilayah',
+        banjars: 'Banjar',
+        population: 'Penduduk',
+        families: 'Keluarga'
+      }
     }
   },
   en: {
@@ -222,6 +258,42 @@ const translations = {
           'Pakraman Paleg Kelod Village'
         ],
         note: 'Pakraman Village (Traditional Village) plays an important role in maintaining local wisdom, traditional ceremonies, and preserving Balinese culture that has been passed down from generation to generation. This traditional function synergizes with village government in maintaining community harmony and order.'
+      }
+    },
+    services: {
+      title: 'Village Services',
+      subtitle: 'Services available for Tianyar Village residents',
+      items: [
+        {
+          title: 'Administrative Services',
+          description: 'Document services and population administration for residents',
+          icon: '📋',
+          schedule: 'Monday - Friday, 08:00 - 15:00 WITA'
+        },
+        {
+          title: 'Posyandu & Health',
+          description: 'Basic health services and routine check-ups for mothers and children',
+          icon: '🏥',
+          schedule: 'Every Wednesday, 09:00 - 12:00 WITA'
+        },
+        {
+          title: 'UMKM Empowerment',
+          description: 'Training programs and capital assistance for local business development',
+          icon: '💼',
+          schedule: 'Monthly'
+        }
+      ]
+    },
+    videoProfile: {
+      title: 'About Tianyar Village',
+      description1: 'Tianyar Village is located in Kubu District, Karangasem Regency. This village has beaches, hills, and beautiful sea views for tourism.',
+      description2: 'The village area is 847 hectares with 3,247 residents divided into 4 banjars. Residents work as farmers, fishermen, and have small businesses.',
+      description3: 'The village continues to develop tourism and local businesses for the welfare of residents while preserving local nature and culture.',
+      stats: {
+        area: 'Hectares of Area',
+        banjars: 'Banjars',
+        population: 'Population',
+        families: 'Families'
       }
     }
   }

@@ -1,6 +1,10 @@
 import AnimatedSection from './AnimatedSection';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function VideoProfile() {
+  const { language, translations } = useLanguage();
+  const t = translations[language];
+
   return (
     <section className="py-16 bg-white min-h-fit">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -23,28 +27,25 @@ export default function VideoProfile() {
           <AnimatedSection delay={0.1}>
             <div className="mb-6">
               <span className="bg-[#204357] text-white px-4 py-2 rounded-full text-sm font-medium">
-                Video Profile
+                {language === 'id' ? 'Video Profile' : 'Village Profile'}
               </span>
             </div>
 
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Tentang Desa Tianyar
+              {t.videoProfile.title}
             </h2>
 
             <div className="space-y-4 text-gray-600 mb-8">
               <p className="leading-relaxed">
-                Desa Tianyar terletak di Kecamatan Kubu, Kabupaten Karangasem.
-                Desa ini punya pantai, bukit, dan pemandangan laut yang bagus untuk wisata.
+                {t.videoProfile.description1}
               </p>
 
               <p className="leading-relaxed">
-                Luas desa 847 hektar dengan 3.247 penduduk yang terbagi dalam 4 banjar.
-                Warga bekerja sebagai petani, nelayan, dan punya usaha kecil.
+                {t.videoProfile.description2}
               </p>
 
               <p className="leading-relaxed">
-                Desa terus mengembangkan wisata dan usaha lokal untuk kesejahteraan warga
-                sambil menjaga alam dan budaya setempat.
+                {t.videoProfile.description3}
               </p>
             </div>
 
@@ -52,19 +53,19 @@ export default function VideoProfile() {
             <div className="grid grid-cols-2 gap-4 mb-8">
               <div className="bg-gray-50 rounded-lg p-4">
                 <div className="text-2xl font-bold text-[#204357] mb-1">847</div>
-                <div className="text-sm text-gray-600">Hektar Luas Wilayah</div>
+                <div className="text-sm text-gray-600">{t.videoProfile.stats.area}</div>
               </div>
               <div className="bg-gray-50 rounded-lg p-4">
                 <div className="text-2xl font-bold text-[#204357] mb-1">4</div>
-                <div className="text-sm text-gray-600">Banjar</div>
+                <div className="text-sm text-gray-600">{t.videoProfile.stats.banjars}</div>
               </div>
               <div className="bg-gray-50 rounded-lg p-4">
                 <div className="text-2xl font-bold text-[#204357] mb-1">14865</div>
-                <div className="text-sm text-gray-600">Penduduk</div>
+                <div className="text-sm text-gray-600">{t.videoProfile.stats.population}</div>
               </div>
               <div className="bg-gray-50 rounded-lg p-4">
                 <div className="text-2xl font-bold text-[#204357] mb-1">3775</div>
-                <div className="text-sm text-gray-600">Keluarga</div>
+                <div className="text-sm text-gray-600">{t.videoProfile.stats.families}</div>
               </div>
             </div>
           </AnimatedSection>
